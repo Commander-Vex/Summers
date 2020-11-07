@@ -58,3 +58,30 @@
  
  suf_emergency_fortifications: "Emergency Fortifications"
  suf_emergency_fortifications_desc: "With the threat of the Legate growing by the day, emergency fortifications have been established along our border with him. We've also put fortifications on the border with Santa Fe lest they fall though the engineers are exausted..."
+ 
+ suf_allying_the_executives: "Allying the Executives"
+ suf_allying_the_executives_desc: "While allying the raiders isn't the most ideal decision, they are rather powerful and are not savages. A temporary alliance is all we need with them."
+ 
+ suf_civil_defense_force: "Civil Defense Forces"
+ suf_civil_defense_force_desc: "With the Legate coming for our people soon, we've recruited small units to defend the towns from the Legate's wrath"
+ 
+ suf_pre_emptive_strike: "Preemptive Strike"
+ suf_pre_emptive_strike_desc: "We must strike quickly while the Legate is unprepared for war against us. With luck, we can beat him back to Red-Sun City"
+ 
+ suf_contacting_our_neighbors: "Contacting Our Neighbors"
+ suf_contacting_our_neighbors_desc: "The Legate is to much of a threat for us to face on our own. We must seek aid from our neighbors regardless of how much we get along with them..."
+ 
+ suf_request_arms_from_texas: "Request Arms from Texas"
+ suf_request_arms_from_texas_desc: "With war with the legate soon, we must seek aid from Texan nations in aquiring arms to defend ourselves. We'll offer to pay them back once the war is over-with..."
+ 
+ suf_push_back_the_bull: "Push Back the Bull"
+ suf_push_back_the_bull_desc: "We must beat the Legate back to Red Sun...its our only hope"
+ 
+ suf_contact_the_goddess: "Contact the Goddess"
+ suf_contact_the_goddess_desc: "Diana and her tribe are a very powerful and technologically advanced force...we must seek them out and form a pact"
+ 
+ suf_strengthen_our_bonds: "Strengthen Our Bond"
+ suf_strengthen_our_bonds_desc: "Trading valuable technologies to both parties is very important to ensure that the war against the Legate is won for our party.."
+ 
+ suf_put_to_the_test: "Put to the Test"
+ suf_put_to_the_test_desc: "We have to strike now, Santa Fe has fallen and if we don't strike now we'll be next!"
