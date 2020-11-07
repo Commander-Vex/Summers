@@ -1,0 +1,120 @@
+﻿capital = 234
+oob = "lupas_followers"
+
+set_country_flag = give_tribal_generic_chiefs
+set_country_flag = give_tribal_generic_political_advisors
+set_country_flag = give_tribal_generic_theorists
+set_country_flag = give_tribal_generic_high_command
+set_country_flag = is_tribal_nation
+
+
+set_technology = {
+	infantry_tech_level_tribal = 1
+	infantry_tech_level_settler = 1
+	special_forces_tech_level_tribal = 1
+	special_forces_tech_level_settler = 1
+	#power_armour_tech_level_settler = 1
+	support_tech_level_tribal = 1
+	support_tech_level_settler = 1
+	vehicles_tech_level_tribal = 1
+	vehicles_tech_level_settler = 1
+	#robotics_tech_level_tribal = 1
+	air_tech_level_tribal = 1
+	air_tech_level_settler = 1
+	naval_tech_level_tribal = 1
+	naval_tech_level_settler = 1
+	tools_tech_level_tribal = 1
+	tools_tech_level_settler = 1
+	habitation_tech_level_tribal = 1
+	habitation_tech_level_settler = 1
+	exploitation_tech_level_tribal = 1
+	exploitation_tech_level_settler = 1
+	exploitation_tech_level_scientific = 1
+	electronics_tech_level_tribal = 1
+	electronics_tech_level_settler = 1
+	standard_weaponry_tech = 1
+	melee_weaponry_tech_1 = 1
+	tribal_civilization = 1
+	settled_civilization = 1
+}
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		nautics_tech_1 = 1
+		light_navy_hull_tech_1 = 1
+		waterproof_sealing_tech = 1
+		medium_navy_hull_tech_1 = 1
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		nautics_tech_non_mtg_1 = 1
+		light_navy_hull_tech_non_mtg_1 = 1
+		waterproof_sealing_tech_non_mtg = 1
+		medium_navy_hull_tech_non_mtg_1 = 1
+	}
+}
+
+set_stability = 0.73
+set_war_support = 0.15
+set_research_slots = 4
+
+set_politics = {
+	ruling_party = elites
+	elections_allowed = no
+}
+
+set_popularities = {
+	elites = 100
+}
+
+
+add_ideas = {
+	lup_death_than_enslavement
+}
+
+
+create_country_leader = {
+	name = "Lupa Capitolina"
+	desc = "LUP_DESC"
+	picture = "gfx/leaders/LUP/Lupa.dds"
+	expire = "3000.1.1"
+	ideology = peoples_militia		
+	traits = {
+
+	}
+}
+create_country_leader = {
+	name = "Lupa Capitolina"
+	desc = "LUP_DESC"
+	picture = "gfx/leaders/LUP/Lupa.dds"
+	expire = "3000.1.1"
+	ideology = technocracy		
+	traits = {
+		        
+	}
+}
+create_country_leader = {
+	name = "Lupa Capitolina"
+	desc = "LUP_DESC"
+	picture = "gfx/leaders/LUP/Lupa.dds"
+	expire = "3000.1.1"
+	ideology = benevolent_dictatorship				
+	traits = { 
+	}
+}
+create_country_leader = {
+	name = "Lupa Capitolina"
+	desc = "LUP_DESC"
+	picture = "gfx/leaders/LUP/Lupa.dds"
+	expire = "3000.1.1"
+	ideology = militarist_technocracy		
+	traits = {
+	}
+}

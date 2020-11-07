@@ -1,0 +1,78 @@
+﻿division_template = {
+	name = "US Army Remnants"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+
+	}
+	support = {
+	fireteam_support = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "US Power Armor Remnants"
+
+	regiments = {
+		power_armour = { x = 0 y = 0 }
+		power_armour = { x = 0 y = 1 }
+		power_armour = { x = 0 y = 2 }
+		power_armour = { x = 1 y = 0 }
+		power_armour = { x = 1 y = 1 }
+
+	}
+}
+units = {
+	division {
+			name = "Summer's Lion"
+			location = 5558
+			division_template = "US Army Remnants"
+			start_experience_factor = 0.5
+			start_equipment_factor = 1.0
+	}
+	division {
+			name = "Summer's Relief"
+			location = 5558
+			division_template = "US Army Remnants"
+			start_experience_factor = 0.5
+			start_equipment_factor = 1.0
+	}
+	division {
+			name = "Summer's Wrath"
+			location = 5558
+			division_template = "US Power Armor Remnants"
+			start_experience_factor = 0.5
+			start_equipment_factor = 1.5
+	}
+	division {
+			name = "Summer's Judge"
+			location = 5558
+			division_template = "US Power Armor Remnants"
+			start_experience_factor = 0.5
+			start_equipment_factor = 1.5
+	}
+	division {
+			name = "Summer's King"
+			location = 5558
+			division_template = "US Power Armor Remnants"
+			start_experience_factor = 0.5
+			start_equipment_factor = 1.0
+	}
+	division {
+			name = "Military Police Force"
+			location = 5558
+			division_template = "US Army Remnants"
+			start_experience_factor = 0.5
+			start_equipment_factor = 1.0
+	}
+	division {
+			name = "Shoetakers Security"
+			location = 5558
+			division_template = "US Army Remnants"
+			start_experience_factor = 1.0
+			start_equipment_factor = 1.0
+	}
+}

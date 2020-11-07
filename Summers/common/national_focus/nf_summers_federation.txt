@@ -1,0 +1,738 @@
+focus_tree = {
+	id = nf_summers_federation
+	country = { 
+		factor= 0
+		modifier = {
+			add = 27
+			tag = SUF
+		}   
+	}
+	default = no
+	
+	#Custom focuses start here
+	
+	#Start 1
+	focus = {
+		id = suf_the_day_the_bombs_fell
+		icon = GFX_focus_wonderweapons
+		cost = 1
+		x = 14
+		y = 0
+		completion_reward = {
+		
+			country_event = { id = nf_fort.1 }
+		}
+	}
+	#Start 2 
+	focus = {
+		id = suf_a_way_of_life
+		icon = GFX_goal_generic_large_scale_normal_industry_focus
+		cost = 1
+		prerequisite = {
+			focus = suf_the_day_the_bombs_fell
+		}
+		x = 14
+		y = 1
+		completion_reward = {
+
+			country_event = { id = nf_fort.2 }
+		}
+	}
+	#Start 3 
+	focus = {
+		id = suf_the_cave_in
+		icon = GFX_goal_generic_bunkers_focus
+		cost = 1 
+		prerequisite = { 
+			focus = suf_a_way_of_life
+	} 
+	x =14 
+	y =2 
+	completion_reward = {
+			country_event = { id = nf_fort.3 }
+		} 
+	}
+	#Start 4
+	focus = { 
+		id = suf_our_return
+		icon = GFX_goal_generic_cities_focus
+		cost = 1
+		prerequisite = { 
+			focus = suf_the_cave_in
+	} 
+		x =14 
+		y =3 
+		completion_reward = {
+			country_event = { id = nf_fort.4 }
+		}
+	}
+
+	#Industrial Path
+	focus = { 
+		id = suf_allocation_of_respurces
+		icon = GFX_goal_generic_position_armies
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_our_return
+	}
+		x =14 
+		y =4 
+		completion_reward = {
+			add_ideas = allocate_resources 
+		}
+	}
+	
+	#Industrial Path Left
+	
+	focus = { 
+		id = suf_eastern_bunker_excavation
+		icon = GFX_goal_generic_cart
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_allocation_of_respurces
+	}
+		x =12 
+		y =5 
+		completion_reward = {
+			 546 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+		}
+		
+		SUF = {
+				add_equipment_to_stockpile = {
+					type = power_armor_equipment_3
+					amount = 75
+					producer = USA
+				}
+			}
+		SUF = {
+			add_equipment_to_stockpile = {
+				type = energy_equipment_1
+				amount = 300
+				producer = SUF
+			}
+		}
+	}
+}
+
+	focus = { 
+		id = suf_restoring_the_power
+		icon = GFX_goal_square_vault_generator
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_eastern_bunker_excavation
+	}
+		x =12 
+		y =6 
+		completion_reward = {
+			 546 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = electricity_generator
+					level = 2
+					instant_build = yes
+				}
+		}
+		set_technology = {
+		resource_generator_power_tech_1 = 1
+		resource_generator_tech = 1
+		}
+	}
+}
+
+#Industrial Tree Middle
+
+focus = { 
+		id = suf_expanding_the_roads
+		icon = GFX_goal_CES_via_militaris
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_allocation_of_respurces
+	}
+		x =14 
+		y =5 
+		completion_reward = {
+			 546 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		}
+		
+		 331 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		}
+		
+		 225 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		}
+	}
+}
+
+focus = { 
+		id = suf_clearing_the_roads
+		icon = GFX_goal_generic_tool_cabinet
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_expanding_the_roads
+	}
+		x =14 
+		y =6 
+		completion_reward = {
+			 546 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		add_resource = {
+		type = metal
+		amount = 17
+	}
+		}
+		
+		 331 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		add_resource = {
+			type = metal
+			amount = 3
+			}
+		}
+		
+		 225 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+				type = metal
+				amount = 3
+			}
+		}
+	}
+}
+
+	#Industrial Right
+
+	focus = { 
+		id = suf_western_bunker_excavation
+		icon = GFX_goal_generic_cart
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_allocation_of_respurces
+	}
+		x =16 
+		y =5 
+		completion_reward = {
+			 546 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+		}
+		
+	set_technology = {
+	robot_automation_tech = 1
+	robot_makeshift_automatons_tech = 1
+	}
+
+		SUF = {
+			add_equipment_to_stockpile = {
+				type = support_robot_scrap_equipment
+				amount = 200
+				producer = USA
+			}
+		load_oob = summers_robotics_1
+		}
+	}
+}
+
+focus = { 
+		id = suf_restoring_the_armories
+		icon = GFX_goal_generic_ammo_boxes_focus
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_western_bunker_excavation
+	}
+		x =16 
+		y =6 
+		completion_reward = {
+			 546 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+		}
+		add_ideas = fortsummersfactories
+		
+	}
+}
+
+focus = { 
+		id = suf_powering_the_mainframe
+		icon = GFX_goal_ARM_mechanical_computing
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_restoring_the_armories
+		}
+		prerequisite = { 
+			focus = suf_restoring_the_power
+		}
+		prerequisite = { 
+			focus = suf_clearing_the_roads
+	}
+		x =14 
+		y =7 
+		completion_reward = {
+		add_political_power = 100
+		add_ideas = mainframe_online
+	}
+}
+
+
+	
+	#Military Path
+	focus = { 
+		id = suf_opening_the_military_academy
+		icon = GFX_goal_generic_small_arms 
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_our_return
+	} 
+		x =20 
+		y =4 
+		completion_reward = {
+			add_manpower = 900
+			add_ideas = emphasis_on_training
+		}
+	}
+	focus = { 
+		id = suf_analyzing_pre_war_military
+		icon = GFX_goal_generic_position_armies
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_opening_the_military_academy
+	} 
+		x =19
+		y =5 
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = vehicle_tech_category
+			}
+		}
+		available_if_capitulated = yes  
+	}
+	
+	focus = { 
+		id = suf_looking_at_army_layouts
+		icon = GFX_goal_generic_position_armies
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_analyzing_pre_war_military
+	}
+		x =19
+		y =6 
+		completion_reward = {
+			army_experience = 50
+		}
+		 
+		available_if_capitulated = yes  
+	}
+	
+	focus = { 
+		id = suf_analyzing_pre_war_airforce
+		icon = GFX_goal_generic_build_airforce
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_opening_the_military_academy
+		}
+		x =21 
+		y =5 
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = air_tech_category
+			}
+		}   
+		available_if_capitulated = yes  
+	}
+	focus = { 
+		id = suf_look_at_old_planes
+		icon = GFX_goal_generic_air_bomber
+		cost = 4.4 
+		prerequisite = { 
+			focus = suf_analyzing_pre_war_airforce
+		} 
+		x =21 
+		y =6 
+		completion_reward = {
+			air_experience = 50
+		}
+		available_if_capitulated = yes  
+	}
+	
+	focus = { 
+		id = suf_new_general
+		icon = GFX_goal_generic_political_pressure
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_looking_at_army_layouts
+			focus = suf_look_at_old_planes
+	} 
+		x =20
+		y =7 
+		completion_reward = {
+			army_experience = 50
+			add_popularity = {
+				ideology = elites
+				popularity = 0.05
+			}
+			create_field_marshal = {
+				name = "General Ironsword"
+				portrait_path = "gfx/leaders/BOS/portrait_cannon.dds"
+				skill = 4
+				attack_skill = 1
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 3
+			}
+		}
+		 
+		available_if_capitulated = yes  
+	}
+	
+	
+		#Start of Political Path 
+	focus = { 
+		id = suf_western_outlook
+		icon = GFX_goal_NCR_Hardline
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_our_return
+	} 
+		x =5 
+		y =4 
+		completion_reward = {
+			add_political_power = 100
+			add_manpower = 1250
+			add_stability = -0.10
+
+		}
+	}
+	
+	focus = { 
+		id = suf_emergency_fortifications
+		icon = GFX_goal_generic_outpost
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_western_outlook
+	} 
+		x =5 
+		y =5 
+		completion_reward = {
+			add_manpower = -300
+			331 = {
+			add_building_construction = {
+					type = bunker
+					level = 2
+					province = 6633
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 1835
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 2869
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 2978
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 7014
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	#Elites Lanius Defense
+	focus = { 
+		id = suf_allying_the_executives
+		icon = GFX_goal_pal_contact_other_gangs
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_emergency_fortifications
+	} 
+		mutually_exclusive = {
+		focus = suf_contacting_our_neigbors
+		focus = suf_contact_the_goddess
+	}
+		x =3 
+		y =6 
+		completion_reward = {
+		add_popularity = {
+				ideology = elites
+				popularity = 0.05
+			}
+		EXE = { 
+		country_event = { id = nf_fort.5 }
+			}
+		}
+	}
+	
+	focus = { 
+		id = suf_civil_defense_force
+		icon = GFX_goal_generic_new_sheriff_in_town
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_allying_the_executives
+	} 
+		x =3 
+		y =7 
+		completion_reward = {
+		load_oob = Summers_Civil_Defense
+		SUF = {
+			add_equipment_to_stockpile = {
+				type = ballistic_equipment_1
+				amount = 200
+				producer = SUF
+			}
+		}
+	}
+}	
+	focus = { 
+		id = suf_pre_emptive_strike
+		icon = GFX_goal_ITZ_encourage_office_dynasties
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_civil_defense_force
+	} 
+		x =3 
+		y =8 
+		completion_reward = {
+		declare_war_on = {
+			target = LAC
+			type = annex_everything
+			}
+		EXE = {
+			declare_war_on = {
+			target = LAC
+			type = annex_everything
+			}
+		}
+	}
+}	
+	#People Lanius Defense
+	
+	focus = { 
+		id = suf_contacting_our_neigbors
+		icon = GFX_goal_pal_back_to_raiding
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_emergency_fortifications
+	}
+		mutually_exclusive = {
+		focus = suf_allying_the_executives
+		focus = suf_contact_the_goddess
+	}
+		x =5 
+		y =6 
+		completion_reward = {
+		add_popularity = {
+				ideology = people
+				popularity = 0.05
+			}
+		create_faction = "Summers Defense Pact"
+		EXE = { 
+		country_event = { id = nf_fort.7 }
+			}
+		ASF = { 
+		country_event = { id = nf_fort.7 }
+			}
+		LUP = { 
+		country_event = { id = nf_fort.7 }
+			}
+		PEC = { 
+		country_event = { id = nf_fort.7 }
+			}
+		TTM = { 
+		country_event = { id = nf_fort.7 }
+			}
+		}
+	}
+	
+	focus = { 
+		id = suf_request_arms_from_texas
+		icon = GFX_goal_TAA_tex_deal
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_contacting_our_neigbors
+	} 
+		x =5 
+		y =7 
+		completion_reward = {
+		LNS = { 
+		country_event = { id = nf_fort.8 }
+			}
+		TBH = { 
+		country_event = { id = nf_fort.8 }
+			}
+		TAA = { 
+		country_event = { id = nf_fort.8 }
+			}
+	}
+}
+
+focus = { 
+		id = suf_push_back_the_bull
+		icon = GFX_goal_generic_legion_speared
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_request_arms_from_texas
+	} 
+		x =5 
+		y =8 
+		completion_reward = {
+		declare_war_on = {
+			target = LAC
+			type = annex_everything
+			}
+	}
+}
+
+#Intellectuals Lanius Path
+
+focus = { 
+		id = suf_contact_the_goddess
+		icon = GFX_goal_generic_focus_magazine_robcofun_wastelad
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_emergency_fortifications
+	} 
+		x =7 
+		y =6 
+		completion_reward = {
+		TTM = { 
+		country_event = { id = nf_fort.9 }
+			}
+	}
+}
+
+focus = { 
+		id = suf_strengthen_our_bonds
+		icon = GFX_goal_VEG_Wrong_Package
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_contact_the_goddess
+	} 
+		x =7 
+		y =7 
+		completion_reward = {
+		set_technology = {
+		robotics_tech_level_scientific = 1
+		tools_tech_level_scientific = 1
+		electronics_tech_level_scientific = 1
+		}
+		
+		SUF = {
+			add_equipment_to_stockpile = {
+				type = support_robot_protectron_equipment_1
+				amount = 150
+				producer = TTM
+			}
+		
+		
+		TTM = {
+		set_technology = {
+		vehicles_tech_level_settler = 1
+		power_armour_tech_level_settler = 1
+		energy_weaponry_tech_1 = 1
+			}
+		}	
+			TTM = {
+				add_equipment_to_stockpile = {
+					type = power_armor_equipment_2
+					amount = 100
+					producer = SUF
+				}
+			}
+		TTM = {
+			add_equipment_to_stockpile = {
+				type = energy_equipment_1
+				amount = 150
+				producer = SUF
+				}
+			}	
+		}
+	}
+}
+
+focus = { 
+		id = suf_put_to_the_test
+		icon = GFX_goal_ITZ_cometh_the_hour_cometh_the_man
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_strengthen_our_bonds
+	}
+		available = {
+		ASF = {
+		exists = no
+			}
+		}
+		x =7 
+		y =8 
+		completion_reward = {
+		declare_war_on = {
+			target = LAC
+			type = annex_everything
+			}
+		TTM = {
+		declare_war_on = {
+			target = LAC
+			type = annex_everything
+			}
+		}
+	}
+}

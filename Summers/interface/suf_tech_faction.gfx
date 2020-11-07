@@ -1,0 +1,58 @@
+spriteTypes = {
+
+	
+	# SUF (Fort Summers)
+	
+spriteType = {
+		name = "GFX_SUF_standard_weaponry_tech_medium"
+		texturefile = "gfx/interface/equipment/cosmetic/22revolver.dds"
+		alwaystransparent = yes
+}
+spriteType = {
+name = "GFX_SUF_ballistic_weaponry_tech_1_medium"
+		texturefile = "gfx/interface/equipment/cosmetic/10mmsmg.dds"
+		alwaystransparent = yes
+}
+spriteType = {
+name = "GFX_SUF_ballistic_weaponry_tech_2_medium"
+		texturefile = "gfx/interface/equipment/cosmetic/BAR.dds"
+		alwaystransparent = yes
+}
+spriteType = {
+		name = "GFX_SUF_ballistic_weaponry_tech_4_medium"
+		texturefile = "gfx/interface/equipment/cosmetic/oicw.dds"
+		alwaystransparent = yes
+		}
+spriteType = {
+		name = "GFX_SUF_energy_weaponry_tech_1_medium"
+		texturefile = "gfx/interface/equipment/cosmetic/MakeshiftLaser.dds"
+		alwaystransparent = yes
+}
+spriteType = {
+		name = "GFX_SUF_energy_weaponry_tech_2_medium"
+		texturefile = "gfx/interface/equipment/cosmetic/energy/energy_weaponry_tech_icon_2_wattz_2000.dds"
+		alwaystransparent = yes
+}
+spriteType = {
+		name = "GFX_SUF_energy_weaponry_tech_3_medium"
+		texturefile = "gfx/interface/equipment/cosmetic/energy/energy_weaponry_tech_icon_3_laer.dds"
+		alwaystransparent = yes
+	}
+spriteType = {
+		name = "GFX_SUF_energy_weaponry_tech_4_medium"
+		texturefile = "gfx/interface/equipment/cosmetic/frt_advanced_laser_weaponry_icon.dds"
+		alwaystransparent = yes
+}
+spriteType = {
+		name = "GFX_SUF_fireteam_weaponry_tech_medium"
+		texturefile = "gfx/interface/equipment/cosmetic/TommyGun.dds"
+		alwaystransparent = yes
+}
+
+	
+	
+	
+	
+	
+	}
+# vim: set ft=pdx tw=79 :

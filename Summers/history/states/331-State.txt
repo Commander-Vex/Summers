@@ -1,0 +1,25 @@
+
+state={
+	id=331
+	name="STATE_SHOETAKERS"
+
+	history={
+		owner = SUF
+		add_core_of = FRT
+		victory_points = {
+			2868 5 
+		}
+		buildings = {
+			infrastructure = 3
+
+		}
+
+	}
+
+	provinces={
+		906 1581 1835 2805 2806 2828 2868 2869 2978 5264 5265 5266 5407 5408 5559 6633 7014 7017 7018 
+	}
+	manpower=7000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

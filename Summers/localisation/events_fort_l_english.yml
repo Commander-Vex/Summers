@@ -1,0 +1,137 @@
+﻿l_english:
+################################## EVENTS ##############################################
+ nf_fort.1.t:0 "The Day the Bombs Fell"
+ nf_fort.1.desc:0 "Our military base survived. It was hit, sure, but we escaped to the bunkers underground. We have lived in the bunker city for 200 years. We made sure to take with us that day:"
+ nf_fort.1.option.a:0 "As many pieces of gear as we possibly could."
+ nf_fort.1.option.b:0 "Tools for workshops."
+ nf_fort.1.option.c:0 "Records of Military Strategy."
+ 
+ nf_fort.2.t:0 "Our Way of Life"
+ nf_fort.2.desc:0 "In the bunkers we were forced to live with only moderated rations, we had a few researchers though, and they focused on:"
+ nf_fort.2.option.a:0 "Industry."
+ nf_fort.2.option.b:0 "Medicine."
+ nf_fort.2.option.c:0 "Fuck research, we need all hands on deck."
+ 
+ nf_fort.3.t:0 "The Cave in"
+ nf_fort.3.desc:0 "In the bunkers half of our home, our only city, collapsed during a cave in."
+ nf_fort.3.option.a:0 "We spent weeks digging out our workshops."
+ nf_fort.3.option.b:0 "We spent weeks digging out rifles."
+ nf_fort.3.option.c:0 "We spent weeks digging out planes, our general was probably psychotic then."
+ 
+ nf_fort.4.t:0 "Our Return"
+ nf_fort.4.desc:0 "We returned to the surface and conquered the nearby region of Plainsrunner so we can expand and rebuild."
+ nf_fort.4.option.a:0 "We spent resources to rebuild Plainsrunner's towns."
+ nf_fort.4.option.b:0 "We spent resources to mine Plainsrunner's territory."
+ nf_fort.4.option.c:0 "We conscripted wastelanders from Plainsrunner."
+ 
+ nf_fort.5.t:0 "The Fort Clovis Expedition"
+ nf_fort.5.desc:0 "We discovered another pre-war fortress called Fort Clovis. We sent an expedition to investigate it and they never returned, what shall we do?"
+ nf_fort.5.option.a:0 "Deploy 4 Companies. We're moving in!"
+ nf_fort.5.option.b:0 "Pepare more weapons, we're going in!"
+ 
+ nf_fort.6.t:0 "The New American Union?"
+ nf_fort.6.desc:0 "Fort Summers, a nearby technically advanced nation is offering an alliance. They would be on top, but we would still gain a fair amount of benefits with such an ally such as protection from the Iron Alliance."
+ nf_fort.6.option.a:0 "No. We are shall follow our own path."
+ nf_fort.6.option.b:0 "We shall join in the Union, the security is too much to ignore."
+ 
+ nf_fort.7.t:0 "The First Expedition"
+ nf_fort.7.desc:0 "Fort Clovis is a sealed military base with a large armory and abundant supplies. We can break in. What should we prioritize retaking?"
+ nf_fort.7.option.option.a:0 "The APCS."
+ nf_fort.7.option.option.b:0 "The energy weapons."
+ 
+ nf_fort.8.t:0 "The Second Expedition"
+ nf_fort.8.desc:0 "During our expedition, we have found large armories of planes and missile launchers."
+ nf_fort.8.option.a:0 "Get those planes."
+ nf_fort.8.option.b:0 "Missile launchers are a necessity."
+ 
+ nf_fort.9.t:0 "The Third Expedition"
+ nf_fort.9.desc:0 "Our third expedition has also proven fruitful. Unfortunately, one of our foolish soldiers accidently blew up an artillery shell and collapsed the base. But before then, we got:"
+ nf_fort.9.option.a:0 "More power Armor"
+ nf_fort.9.option.b:0 "Laser Support"
+ 
+ nf_fort.10.t:0 "The Incident"
+ nf_fort.10.desc:0 "Wastelander natives of Plainsrunner recently rioted in protest of the Fort Summers government, how do we respond?"
+ nf_fort.10.option.a:0 "Kill the rioters"
+ nf_fort.10.option.b:0 "A few civilians don't matter"
+ nf_fort.10.option.c:0 "Take their thoughts into consideration."
+ nf_fort.10.option.d:0 "Lets...influence the rioters shall we?"
+ 
+ nf_fort.11.t:0 "The 2277 'Election'"
+ nf_fort.11.desc:0 "It has been about 200 years since we have made the declaration of emergency. Is it time that we lift that and resume elections in our fine nation?"
+ nf_fort.11.option.a:0 "We must if we want progress."
+ nf_fort.11.option.b:0 "No, it's worked this long."
+ nf_fort.11.option.c:0 "No, but we must revise our methods."
+ nf_fort.11.option.d:0 "We'll take it from here"
+ 
+ nf_fort.12.t:0 "The Old Armory"
+ nf_fort.12.desc:0 "Before we came back to the surface, we had a cave in that resulted with the collapse of one of our armories. Now we have the time and resources to dig it out. There are two areas, but if we get one the other collapses."
+ nf_fort.12.option.a:0 "Get the power armor."
+ nf_fort.12.option.b:0 "Get the guns."
+ 
+ nf_fort.13.t:0 "The Excavated Data Center"
+ nf_fort.13.desc:0 "Another area we managed to excavate was the data center. What files should we prioritize reclaiming?"
+ nf_fort.13.option.a:0 "Industrial and support based tech."
+ nf_fort.13.option.b:0 "Military and strategical tech."
+ 
+  nf_fort.14.t:0 "The New American Union?"
+ nf_fort.14.desc:0 "Fort Summers, a nearby technically advanced nation is offering an alliance. They would be on top, but we would still gain a fair amount of benefits with such an ally such as protection from the Iron Alliance."
+ nf_fort.14.option.a:0 "No. We are shall follow our own path."
+ nf_fort.14.option.b:0 "We shall join in the Union, the security is too much to ignore.
+ 
+  nf_fort.15.t:0 "The New American Union?"
+ nf_fort.15.desc:0 "Fort Summers, a nearby technically advanced nation is offering an alliance. They would be on top, but we would still gain a fair amount of benefits with such an ally such as protection from the Iron Alliance."
+ nf_fort.15.option.a:0 "No. We are shall follow our own path."
+ nf_fort.15.option.b:0 "We shall join in the Union, the security is too much to ignore.
+ 
+  nf_fort.16.t:0 "The New American Union?"
+ nf_fort.16.desc:0 "Fort Summers, a nearby technically advanced nation is offering an alliance. They would be on top, but we would still gain a fair amount of benefits with such an ally such as protection from the Iron Alliance."
+ nf_fort.16.option.a:0 "No. We are shall follow our own path."
+ nf_fort.16.option.b:0 "We shall join in the Union, the security is too much to ignore.
+ 
+  nf_fort.17.t:0 "The New American Union?"
+ nf_fort.17.desc:0 "Fort Summers, a nearby technically advanced nation is offering an alliance. They would be on top, but we would still gain a fair amount of benefits with such an ally such as protection from the Iron Alliance."
+ nf_fort.17.option.a:0 "No. We are shall follow our own path."
+ nf_fort.17.option.b:0 "We shall join in the Union, the security is too much to ignore.
+ 
+  nf_fort.18.t:0 "The New American Union?"
+ nf_fort.18.desc:0 "Fort Summers, a nearby technically advanced nation is offering an alliance. They would be on top, but we would still gain a fair amount of benefits with such an ally such as protection from the Iron Alliance."
+ nf_fort.18.option.a:0 "No. We are shall follow our own path."
+ nf_fort.18.option.b:0 "We shall join in the Union, the security is too much to ignore.
+ 
+   nf_fort.19.t:0 "The Union Federalizes"
+ nf_fort.19.desc:0 "The New American Union shrinks today, with the official merging of our nation with the Founder, the Federal Republic of Fort Summers!"
+ nf_fort.19.option.a:0 "Long Live the Union!"
+ 
+    nf_fort.20.t:0 "The Union Federalizes"
+ nf_fort.20.desc:0 "The New American Union shrinks today, with the official merging of our nation with the Founder, the Federal Republic of Fort Summers!"
+ nf_fort.20.option.a:0 "Long Live the Union!"
+ 
+    nf_fort.21.t:0 "The Union Federalizes"
+ nf_fort.21.desc:0 "The New American Union shrinks today, with the official merging of our nation with the Founder, the Federal Republic of Fort Summers!"
+ nf_fort.21.option.a:0 "Long Live the Union!"
+ 
+     nf_fort.22.t:0 "The Final Act of Union"
+ nf_fort.22.desc:0 "The New American Union officially ceases the integration of new states,the Federal Republic of Fort Summers has become a democratic power to rival any in the West!"
+ nf_fort.22.option.a:0 "Long Live the Union!"
+ 
+ nf_fort.23.t:0 "Fort Summers Ultimatium"
+ nf_fort.23.desc:0 "Fort Summers is demanding two parts of our territories beside us, what shall we do?"
+ nf_fort.23.option.a:0 "We shall give in"
+ nf_fort.23.option.b:0 "See you in hell!"
+ 
+ nf_fort.24.t:0 "The Clovis Expedition..."
+ nf_fort.24.desc:0 "When we dispatched forces to explore the ruins of Fort Clovis, the robots did not attack. As we entered the fort we encountered a group of soldiers. They explained that they were the Enclave and that they would help lead us"
+ nf_fort.24.option.a:0 "This could not possibly go wrong!"
+ 
+ nf_fort.25.t:0 "Choosing Our Weapons"
+ nf_fort.25.desc:0 "Our technicians have offered a interesting choice to us. We can use advanced energy weapons, which are slower to produce but far deadlier, or we can switch to a advanced ballistic weapon known as the OICW. It was experimental before the war and was in development to take over as the primary weapon used by the military."
+ nf_fort.25.option.a:0 "Lets switch to this 'OICW'"
+ nf_fort.25.option.b:0 "Energy All Day!"
+ 
+  nf_fort.26.t:0 "Enclave Support"
+ nf_fort.26.desc:0 "The Enclave have thrown in with us and have offered us support as we have proven to be True Americans"
+ nf_fort.26.option.a:0 "God Bless the US of A"
+ 
+  nf_fort.27.t:0 "Contact with the "Brotherhood of Steel""
+ nf_fort.27.desc:0 "While searching through the Clovis Archives, we discovered mentions of the faction known as the "Brotherhood of Steel". We sent out a ping to one of their outposts and they sent a team to investigate."
+ nf_fort.27.option.a:0 "Lets hope they are better then the Enclave"

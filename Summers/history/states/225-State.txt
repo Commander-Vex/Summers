@@ -1,0 +1,30 @@
+state={
+	id=225
+	name="STATE_60-SIGNS"
+	resources={
+		water= 3
+		metal= 7
+		energy = 4
+	}
+
+	history={
+		owner = SUF
+		add_core_of = SUF
+		victory_points = {
+			5623 5
+		}
+		buildings = {
+			infrastructure = 4
+			arms_factory = 2
+			industrial_complex = 2
+		}
+
+	}
+
+	provinces={
+		1703 2787 2816 2829 2867 5262 5405 5406 5560 5701 5703 5704 7006 7016
+	}
+	manpower=7000
+	buildings_max_level_factor=1.000
+	state_category = town
+}

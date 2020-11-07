@@ -1,0 +1,4 @@
+LUP = {
+	color = rgb { 25 20 27 }
+	color_ui = rgb { 25 20 27 }
+}
