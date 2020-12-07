@@ -1,0 +1,95 @@
+ideas = {
+		mobilization_laws = {
+		law = yes
+		SUF_remnants_of_the_army = {
+			picture = generic_trifold
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			visible = {
+				if = {
+					tag = SUF
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				conscription = 0.08
+				special_forces_cap = 0.05
+				political_power_gain = -0.15
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_org = 5
+				dig_in_speed = 2
+				army_morale_factor = 0.05
+				training_time_army_factor = 0.15
+			}
+
+			cancel_if_invalid = no
+		}
+		
+		SUF_a_new_chapter = {
+			picture = generic_bos_flag
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			visible = {
+				if = {
+					tag = SUF
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				conscription = 0.06
+				training_time_army_factor = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				research_speed_factor = 0.10
+				army_org_factor = 0.05
+				special_forces_cap = 0.20
+				special_forces_min = 30
+			}
+
+			cancel_if_invalid = no
+		}
+		
+		SUF_to_protect_the_republic = {
+			picture = food_for_service
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			visible = {
+				if = {
+					tag = SUF
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				conscription = 0.15
+				training_time_army_factor = -0.10
+				army_attack_factor = 0.02
+				army_defence_factor = 0.15
+				army_org_factor = 0.02
+				army_speed_factor = 0.15
+				dig_in_speed = 5
+			}
+
+			cancel_if_invalid = no
+		}
+	}
+}
+	
+
+		
+	
+	
+	
+	

@@ -1,0 +1,120 @@
+﻿l_english:
+################################## EVENTS ##############################################
+ nf_fort.1.t:0 "The Day the Bombs Fell"
+ nf_fort.1.desc:0 "We were lucky to have gotten warning. NORAD sent out an alert and we rushed to the bunkers. We didn't have much time and only got to take a small amount of external supplies to the bunker. What did we manage to take:"
+ nf_fort.1.option.a:0 "As many pieces of gear as we possibly could."
+ nf_fort.1.option.b:0 "Irradiated survivors of the National Guard"
+ nf_fort.1.option.c:0 "Records of Military Strategy."
+ 
+ nf_fort.2.t:0 "The Insufferable Waiting"
+ nf_fort.2.desc:0 "While the radiation levels slowly decrease, we're stuck within these bunkers. The worst part is the eastern and western portions of the bunker are cut off."
+ nf_fort.2.option.a:0 "Industry."
+ nf_fort.2.option.b:0 "Medicine."
+ nf_fort.2.option.c:0 "Fuck research, we need all hands on deck."
+ 
+ nf_fort.3.t:0 "Reclaiming the Fort"
+ nf_fort.3.desc:0 "When the radiation levels dropped heavily, we made our move and reclaimed the Fort. After that..."
+ nf_fort.3.option.a:0 "We spent weeks digging out our workshops."
+ nf_fort.3.option.b:0 "We spent weeks digging out rifles."
+ nf_fort.3.option.c:0 "We managed to salvage old fighters from a museum."
+ 
+ nf_fort.4.t:0 "Our Duty"
+ nf_fort.4.desc:0 "After several years of remaing within the fort and creating a community, several towns reached out to us begging for protection against raiders. We could not refuse, we protected the people before the war, and that is what we will do now!"
+ nf_fort.4.option.a:0 "We requested tools and workbenches."
+ nf_fort.4.option.b:0 "We requested resources in exchange for protection."
+ nf_fort.4.option.c:0 "We recurited brave settlers from the towns we protect."
+ 
+ nf_fort.5.t:0 "A Pact with the Army?"
+ nf_fort.5.desc:0 "Fort Summers has offered us a pact against Lanius, should we accept?"
+ nf_fort.5.option.a:0 "A Pact with the Devil it is"
+ nf_fort.5.option.b:0 "We'll Deny but stand ready to fight Lanius"
+ 
+ nf_fort.6.t:0 "Survivors of the Rose"
+ nf_fort.6.desc:0 "Survivors from the Blue Rose Society have arrived at our borders, telling of Lanius's slaughter of their people."
+ nf_fort.6.option.a:0 "Welcome Aboard..."
+
+ 
+ nf_fort.7.t:0 "Joining the Summers Defense Pact?"
+ nf_fort.7.desc:0 "Fort Summers has offered us an alliance against Lanius and his cohort. Shall we join against this monster?"
+ nf_fort.7.option.option.a:0 "Join the Pact"
+ nf_fort.7.option.option.b:0 "Stand Alone"
+ 
+ nf_fort.8.t:0 "Summers Requests Arms"
+ nf_fort.8.desc:0 "The nation of Fort Summers has requested arms to use against Lanius, what type of arms should we send?"
+ nf_fort.8.option.a:0 "Laser Weapons"
+ nf_fort.8.option.b:0 "Ballistic Weapons"
+ 
+ nf_fort.9.t:0 "An Alliance with the Army?"
+ nf_fort.9.desc:0 "The soldiers at Fort Summers has offered us a pact against Lanius, should we accept this offer?"
+ nf_fort.9.option.a:0 "Let's Humor these Toy Soldiers"
+ nf_fort.9.option.b:0 "We stand against Lanius, but on our own terms."
+ 
+ nf_fort.10.t:0 "Emergency Elections"
+ nf_fort.10.desc:0 "The people of Summers crave the option to change. With the Legates cohort dead, the people now seek to have a voice..."
+ nf_fort.10.option.a:0 "Jupiter Remains In Control"
+ nf_fort.10.option.b:0 "The Technocrats Take Control"
+ nf_fort.10.option.c:0 "The Constitutionalists Take Control"
+ 
+ nf_fort.11.t:0 "The Fort Clovis Demand"
+ nf_fort.11.desc:0 "Fort Summers is demanding the transfer of Fort Clovis over to them, and if they don't get their way they'll march on us!"
+ nf_fort.11.option.a:0 "Hand over Clovis"
+ nf_fort.11.option.b:0 "Lubbock bows to no tyrant"
+ 
+ nf_fort.12.t:0 "The Soldiers Demands"
+ nf_fort.12.desc:0 "The soldiers of the west demand our territory, what should we do"
+ nf_fort.12.option.a:0 "Accept their demands..."
+ nf_fort.12.option.b:0 "To the death!"
+ 
+ nf_fort.13.t:0 "Join the Summers Defense Pact?"
+ nf_fort.13.desc:0 "Fort Summers, a nearby technically advanced nation is offering an alliance. Should we accept their alliance offer?"
+ nf_fort.13.option.a:0 "We shall join"
+ nf_fort.13.option.b:0 "We must decline"
+ 
+ nf_fort.14.t:0 "Join the Summers Defense Pact?"
+ nf_fort.14.desc:0 "Fort Summers, a nearby technically advanced nation is offering an alliance. Should we accept their alliance offer?"
+ nf_fort.14.option.a:0 "We shall join"
+ nf_fort.14.option.b:0 "We must decline"
+ 
+ nf_fort.15.t:0 "Join the Summers Defense Pact?"
+ nf_fort.15.desc:0 "Fort Summers, a nearby technically advanced nation is offering an alliance. Should we accept their alliance offer?"
+ nf_fort.15.option.a:0 "We shall join"
+ nf_fort.15.option.b:0 "We must decline"
+ 
+ nf_fort.16.t:0 "Join the Summers Defense Pact?"
+ nf_fort.16.desc:0 "Fort Summers, a nearby technically advanced nation is offering an alliance. Should we accept their alliance offer?"
+ nf_fort.16.option.a:0 "We shall join"
+ nf_fort.16.option.b:0 "We must decline"
+ 
+ nf_fort.17.t:0 "Join the Summers Defense Pact?"
+ nf_fort.17.desc:0 "Fort Summers, a nearby technically advanced nation is offering an alliance. Should we accept their alliance offer?"
+ nf_fort.17.option.a:0 "We shall join"
+ nf_fort.17.option.b:0 "We must decline"
+ 
+ nf_fort.18.t:0 "The Soldiers Offer"
+ nf_fort.18.desc:0 "The Soldiers of the West offer protection in exchange for the airbase, should we accept?"
+ nf_fort.18.option.a:0 "A price willingly paid"
+ nf_fort.18.option.b:0 "Death to Technology!"
+ 
+ nf_fort.19.t:0 "Clovis for Protection"
+ nf_fort.19.desc:0 "Fort Summers offers protection, in exchange for Fort Clovis"
+ nf_fort.19.option.a:0 "A good deal!"
+ nf_fort.19.option.b:0 "Fuck off!"
+ 
+ nf_fort.20.t:0 "Summers Requests Integration"
+ nf_fort.20.desc:0 "Fort Summers requests to integrate with is to form the state of New Mexico, though if we decline it likely will mean war..."
+ nf_fort.20.option.a:0 "A Small Price for Protection"
+ nf_fort.20.option.b:0 "To the Death!"
+  
+ nf_fort.21.t:0 "Our Future Path"
+ nf_fort.21.desc:0 "The technocrats are divided, with a faction led by the MIB who wishes to move to defending us against 'the great terror of the skies' while Crystal wishes to move us to an alliance with the Brotherhood Chapters. Who should we side with"
+ nf_fort.21.option.a:0 "The Man in Black"
+ nf_fort.21.option.b:0 "Crystal Mothson"
+ 
+ nf_fort.21.t:0 "Tech for Protection?"
+ nf_fort.21.desc:0 "The Space Defense Command has offered us protection, in exchange for technology. How should we respond?"
+ nf_fort.21.option.a:0 "Whats the harm?"
+ nf_fort.21.option.b:0 "We reject this silly offer"
+ 
+ nf_fort.23.t:0 "Reinforcements for Summers?"
+ nf_fort.23.desc:0 "Fort Summers has requested reinforcements from us. They are a bulwark against the Legion so it would be wise to send them assistance."
+ nf_fort.23.option.a:0 "Backup is on the Way"

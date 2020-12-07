@@ -1,0 +1,45 @@
+
+	division_template = {
+	is_locked = yes
+	template_counter= 74
+	name = "New Mexican Remnants"
+	regiments = {
+		ghoul_infantry = { x = 0 y = 0 }
+		ghoul_infantry = { x = 0 y = 1 }
+		ghoul_infantry = { x = 1 y = 0 }
+		ghoul_infantry = { x = 1 y = 1 }
+		ghoul_infantry = { x = 2 y = 0 }
+		ghoul_infantry = { x = 2 y = 1 }
+	}
+	support = {
+		fireteam_support = { x = 0 y = 0 }
+	}
+}
+
+	units = {
+	
+	division = {
+		name = "37th New Mexican Guard"
+		location = 2804
+		division_template = "New Mexican Remnants"
+		start_experience_factor = 0.45
+		start_equipment_factor = 1.0
+	}
+	
+		division = {
+		name = "67th New Mexican Guard"
+		location = 2868
+		division_template = "New Mexican Remnants"
+		start_experience_factor = 0.45
+		start_equipment_factor = 1.0
+	}
+	
+		division = {
+		name = "29th New Mexican Guard"
+		location = 2829
+		division_template = "New Mexican Remnants"
+		start_experience_factor = 0.45
+		start_equipment_factor = 1.0
+	}
+	
+}

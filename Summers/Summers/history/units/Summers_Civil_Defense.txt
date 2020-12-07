@@ -1,0 +1,40 @@
+﻿division_template = {
+	name = "Civil Defense Force"
+	template_counter= 115
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	
+
+	}
+	support = {
+	
+	}
+}
+
+units = {
+	division {
+			name = "Shoetaker CDF"
+			location = 2869
+			division_template = "Civil Defense Force"
+			start_experience_factor = 0.25
+			start_equipment_factor = 1.0
+	}
+
+	division {
+			name = "Summer CDF"
+			location = 5558
+			division_template = "Civil Defense Force"
+			start_experience_factor = 0.25
+			start_equipment_factor = 1.0
+	}
+	dvision {
+			name = "Signs CDF"
+			location = 5703
+			division_template = "Civil Defense Force"
+			start_experience_factor = 0.25
+			start_equipment_factor = 1.0
+	}
+}

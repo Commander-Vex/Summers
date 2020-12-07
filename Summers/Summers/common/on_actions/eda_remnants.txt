@@ -1,0 +1,13 @@
+on_actions = {
+  on_capitulation = {
+    effect = {
+      if = {
+        limit = {
+          tag = EDA
+          exists = no
+        }
+        SUF = { country_event = nf_fort.6 }
+			}
+		}
+	}
+}

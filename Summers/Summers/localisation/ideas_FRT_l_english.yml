@@ -1,0 +1,76 @@
+﻿        l_english:
+
+suf_labor_corps: "Labor Corp"
+suf_labor_corps_desc: "We have sent recruits to the Labor Corp instead of the front, this will help in the long run"
+
+suf_jupiter_program_degraded: "Officer Trainings"
+suf_jupiter_program_degraded_desc: "Before the War, Fort Summers was a testing site for a new program to test military officers and improve the organization and skill of our soldiers. The program is intense, but sadly we only have half of the program left after the Mainframe was abruptly shut down at the start of the Great War."
+
+suf_jupiter_program_restored: "Jupiter Program"
+suf_jupiter_program_restored_desc: "Before the War, Fort Summers was a testing site for a new program to test military officers and improve the organization and skill of our soldiers. The program is intense, and produces the highest quality of officers within the wastes. With the Mainframe restored, the Jupiter Program is fully accessable and able to be documented to an extent unseen before."
+
+suf_emphasis_on_training: "Drill the Men!"
+suf_emphasis_on_training_desc: "ATTENTION!"
+
+suf_allocate_resources: "Allocation of Resouce Stockpile"
+suf_allocate_resources_desc: "We have decided less resources should be given to the people, instead we shall put it in the factories and industiral sectors"
+
+suf_mainframe_online: "Mainframe Online"
+suf_mainframe_online_desc: "With the restoration of the mainframe, we have greater access to records from before the war."
+
+lup_death_than_enslavement: "Death Before Enslavement"
+lup_death_than_enslavement_desc: "With many members of the nation being former slaves or legionares, they know what will happen if they are captured..There is no surrender to the Legion, better free and suffering then alive under the bull..."
+
+suf_consolidating_our_territory: "Consolidating Our Territory"
+suf_consolidating_our_territory_desc: "With our operation to push towards Vault 0 going well, we must consolidate our current gains."
+
+suf_repairing_the_facility: "Repairing the Facility"
+suf_repairing_the_facility_desc: "With the partial destruction of Vaul 0, we must work hard to restore the facility and bring back law and order to the wastes.
+
+suf_norad_online: "NORAD Restored"
+suf_norad_online_desc: "With the restoration of Vault 0 and the re-connecting of the Military Defense Network, the North American Aerospace Defence Command is truley back in action."
+
+suf_conelrad: "CONELRAD"
+suf_conelrad_desc: "CONELRAD is the warning system installed in each town, warning of raider attacks and other such events, allowing us to deploy our forces properly."
+
+suf_dbac_formed: "DBAC Formed"
+suf_dbac_formed_desc: "The Dangerous Biome Assault Corps, or DBAC, is an elite special forces corp designed to fight in any environment typically hostile to human life, and thus has the best training and equipment in the wasteland."
+
+suf_forged_in_blood: "Forged in Blood"
+suf_forged_in_blood_desc: "The Republic was formed in blood, and we'll be damned if we won't bleed to protect it."
+
+suf_old_world_faults_1: "Old World Faults"
+suf_old_world_faults_1_desc: "With an old world governing system comes the faults with that system, namely rampant corruption, inequality, ethnic division, and lobbying by buisness owners"
+
+suf_old_world_faults_2: "Lessened Corruption"
+suf_old_world_faults_2_desc: "With some effort, we've managed to reduce the amount of corruption in the nation, all the while mending many ties in the nation"
+
+suf_old_world_faults_3: "Weak Corruption"
+suf_old_world_faults_3_desc: "With constant vigilance, we've cut down on the corruption and have moved to unify its people further."
+
+suf_overcoming_faults: "A Strong Democracy"
+suf_overcoming_faults_desc: "While occasional bribes occur and some slurs are thrown around, we've managed to unify our people. For the Republic!"
+
+suf_space_defense_agency: "Space Defense Agency"
+suf_space_defense_agency_desc: "Their coming for us! We must stop them, we are humanity's only line of defense against these aliens"
+
+suf_aid_from_maxons: "Aid from Maxons Chapter"
+suf_aid_from_maxons_desc: "Our request for aid has come, with some advisors arriving to watch us carefully. This should be the start of a great relationship!"
+
+suf_scribes_arrive: "Scribes Arrive"
+suf_scribes_arrive_desc: "Brotherhood Scribes arrive to help with improving our equipment and seeing what we have access to. Our military base must be a wet dream to them."
+
+suf_scribes_knowlege: "The Scribes Knowlege"
+suf_scribes_knowlege_desc: "These scibes know their stuff, perhaps we can learn much from them and their organization"
+
+suf_lessons_of_the_paladins: "Lessons of the Paladins"
+suf_lessons_of_the_paladins_desc: "The Paladins can teach us a lot about using our power armor in ways we could not have thought of."
+
+SUF_remnants_of_the_army: "Remnants of the Army"
+SUF_remnants_of_the_army_desc: "We decend from the United States Army, and while we have elite training we also have limited manpower..."
+
+SUF_a_new_chapter: "A New Chapter"
+SUF_a_new_chapter_desc: "While being a part of Brotherhood has many advantages, it also means we have to have even harsher recruitment standards."
+
+SUF_to_protect_the_republic: "To Protect The Republic"
+SUF_to_protect_the_republic_desc: "Democracy is Non-Negotable!"

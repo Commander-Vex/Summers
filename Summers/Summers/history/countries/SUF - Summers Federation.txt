@@ -1,0 +1,176 @@
+﻿capital = 546
+oob = "Summers_Army"
+
+set_country_flag = give_settler_generic_chiefs
+set_country_flag = give_settler_generic_political_advisors
+set_country_flag = give_settler_generic_theorists
+set_country_flag = give_settler_generic_high_command
+
+set_technology = {
+	infantry_tech_level_tribal = 1
+	infantry_tech_level_settler = 1
+	support_tech_level_tribal = 1
+	support_tech_level_settler = 1
+	special_forces_tech_level_tribal = 1
+	special_forces_tech_level_settler = 1
+	robotics_tech_level_tribal = 1
+	robotics_tech_level_settler = 1
+	air_tech_level_tribal = 1
+	air_tech_level_settler = 1
+	naval_tech_level_tribal = 1
+	naval_tech_level_settler = 1
+	tools_tech_level_tribal = 1
+	tools_tech_level_settler = 1
+	habitation_tech_level_tribal = 1
+	habitation_tech_level_settler = 1
+	exploitation_tech_level_tribal = 1
+	exploitation_tech_level_settler = 1
+	electronics_tech_level_tribal = 1
+	electronics_tech_level_settler = 1
+	vehicles_tech_level_tribal = 1
+	vehicles_tech_level_settler = 1
+	tribal_civilization = 1
+	settled_civilization = 1
+	tool_engineering = 1
+	standard_weaponry_tech = 1
+	support_weaponry = 1
+	demolitions_weaponry_tech = 1
+	fireteam_weaponry_tech = 1
+	bike_tech_1 = 1
+	ballistic_weaponry_tech_1 = 1
+	spec_ops_equipment_tech_1 = 1
+	spec_ops_equipment_tech_2 = 1
+	spec_ops_equipment_tech_3 = 1
+	hardening_armour_tech = 1
+	elite_army = 1
+}
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		nautics_tech_1 = 1
+		light_navy_hull_tech_1 = 1
+		waterproof_sealing_tech = 1
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		nautics_tech_non_mtg_1 = 1
+		light_navy_hull_tech_non_mtg_1 = 1
+		waterproof_sealing_tech_non_mtg = 1
+	}
+}
+
+set_stability = 0.72
+set_war_support = 0.45
+set_convoys = 65
+set_research_slots = 4
+
+set_politics = {
+	ruling_party = elites
+	elections_allowed = no
+}
+
+set_popularities = {
+	people = 15
+	elites = 70
+	intellectuals = 10
+	ruler = 5
+}
+create_country_leader = {
+	name = "Jupiter Command"
+	desc = "JUP_DESC"
+	picture = "gfx/leaders/FRT/Zeus.dds"
+	expire = "3000.1.1"
+	ideology = militarist_technocracy		
+	traits = {
+		stout_defender
+        fortifications_expert
+	}
+}
+
+create_country_leader = {
+	name = "Federal President Lauri Deveron"
+	desc = "FED_DESC"
+	picture = "gfx/leaders/FRT/People.dds"
+	expire = "3000.1.1"
+	ideology = peoples_militia		
+	traits = {
+cornered_fox
+	}
+}
+create_country_leader = {
+	name = "Crystal Mothson"
+	desc = "CRYSTAL_DESC"
+	picture = "gfx/leaders/FRT/IntLeader.dds"
+	ideology = technocracy		
+	traits = {
+		        fortifications_expert
+	}
+}
+create_country_leader = {
+	name = "Benevolent Dictator Magnum"
+	desc = "MAG_DESC"
+	picture = "gfx/leaders/FRT/Mag.dds"
+	expire = "3000.1.1"
+	ideology = benevolent_dictatorship				
+	traits = { cruel_tyrant
+	}
+}
+create_field_marshal = {
+    name = "Jupiter Command"
+    portrait_path = "gfx/leaders/FRT/Zeus.dds"
+    skill = 7
+    traits = { strong_trait rooted_trait charismatic_trait intelligent_trait sneering_imperialist_trait
+    }
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = {
+    name = "General Bridges"
+    portrait_path = "gfx/leaders/FRT/Gen1.dds"
+    skill = 3
+    traits = {strong_trait pain_train_trait agile_trait
+    }
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = {
+    name = "General Branston"
+    portrait_path = "gfx/leaders/FRT/Gen2.dds"
+    skill = 3
+    traits = { strong_trait rooted_trait perceptive_trait sniper_trait enduring_trait
+    }
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+    name = "General Rosenthurn"
+    portrait_path = "gfx/leaders/FRT/Gen3.dds"
+    skill = 3
+    traits = {  agile_trait lucky_trait
+    }
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+add_ideas = { 
+	suf_jupiter_program_degraded
+	SUF_remnants_of_the_army
+	officer_law_military_academy
+	training_law_military_academy
+	war_economy
+}

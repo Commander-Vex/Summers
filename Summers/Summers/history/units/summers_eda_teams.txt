@@ -1,0 +1,48 @@
+division_template = {
+	name = "Earth Defense Task Force"
+	regiments = {
+		power_armour = { x = 0 y = 0 }
+		power_armour = { x = 0 y = 1 }
+		power_armour = { x = 1 y = 0 }
+		power_armour = { x = 1 y = 1 }
+		power_armour = { x = 2 y = 0 }
+		power_armour = { x = 2 y = 1 }
+
+	}
+	support = {
+	fireteam_support = { x = 0 y = 0 }
+	}
+}
+
+units = {
+	division {
+			name = "Task Force Winter"
+			location = 5458
+			division_template = "Earth Defense Task Force"
+			start_experience_factor = 0.8
+			start_equipment_factor = 1.0
+	}
+	division {
+			name = "Task Force Autumn"
+			location = 1696
+			division_template = "Earth Defense Task Force"
+			start_experience_factor = 0.8
+			start_equipment_factor = 1.0
+	}
+	
+	division {
+			name = "Task Force Spring"
+			location = 5472
+			division_template = "Earth Defense Task Force"
+			start_experience_factor = 0.8
+			start_equipment_factor = 1.0
+	}
+	
+	division {
+			name = "Task Force Summer"
+			location = 5522
+			division_template = "Earth Defense Task Force"
+			start_experience_factor = 0.8
+			start_equipment_factor = 1.0
+	}
+}

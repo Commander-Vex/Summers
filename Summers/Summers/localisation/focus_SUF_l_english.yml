@@ -1,0 +1,267 @@
+﻿        l_english:
+ suf_the_day_the_bombs_fell: "The End of America"
+ suf_the_day_the_bombs_fell_desc: "Those bastards finally did it! They dropped the bombs! Sirens are going off, we need to get to the bunker complex now!"
+ 
+ suf_a_way_of_life: "Passing the Time"
+ suf_a_way_of_life_desc: "With no way to safely exit the bunkers, we are trapped in here until the radiation clears..."
+ 
+ suf_the_cave_in: "Reclaiming the Fort"
+ suf_the_cave_in_desc: "After many years underground, it was time to reclaim the Fort. Upon our exit we found the fort largely abandoned, apart from a few vagrants and irradiated creatures..."
+ 
+ suf_our_return: "Once Soldiers, always Soldiers"
+ suf_our_return_desc: "After a few years of establishing our presence, several nearby settlements begged us for aid as raiders looted and pillaged there towns. We oblidged, it is our duty as soldiers to protect the American people, and so we wiped the raiders out to a man..."
+ 
+ suf_opening_the_military_academy: "Congratulating The Next Generation"
+ suf_opening_the_military_academy_desc: "These soldiers are the finest batch that we have trained, they are model soldiers and are proud to serve. "Be All You Can Be!""
+ 
+ suf_analyzing_pre_war_military: "Examining the Wrecks"
+ suf_analyzing_pre_war_military_desc: "With many wrecks from before the war laying in the base we may be able to examine the vehicles and possibly get some basics on how to repair and even build our own vehicles."
+ 
+ suf_looking_at_army_layouts:"Exercise Omega"
+ suf_looking_at_army_layouts_desc: "We shall be competing in a military exercise to test our men, with the 'opposition' being the local town militias."
+ 
+ suf_analyzing_pre_war_airforce: "Examining the Dreamlifters"
+ suf_analyzing_pre_war_airforce_desc: "Several crashed transport planes rest near the fort, likely having tried to land at Cannon AFB before the bombs went off. We can examine them and see if we can somehow replicate their design and use it to repair other aircraft."
+ 
+ suf_look_at_old_planes:"Pilot Simulations"
+ suf_look_at_old_planes_desc:"A flight simulator somehow managed to survive the years in one of the storerooms in the back of the fort, likely intended for Cannon AFB. With this we can see what we can learn from it before it gives out."
+ 
+ suf_new_general:"Promoting a Hero"
+ suf_new_general_desc: "Corporal Husky was on patrol when his squad was ambushed by Legion soldiers, who injured all of his squad. Reports from his squadmates say he fought like a soldier possessed, taking hit after hit as he drove off the legionnaires. Unfortunately a deathclaw happened to be hunting nearby and charged the corporal. After several magdumps, 3 grenades and using a fallen legionnaire machete, the deathclaw fell dead..."
+ 
+ suf_allocation_of_respurces:"Allocation of Resources"
+ suf_allocation_of_respurces_desc: "With a looming threat we need to consolidate our resources if we are to survive the coming conflict..."
+ 
+ suf_eastern_bunker_excavation: "Excavating the Eastern Bunkers"
+ suf_eastern_bunker_excavation_desc: "After the bombs fell, the eastern part of the bunker complex fell silent and was blocked by rubble. Now the time has come to find what's left in there, and get one step closer to restoring power"
+ 
+ suf_restoring_the_power:  "Restoring the Power"
+ suf_restoring_the_power_desc: "With the eastern bunker complex excavated, we can assign engineers to try and salvage the old power generators left from before the war."
+ 
+ suf_expanding_the_roads: "Expanding the Roads"
+ suf_expanding_the_roads_desc: "We've been stuck using the same old roads that were cleared by the nearby towns and now they are becoming overcrowded. We'll expand the road network to less connected towns and make more permenant roads using old methods from far before the war."
+ 
+ suf_clearing_the_roads: "Clearing the Roads"
+ suf_clearing_the_roads_desc: "While some roads are clear, most are jam-packed with thousands of vehicles, most rusted beyond repair but also with active engines making them to dangerous to clear. We'll use our mechanical specialists to begin clearing the roads, giving us expanded routes as well as large amounts of metal."
+ 
+ suf_western_bunker_excavation: "Excavating the Western Bunkers"
+ suf_western_bunker_excavation_desc: "The western section of the bunker complex was cut off around the same time of the eastern section, by excavating we can hopefully gain access to the security robots within the section. As well as that we can gain acess to old armories."
+ 
+ suf_restoring_the_armories: "Restoring the Armories"
+ suf_restoring_the_armories_desc: "With the armories now acessible, we can put them to use and begin restoring weapons and armor. We also should form a Labor Corp in order to provide work and to rebuild our territory"
+ 
+ suf_powering_the_mainframe: "Restoring the Mainframe"
+ suf_powering_the_mainframe_desc: "The military mainframe within the base was rendered inactive by the Great War, with its knowlege lost including the full training protocols for the Jupiter Program. With its restoration we can create some of the most elite generals within the wasteland, rivaling the Texas Brotherhood and perhaps even Diana"
+ 
+ suf_western_outlook: "Across the Pecos"
+ suf_western_outlook_desc: "Legate Lanius is a threat to us...sooner or later he'll come for us, we must prepare..."
+ 
+ suf_emergency_fortifications: "Emergency Fortifications"
+ suf_emergency_fortifications_desc: "With the threat of the Legate growing by the day, emergency fortifications have been established along our border with him. We've also put fortifications on the border with Santa Fe lest they fall though the engineers are exausted..."
+ 
+ suf_allying_the_executives: "Allying the Executives"
+ suf_allying_the_executives_desc: "While allying the raiders isn't the most ideal decision, they are rather powerful and are not savages. A temporary alliance is all we need with them."
+ 
+ suf_civil_defense_force: "Civil Defense Forces"
+ suf_civil_defense_force_desc: "With the Legate coming for our people soon, we've recruited small units to defend the towns from the Legate's wrath"
+ 
+ suf_pre_emptive_strike: "Preemptive Strike"
+ suf_pre_emptive_strike_desc: "We must strike quickly while the Legate is unprepared for war against us. With luck, we can beat him back to Red-Sun City"
+ 
+ suf_contacting_our_neigbors: "Contacting Our Neighbors"
+ suf_contacting_our_neigbors: "The Legate is to much of a threat for us to face on our own. We must seek aid from our neighbors regardless of how much we get along with them..."
+ 
+ suf_request_arms_from_texas: "Request Arms from Texas"
+ suf_request_arms_from_texas_desc: "With war with the legate soon, we must seek aid from Texan nations in aquiring arms to defend ourselves. We'll offer to pay them back once the war is over-with..."
+ 
+ suf_push_back_the_bull: "Push Back the Bull"
+ suf_push_back_the_bull_desc: "We must beat the Legate back to Red Sun...its our only hope"
+ 
+ suf_contact_the_goddess: "Contact the Goddess"
+ suf_contact_the_goddess_desc: "Diana and her tribe are a very powerful and technologically advanced force...we must seek them out and form a pact"
+ 
+ suf_strengthen_our_bonds: "Strengthen Our Bond"
+ suf_strengthen_our_bonds_desc: "Trading valuable technologies to both parties is very important to ensure that the war against the Legate is won for our party.."
+ 
+ suf_put_to_the_test: "Put to the Test"
+ suf_put_to_the_test_desc: "We have to strike now, Santa Fe has fallen and if we don't strike now we'll be next!"
+ 
+ suf_victory_over_the_legate: "Victory over the Legate"
+ suf_victory_over_the_legate_desc: "With Lanius and his forces lying dead on the ground, we must route out the surving legionares and move to protect the people against any further legion incursions..."
+ 
+ suf_emergency_elections: "Emergency Elections"
+ suf_emergency_elections_desc: "With our war over Lanius complete, we must focus on the interior and see who will rise to lead us"
+
+suf_sending_out_the_scouts: "Sending out the Scouts"
+suf_sending_out_the_scouts_desc: "We must send out recon teams to search out military instillations for us to secure and observe in the future"
+
+suf_securing_the_south: "Securing the South"
+suf_securing_the_south_desc: "It's time to turn our attention to the Executives, we'll delive them an deadly executive order!"
+
+suf_integrating_the_settlements: "Integrating the Settlements"
+suf_integrating_the_settlements_desc: "With the Executives dealt with, its time to move in and secure their land."
+
+suf_the_clovis_question: "The Fort Clovis Question"
+suf_the_clovis_question_desc: "Lubbok holds a vital military base, we must get it back by any means necessary"
+
+suf_we_love_cannons: "We Love Cannons"
+suf_we_love_cannons_desc: "Cannon AFB is another vital base that we must secure, especially from these luddites!"
+
+suf_gods_gonna_cut_you_down: "Gods Gonna Cut You Down"
+suf_gods_gonna_cut_you_down_desc: "You've been running for a long time..."
+
+suf_setting_the_black_sun: "Setting the Black Sun"
+suf_setting_the_black_sun_desc: "It's time to move north, starting with the Black Sun tribe"
+
+suf_consolidating_our_position: "Consolidating our Position"
+suf_consolidating_our_position_desc: "As we advance north, we must consolidate our foothold. Additional laws are to be put in place to lessen the need for garrisons, and wiping out the Sun Dogs will secure our supply lines."
+
+suf_biting_the_scorpion: "Biting the Scorpion"
+suf_biting_the_scorpion_desc:"The Scorpions are a menace to the wastes and must be eliminated by any means necessary."
+
+suf_peircing_the_chapter: "Peircing The Chapter"
+suf_peircing_the_chapter_desc: "This 'Brotherhood' chapter must be eliminated, they pretend to be american soldiers, and that will not stand!"
+
+suf_putting_down_the_dogs: "Putting down the Dogs"
+suf_putting_down_the_dogs_desc: "The Hangdogs are as vile as raiders come, it's time to retake Denver from these raider scum."
+
+suf_clearing_collins: "Clearing Collins"
+suf_clearing_collins_desc: "Another base to be cleared, another group of wastelanders to battle..."
+
+suf_retaking_zeros_ruins: "Retaking Zero's Ruins"
+suf_retaking_zeros_ruins_desc: "The Remnants of Vault 0 is our goal, as Military Complex there while heavily damaged due to actions of prior individuals could be extremely valuable."
+
+suf_restoring_the_complex: "Restoring the Complex"
+suf_restoring_the_complex_desc: "Restoring the Cheyenne Mountain Complex is of utmost priority, regardless of the sacrafices this may entail..."
+
+suf_norad_is_online: "NORAD is Online"
+suf_norad_is_online_desc: "After 200 years, NORAD is back in operation."
+
+suf_reform_conelrad: "Reform CONELRAD"
+suf_reform_conelrad_desc: "CONELRAD was used before the war, its time to bring it back."
+
+suf_forming_the_dbac: "Forming the DBAC"
+suf_forming_the_dbac_desc: "The Dangerous Biome Assault Corp, or DBAC, was a proposed elite military task force from before the war. It's time to bring it back."
+
+suf_prison_for_dissidents:"Prisoner for Dissidents"
+suf_prison_for_dissidents_desc: "We need a place to imprison the dissidents in the nation. The Penitentary will do nicely. We're not savages after all."
+
+suf_clearing_colorado: "Clearing Colorado"
+suf_clearing_colorado_desc: "With a variety of nations in Colorado still not under our thumb, its time to give them hell."
+
+suf_securing_colorado: "Securing Colorado"
+suf_securing_colorado_desc: "With these dissidents taken care of, we should now move to secure our claims and restore order in the region."
+
+suf_a_dream_of_statehood: "Dreams of Statehood."
+suf_a_dream_of_statehood_desc: "So many symbols of an old republic that once stood remain flying high...perhaps we can restore it"
+
+suf_friends_of_god: "Friends of God"
+suf_friends_of_god_desc: "The Archdiose of Santa Fe is a friendly nation, why not befriend them?"
+
+suf_plucking_the_rose: "Plucking the Rose"
+suf_plucking_the_rose_desc: "The Blue Rose Society have the best intrests at heart, but perhaps we can make them look down instead of at the skies"
+
+suf_feeding_the_wolves: "Feeding the Wolves"
+suf_feeding_the_wolves_desc: "Lupa's cult is a nation that we should stand with, after all they were once slaves of the Legion."
+
+suf_an_offer_to_the_suns: "An Offer to the Suns"
+suf_an_offer_to_the_suns_desc: "Black Sun and the Sun Dogs hold territory that were apart of New Mexico, it's time to get these back."
+
+suf_clovis_for_security: "Clovis for Security"
+suf_clovis_for_security_desc: "Fort Clovis is a vital military base once in New Mexico. We can offer Lubbock Protection in exchange for the base."
+
+suf_cannon_for_security: "Cannon For Security"
+suf_cannon_for_security_desc: "Cannon Air Force Base is a vital air base once in New Mexico. We can give these...luddites protection in exchange for it."
+
+suf_accept_our_union: "Accept our Union"
+suf_accept_our_union_desc: "...."
+
+suf_or_face_the_consequences: "OR FACE THE CONSEQUENCES"
+suf_or_face_the_consequences_desc: "..."
+
+suf_a_state_reborn: "A State Reborn"
+suf_a_state_reborn_desc: "The State of New Mexico has been reformed..."
+
+suf_a_republic_forged_in_blood: "A Republic Forged in Blood"
+suf_a_republic_forged_in_blood_desc: "...but at what cost?"
+
+suf_offering_a_goddess_security: "Offering a Goddess Security"
+suf_offering_a_goddess_security_desc: "The Twin Mothers as a nation is a friendly nation to us, we should protect them from harm."
+
+suf_securing_our_future: "Securing Our Future"
+suf_securing_our_future_desc: "The Legion is a threat to our security. We must fortify."
+
+suf_our_options_await: "Our Options Await"
+suf_our_options_await_desc: "A Choice Lies Ahead..."
+
+suf_wait_until_the_time_arises: "Wait Until The Time Arises"
+suf_wait_until_the_time_arises_desc: "Patience is a virtue."
+
+suf_freedom_is_a_sovereign_right: "Freedom is a Sovereign Right"
+suf_freedom_is_a_sovereign_right_desc: "Democracy is Non-Negotiable!"
+
+suf_an_infant_republic: "An Infant Republic"
+suf_an_infant_republic_desc: "No state is without its flaws..."
+
+suf_mending_cultural_ties: "Mending Cultural Ties"
+suf_mending_cultural_ties_desc: "With many nations we have taken land from, clear cultural divides are apparent..."
+
+suf_integrating_our_rightful_land: "Integrating Our Rightful Land"
+suf_integrating_our_rightful_land_desc: "This land is our land, not theirs, ours!"
+
+suf_a_time_to_join_together: "A Time to Join Together"
+suf_a_time_to_join_together_desc: "Our republic must join together or we will fall like all nations"
+
+suf_looking_to_the_future: "Looking to the Future"
+suf_looking_to_the_future_desc: "Science is Progress!"
+
+suf_a_division_in_our_ranks: "A Division in Our Ranks"
+suf_a_division_in_our_ranks_desc: "Damn you diffential opinions!"
+
+suf_hello_commander: "Hello Commander"
+suf_hello_commander_desc: "We will be watching"
+
+suf_eda_teams: "EDA Teams"
+suf_eda_teams_desc: "We must form elite soldiers to protect our planet."
+
+suf_expand_the_ao: "Expand the AO"
+suf_expand_the_ao_desc: "We can not have these tribes and settlements stand in our way."
+
+suf_tech_for_protech: "Tech for Protech"
+suf_tech_for_protech_desc: "I had to do a fun pun somewhere"
+
+suf_expand_our_bunkers: "Expand our Bunkers"
+suf_expand_our_bunkers_desc: "We must expand our bunkers in order to make them more survivable"
+
+suf_restore_the_defenses: "Restore the Defenses"
+suf_restore_the_defenses_desc: "Anti-Air Guns are Online"
+
+suf_secure_nearby_installations: "Secure Nearby Insillations"
+suf_secure_nearby_installations_desc: "We must take back instillations that the US Military Used"
+
+suf_prepare_for_their_invasion: "Prepare for their Invasion"
+suf_prepare_for_their_invasion_desc: "ALIENS!"
+
+suf_contacting_maxons_chapter: "Contacting the Maxon Chapter"
+suf_contacting_maxons_chapter_desc: "Maxon's Chapter is a facinating nation, we must align with them"
+
+suf_scribes_and_shiny_guns: "Scribes and Shiny Guns"
+suf_scribes_and_shiny_guns_desc: "Oooh, shiny!"
+
+suf_learning_a_knights_oath: "A Knights Oath"
+suf_learning_a_knights_oath_desc: "Deus Veu- wait wrong knight"
+
+suf_the_tasks_of_scribes: "Tasks of the Scribe"
+suf_the_tasks_of_scribes_desc: "Science harder damn it!"
+
+suf_the_duty_of_paladins: "Duty of Paladins"
+suf_the_duty_of_paladins_desc: "They are second-rate healers."
+
+suf_reaching_out_to_texas: "Reaching out to Texas"
+suf_reaching_out_to_texas_desc: "...With the yellow rose of Texas so I'd better get there fast..."
+
+suf_closing_the_nursery: "Closing the Nursery"
+suf_closing_the_nursery_desc: "Nighty Night!"
+
+suf_forming_the_summers_chapter: "Forming the Summers Chapter"
+suf_forming_the_summers_chapter_desc: "For the Brotherhood!"

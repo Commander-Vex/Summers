@@ -1,0 +1,2228 @@
+####################################################
+#         Lanius's Cohort Focus Tree               #
+#        Originally Planned by Zapdude             #
+# 3.0 Tree                                         #
+# Coded by Faeelin, Assistance from Zusk           #
+#                                                  #
+#                                                  #
+####################################################
+focus_tree = {
+	id = cohort_focus_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			original_tag = LAC
+		}
+	}
+	default = no
+	focus = {
+		id = lac_the_cohorts_legate
+		icon = GFX_goal_CES_immortal_empire
+		cost = 1
+		x = 11
+		y = 0
+		completion_reward = {
+			country_event = {
+				id = nf_lanius.1
+			}
+		}
+	}
+	focus = {
+		id = lac_the_legates_cohort
+		icon = GFX_goal_CES_generic_focus
+		cost = 1
+		prerequisite = {
+			focus = lac_the_cohorts_legate
+		}
+		x = 0
+		y = 1
+		relative_position_id = lac_the_cohorts_legate
+		completion_reward = {
+			country_event = {
+				id = nf_lanius.2
+			}
+		}
+	}
+	focus = {
+		id = lac_birth_of_bernalillo
+		icon = GFX_goal_CES_slaves
+		cost = 1
+		prerequisite = {
+			focus = lac_the_legates_cohort
+		}
+		x = 11
+		y = 2
+		completion_reward = {
+			country_event = {
+				id = nf_lanius.3
+			}
+		}
+	}
+	focus = {
+		id = lac_conquering_lambda
+		icon = GFX_goal_generic_focus_spears
+		cost = 1
+		prerequisite = {
+			focus = lac_birth_of_bernalillo
+		}
+		x = 0
+		y = 1
+		relative_position_id = lac_birth_of_bernalillo
+		completion_reward = {
+			country_event = {
+				id = nf_lanius.4
+			}
+		}
+	}
+	focus = {
+		id = lac_march_on_mescalero
+		icon = GFX_goal_generic_swords
+		cost = 4.3
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		relative_position_id = lac_conquering_lambda
+		prerequisite = {
+			focus = lac_conquering_lambda
+		}
+		will_lead_to_war_with = LUP
+		available = {
+			ai_has_no_other_wars_or_wargoals = yes
+		}
+		bypass = {
+			LUP = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		x = -1
+		y = 1
+		completion_reward = {
+			LUP = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = lac_march_on_mescalero2
+		icon = GFX_goal_generic_slave_collars
+		cost = 4.3
+		relative_position_id = lac_march_on_mescalero
+		prerequisite = {
+			focus = lac_march_on_mescalero
+		}
+		available = {
+			LUP = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = LUP
+				}
+				add_core_of = ROOT
+			}
+			country_event = nf_lanius.9
+		}
+	}
+	focus = {
+		id = lac_attack_the_archdiocese
+		icon = GFX_goal_CES_protect_the_bull
+		cost = 4.3
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		prerequisite = {
+			focus = lac_conquering_lambda
+		}
+		available = {
+			ai_has_no_other_wars_or_wargoals = yes
+		}
+		relative_position_id = lac_conquering_lambda
+		will_lead_to_war_with = ASF
+		bypass = {
+			ASF = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			ASF = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = lac_fate_ofarchdiochese
+		icon = GFX_goal_NCN_Mormon_Book
+		cost = 4.3
+		prerequisite = {
+			focus = lac_attack_the_archdiocese
+		}
+		relative_position_id = lac_attack_the_archdiocese
+		available = {
+			ASF = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			country_event = nf_lanius.6
+			every_state = {
+				limit = {
+					is_core_of = ASF
+				}
+				add_core_of = ROOT
+			}
+		}
+	}
+	focus = {
+		id = ces_earth_defense_force
+		icon = GFX_goal_generic_satellite
+		cost = 4.3
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		prerequisite = {
+			focus = lac_conquering_lambda
+		}
+		available = {
+			ai_has_no_other_wars_or_wargoals = yes
+			is_neighbor_of = EDA
+		}
+		will_lead_to_war_with = EDA
+		bypass = {
+			EDA = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		x = 3
+		y = 1
+		relative_position_id = lac_conquering_lambda
+		completion_reward = {
+			EDA = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ces_earth_defense_force2
+		icon = GFX_goal_generic_alien
+		cost = 4.3
+		prerequisite = {
+			focus = ces_earth_defense_force
+		}
+		available = {
+			EDA = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = ces_earth_defense_force
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = EDA
+				}
+				add_core_of = ROOT
+			}
+			country_event = nf_lanius.8
+		}
+	}
+	focus = {
+		id = ces_markets_open
+		icon = GFX_goal_CES_aureus
+		cost = 4.3
+		prerequisite = {
+			focus = lac_conquering_lambda
+		}
+		x = 5
+		y = 1
+		relative_position_id = lac_conquering_lambda
+		completion_reward = {
+			set_temp_variable = {
+				caps_to_add = 200
+			}
+			add_caps = yes
+		}
+	}
+	focus = {
+		id = ces_solar_plants
+		icon = GFX_goal_generic_focus_solar_energy
+		cost = 4.3
+		prerequisite = {
+			focus = ces_markets_open
+		}
+		x = 0
+		y = 1
+		relative_position_id = ces_markets_open
+		completion_reward = {
+			add_resource = {
+				type = composites
+				amount = 4
+				state = 5
+			}
+			add_resource = {
+				type = circuitry
+				amount = 4
+				state = 5
+			}
+		}
+	}
+	focus = {
+		id = lac_naval_base
+		icon = GFX_goal_generic_navy_anti_submarine
+		cost = 4.3
+
+		prerequisite = {
+			focus = ces_solar_plants
+		}
+		x = 0
+		y = 1
+		relative_position_id = ces_solar_plants
+		completion_reward = {
+			5 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = water
+					amount = 5
+				}
+			}
+			navy_experience = 10
+		}
+	}
+
+	focus = {
+		id = LAC_needs_must
+		icon = GFX_goal_generic_pip_2000_vi_1
+		cost = 4.3
+		prerequisite = {
+			focus = ces_markets_open
+		}
+		x = 2
+		y = 1
+		relative_position_id = ces_markets_open
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = industry_specialisation_category
+			}
+		}
+	}
+	focus = {
+		id = LAC_coal_mines
+		icon = GFX_goal_generic_fuel_focus
+		cost = 4.3
+		prerequisite = {
+			focus = LAC_needs_must
+		}
+		x = 0
+		y = 1
+		relative_position_id = LAC_needs_must
+		completion_reward = {
+			add_resource = {
+				type = energy
+				amount = 10
+				state = 189
+			}
+		}
+	}
+	focus = {
+		id = LAC_light_hand
+		icon = GFX_goal_generic_outpost
+		cost = 4.3
+		prerequisite = {
+			focus = LAC_needs_must
+		}
+		x = 2
+		y = 1
+		relative_position_id = LAC_needs_must
+		completion_reward = {
+			set_technology = {
+				tribal_occupation_tech = 1
+			}
+		}
+	}
+	focus = {
+		id = LAC_colonia
+		icon = GFX_goal_food_razor_grain
+		cost = 4.3
+		prerequisite = {
+			focus = LAC_coal_mines
+		}
+		x = 0
+		y = 1
+		relative_position_id = LAC_coal_mines
+		completion_reward = {
+			add_resource = {
+				type = water
+				amount = 3
+				state = 5
+			}
+			5 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ces_ranching_new_mexico
+		icon = GFX_goal_food_various_vegetables
+		cost = 4.3
+		prerequisite = {
+			focus = ces_earth_defense_force2
+			focus = lac_fate_ofarchdiochese
+		}
+		x = -1
+		y = 1
+		relative_position_id = ces_earth_defense_force2
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = lac_cheese
+		icon = GFX_goal_food_prewar_food
+		cost = 4.3
+		prerequisite = {
+			focus = ces_ranching_new_mexico
+		}
+		available = {
+			owns_state = 215
+		}
+		x = 0
+		y = 1
+		relative_position_id = ces_ranching_new_mexico
+		completion_reward = {
+			add_resource = {
+				type = metal
+				amount = 9
+				state = 215
+			}
+		}
+	}
+	focus = {
+		id = lac_winter_is_coming
+		icon = GFX_goal_BRK_great_blizzard
+		cost = 4.3
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		prerequisite = {
+			focus = lac_conquering_lambda
+		}
+		available = {
+			ai_has_no_other_wars_or_wargoals = yes
+			is_neighbor_of = SUF
+		}
+		bypass = {
+			SUF = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		x = -3
+		y = 1
+		relative_position_id = lac_conquering_lambda
+		completion_reward = {
+			SUF = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = lac_winter_is_coming2
+		icon = GFX_goal_NCR_Riverbank
+		cost = 4.3
+		prerequisite = {
+			focus = lac_winter_is_coming
+		}
+		available = {
+			owns_state = 546
+		}
+		x = 0
+		y = 1
+		relative_position_id = lac_winter_is_coming
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = SUF
+				}
+				add_core_of = ROOT
+			}
+		}
+	}
+	focus = {
+		id = ces_executives
+		icon = GFX_goal_generic_vault_door_1
+		cost = 4.3
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		prerequisite = {
+			focus = lac_march_on_mescalero2
+		}
+		available = {
+			ai_has_no_other_wars_or_wargoals = yes
+			is_neighbor_of = EXE
+		}
+		bypass = {
+			EXE = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		will_lead_to_war_with = EXE
+		x = -1
+		y = 1
+		relative_position_id = lac_march_on_mescalero2
+		completion_reward = {
+			EXE = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ces_executives_2
+		icon = GFX_goal_generic_vault_stash
+		cost = 4.3
+		prerequisite = {
+			focus = ces_executives
+		}
+		available = {
+			owns_state = 566
+		}
+		x = 0
+		y = 1
+		relative_position_id = ces_executives
+		completion_reward = {
+			country_event = nf_lanius.7
+		}
+	}
+	focus = {
+		id = lac_lessons_hidebarks
+		icon = GFX_goal_tribal_generic
+		cost = 8.6
+		prerequisite = {
+			focus = lac_conquering_lambda
+		}
+		x = -5
+		y = 1
+		relative_position_id = lac_conquering_lambda
+		completion_reward = {
+			set_technology = {
+				tribal_enforcer_soft_attack_tech  = 1
+			}
+		}
+	}
+	focus = {
+		id = LAC_legion_training
+		icon = GFX_goal_roman_helmet
+		cost = 4.3
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = lac_lessons_hidebarks
+		}
+		relative_position_id = lac_lessons_hidebarks
+		completion_reward = {
+			add_ideas = cultofmars_principes
+		}
+	}
+	focus = {
+		id = LAC_tribal_mastery
+		icon = GFX_goal_generic_bow_1
+		cost = 4.3
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = LAC_legion_training
+		}
+		relative_position_id = LAC_legion_training
+		completion_reward = {
+			add_ideas = national_spirit_tribal_warfare
+		}
+	}
+	focus = {
+		id = LAC_more_tribal_stuff
+		icon = GFX_goal_generic_focus_spears
+		cost = 4.3
+		x = -4
+		y = 1
+		prerequisite = {
+			focus = LAC_legion_training
+		}
+		relative_position_id = LAC_legion_training
+		completion_reward = {
+			set_technology = {
+				tribal_infantry_hard_attack_tech  = 1
+			}
+		}
+	}
+	focus = {
+		id = LAC_cult
+		icon = GFX_goal_NCN_Warrior_Cult
+		cost = 4.3
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = LAC_tribal_mastery
+		}
+		relative_position_id = LAC_tribal_mastery
+		completion_reward = {
+			add_political_power = 200
+		}
+	}
+	focus = {
+		id = LAC_legion_firearms
+		icon = GFX_goal_CES_heavy_gun
+		cost = 4.3
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = LAC_legion_training
+		}
+		relative_position_id = LAC_legion_training
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = support_fireteam_tech_category
+			}
+			add_tech_bonus = {
+				bonus = 0.1
+				uses = 1
+				category = support_demolitions_tech_category
+			}
+		}
+	}
+	focus = {
+		id = LAC_legion_equipment
+		icon = GFX_goal_CES_legionary
+		cost = 4.3
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = lac_lessons_hidebarks
+		}
+		relative_position_id = lac_lessons_hidebarks
+		completion_reward = {
+			if = {
+				limit = {
+					has_tech = ballistic_weaponry_tech_1
+				}
+				add_equipment_to_stockpile = {
+					type = ballistic_equipment_1
+					amount = 700
+				}
+			}
+			else = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 700
+				}
+			}
+		}
+	}
+	focus = {
+		id = lac_weapons_of_kings
+		icon = GFX_goal_generic_workshop
+		cost = 4.3
+		prerequisite = {
+			focus = lac_conquest_of_new_mexico
+		}
+		x = 0
+		y = 1
+		relative_position_id = ces_executives_2
+		completion_reward = {
+			random_owned_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = lac_conquest_of_new_mexico
+		icon = GFX_goal_CES_new_mexico
+		cost = 8.6
+		prerequisite = {
+			focus = lac_winter_is_coming2
+		}
+		prerequisite = {
+			focus = ces_earth_defense_force2
+		}
+		prerequisite = {
+			focus = lac_march_on_mescalero2
+		}
+		prerequisite = {
+			focus = lac_fate_ofarchdiochese
+		}
+		available = {
+			ASF = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			EXE = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			SUF = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			LUP = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		x = 1
+		y = 2
+		relative_position_id = lac_march_on_mescalero2
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = lac_mustering_cohort
+				add_idea = lac_cohort_of_east
+			}
+			country_event = nf_lanius.10
+			CES = {
+				news_event = nf_lanius.15
+			}
+		}
+	}
+	focus = {
+		id = lac_lumber_mills
+		icon = GFX_goal_generic_large_scale_normal_industry_focus
+		cost = 4.3
+		prerequisite = {
+			focus = lac_conquest_of_new_mexico
+		}
+		x = 2
+		y = 1
+		relative_position_id = lac_conquest_of_new_mexico
+		completion_reward = {
+			25 = {
+				add_resource = {
+					type = water
+					amount = 6
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = lac_city_forms
+		icon = GFX_goal_CES_denarius
+		cost = 4.3
+		prerequisite = {
+			focus = lac_conquest_of_new_mexico
+		}
+		x = 4
+		y = 1
+		relative_position_id = lac_conquest_of_new_mexico
+		completion_reward = {
+			5 = {
+				add_to_temp_variable = {
+					development_to_add = 1
+				}
+				add_development_to_node = yes
+			}
+		}
+	}
+	focus = {
+		id = lac_we_find_more_slaves
+		icon = GFX_goal_CES_slaves
+		cost = 4.3
+		prerequisite = {
+			focus = lac_city_forms
+		}
+		x = 0
+		y = 1
+		relative_position_id = lac_city_forms
+		completion_reward = {
+			set_temp_variable = {
+				slaves_to_add = 1.5
+			}
+			add_slaves_to_nation = yes
+			increase_slavery = yes
+		}
+	}
+	focus = {
+		id = lac_pueblo_chemical_depot
+		icon = GFX_goal_generic_hazard_chemical
+		cost = 4.3
+		available = {
+			123 = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		prerequisite = {
+			focus = lac_city_forms
+		}
+		x = 0
+		y = 1
+		relative_position_id = lac_city_forms
+		completion_reward = {
+			123 = {
+				add_resource = {
+					type = composites
+					amount = 8
+				}
+			}
+			add_manpower = -5
+		}
+	}
+	focus = {
+		id = lac_carlsbad
+		icon = GFX_goal_pal_exploit_countryside
+		cost = 4.3
+		available = {
+			123 = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		prerequisite = {
+			focus = lac_pueblo_chemical_depot
+		}
+		x = 1
+		y = 1
+		relative_position_id = lac_pueblo_chemical_depot
+		completion_reward = {
+			news_event = nf_lanius.33
+		}
+	}
+	focus = {
+		id = lac_the_code
+		icon = GFX_goal_CES_roman_eagle
+		cost = 4.3
+		prerequisite = {
+			focus = lac_city_forms
+		}
+		x = 2
+		y = 1
+		relative_position_id = lac_city_forms
+		completion_reward = {
+			add_political_power = 200
+		}
+	}
+	focus = {
+		id = lac_tribal_god
+		icon = GFX_goal_tribal_generic
+		cost = 8.6
+		available = {
+			has_completed_focus = LAC_tribal_mastery
+		}
+		prerequisite = {
+			focus = lac_the_code
+		}
+		x = 1
+		y = 1
+		relative_position_id = lac_the_code
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = national_spirit_tribal_warfare
+				add_idea = national_spirit_tribal_warfare1
+			}
+		}
+	}
+	focus = {
+		id = lac_training_grounds
+		icon = GFX_goal_CES_legionary
+		cost = 4.3
+		prerequisite = {
+			focus = lac_conquest_of_new_mexico
+		}
+		x = -4
+		y = 1
+		relative_position_id = lac_conquest_of_new_mexico
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = cat_land_doctrine
+			}
+			add_manpower = -15
+			every_army_leader = {
+				limit = {
+					has_id = 12161
+				}
+				add_skill_level = 1
+				add_max_trait = 1
+			}
+		}
+	}
+	focus = {
+		id = lac_slave_workshops
+		icon = GFX_goal_CES_blacksmith
+		cost = 4.3
+		prerequisite = {
+			focus = lac_conquest_of_new_mexico
+		}
+		x = -6
+		y = 1
+		relative_position_id = lac_conquest_of_new_mexico
+		completion_reward = {
+			566 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = lac_centurions
+		icon = GFX_goal_CES_centurion
+		cost = 4.3
+
+		prerequisite = {
+			focus = lac_conquest_of_new_mexico
+		}
+		x = -8
+		y = 1
+		relative_position_id = lac_conquest_of_new_mexico
+		completion_reward = {
+			set_technology = { legion_centurions_tech = 1 }
+		}
+	}
+	focus = {
+		id = lac_elite
+		icon = GFX_goal_generic_sword_1
+		cost = 4.3
+		available = {
+			has_idea = cultofmars_principes
+		}
+
+		prerequisite = {
+			focus = lac_centurions
+		}
+		x = 0
+		y = 1
+		relative_position_id = lac_centurions
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = cultofmars_principes
+				add_idea = legion_select_few1
+			}
+		}
+	}
+
+
+
+	focus = {
+		id = LAC_chariots
+		icon = GFX_goal_CES_bikes
+		cost = 4.3
+		prerequisite = {
+			focus = lac_slave_workshops
+		}
+		prerequisite = {
+			focus = lac_training_grounds
+		}
+		x = -6
+		y = 2
+		relative_position_id = lac_conquest_of_new_mexico
+		completion_reward = {
+			set_technology = {
+				chariot_vehicle_tech = 1
+			}
+		}
+	}
+	focus = {
+		id = lac_lessons_from_the_east
+		icon = GFX_goal_generic_books
+		cost = 4.3
+		prerequisite = {
+			focus = lac_slave_workshops
+		}
+		prerequisite = {
+			focus = lac_training_grounds
+		}
+		x = 2
+		y = 1
+		relative_position_id = lac_slave_workshops
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = lac_la_garita
+		icon = GFX_goal_TTM_Volcano
+		cost = 4.3
+		available = {
+			is_in_faction_with = TTM
+		}
+		prerequisite = {
+			focus = lac_lessons_from_the_east
+		}
+		x = -3
+		y = 1
+		relative_position_id = lac_lessons_from_the_east
+		completion_reward = {
+			TTM = {
+				country_event = nf_ttm.64
+			}
+		}
+	}
+	focus = {
+		id = lac_cars_now_yay
+		icon = GFX_goal_generic_motorcycle
+		cost = 4.3
+		prerequisite = {
+			focus = lac_lessons_from_the_east
+		}
+		x = -1
+		y = 1
+		relative_position_id = lac_lessons_from_the_east
+		completion_reward = {
+			add_tech_bonus = {
+				ahead_reduction = 0.5
+				uses = 1
+				name = tech_bonus
+				category = vehicle_tech_category
+			}
+		}
+	}
+	focus = {
+		id = lac_pushing_for_colorado
+		icon = GFX_goal_generic_state_colorado
+		cost = 8.6
+		available = {
+			SUF = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			LUP = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			ASF = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			EDA = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			EXE = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		prerequisite = {
+			focus = lac_conquest_of_new_mexico
+		}
+		x = 0
+		y = 1
+		relative_position_id = lac_conquest_of_new_mexico
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_colorado_state = yes
+				}
+				set_variable = {
+					coring_cost_targeted_state_factor@LAC = -0.5
+				}
+			}
+			custom_effect_tooltip = lac_pushing_for_colorado_desc_tt
+		}
+	}
+	focus = {
+		id = lac_block_out_sun
+		icon = GFX_goal_sun_flag
+		cost = 4.3
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		prerequisite = {
+			focus = lac_pushing_for_colorado
+		}
+		available = {
+			ai_has_no_other_wars_or_wargoals = yes
+		}
+		bypass = {
+			BSU = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			SUN = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = lac_pushing_for_colorado
+		completion_reward = {
+			BSU = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			SUN = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = lac_painted_rock
+		icon = GFX_goal_CES_protect_the_bull
+		cost = 4.3
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		prerequisite = {
+			focus = lac_block_out_sun
+		}
+		available = {
+			ai_has_no_other_wars_or_wargoals = yes
+		}
+		bypass = {
+			PAR = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		x = -1
+		y = 1
+		relative_position_id = lac_block_out_sun
+		completion_reward = {
+			PAR = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = lac_painted_rock2
+		icon = GFX_goal_CES_crucifixion
+		cost = 4.3
+		prerequisite = {
+			focus = lac_painted_rock
+		}
+		available = {
+			PAR = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		x = -1
+		y = 1
+		relative_position_id = lac_painted_rock
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = PAR
+				}
+				add_core_of = ROOT
+			}
+			news_event = nf_lanius.11
+		}
+	}
+	focus = {
+		id = lac_no_smooching
+		icon = GFX_goal_generic_smooch_focus
+		cost = 4.3
+		prerequisite = {
+			focus = lac_pushing_for_colorado
+		}
+		x = -2
+		y = 1
+		relative_position_id = lac_pushing_for_colorado
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = lac_peace_order_good_governmant
+		icon = GFX_goal_CES_via_militaris
+		cost = 4.3
+		prerequisite = {
+			focus = lac_no_smooching
+		}
+		x = -1
+		y = 1
+		relative_position_id = lac_no_smooching
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = lac_maxson_must_die
+		icon = GFX_goal_generic_van_buren_power_armour
+		cost = 4.3
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		prerequisite = {
+			focus = lac_block_out_sun
+		}
+		available = {
+			ai_has_no_other_wars_or_wargoals = yes
+		}
+		bypass = {
+			MXC = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		x = 1
+		y = 1
+		relative_position_id = lac_block_out_sun
+		completion_reward = {
+			MXC = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = lac_maxson_did_die
+		icon = GFX_goal_generic_sledgehammers
+		cost = 4.3
+		prerequisite = {
+			focus = lac_maxson_must_die
+		}
+		available = {
+			MXC = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		x = 1
+		y = 1
+		relative_position_id = lac_maxson_must_die
+		completion_reward = {
+			country_event = nf_lanius.12
+			add_country_leader_trait = lanius_monster_east
+			every_army_leader = {
+				limit = {
+					has_id = 12161
+				}
+				add_skill_level = 1
+			}
+		}
+	}
+	focus = {
+		id = LAC_mxc_strip_bunker
+		icon = GFX_goal_generic_circuit_adv
+		cost = 4.3
+		prerequisite = {
+			focus = lac_towards_denver
+		}
+		x = 2
+		y = 1
+		relative_position_id = lac_maxson_did_die
+		completion_reward = {
+			add_resource = {
+				type = circuitry
+				amount = 3
+				state = 412
+			}
+			add_resource = {
+				type = metal
+				amount = 9
+				state = 412
+			}
+		}
+	}
+	focus = {
+		id = lac_towards_denver
+		icon = GFX_goal_generic_creature_radscorpion
+		cost = 4.3
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		prerequisite = {
+			focus = lac_maxson_must_die
+		}
+		prerequisite = {
+			focus = lac_painted_rock
+		}
+		available = {
+			ai_has_no_other_wars_or_wargoals = yes
+			MXC = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			PAR = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		bypass = {
+			SCO = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		x = -2
+		y = 0
+		relative_position_id = lac_maxson_did_die
+		completion_reward = {
+			SCO = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = lac_building_up_for_hangdogs
+		icon = GFX_goal_generic_train_1
+		cost = 4.3
+		available = {
+			OR = {
+				is_neighbor_of = HAN
+				AND = {
+					BSU = {
+						all_core_land_owned_by_prev_sphere = yes
+					}
+					SUN = {
+						all_core_land_owned_by_prev_sphere = yes
+					}
+					PAR = {
+						all_core_land_owned_by_prev_sphere = yes
+					}
+					MXC = {
+						all_core_land_owned_by_prev_sphere = yes
+					}
+					SCO = {
+						all_core_land_owned_by_prev_sphere = yes
+					}
+				}
+			}
+		}
+		prerequisite = {
+			focus = lac_towards_denver
+		}
+		x = 0
+		y = 1
+		relative_position_id = lac_towards_denver
+		completion_reward = {
+			add_war_support = 0.05
+			every_state = {
+				limit = {
+					is_colorado_state = yes
+					is_owned_by = LAC
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = lac_hang_the_dogs
+		icon = GFX_goal_CES_burned_dog
+		cost = 4.3
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		prerequisite = {
+			focus = lac_building_up_for_hangdogs
+		}
+		available = {
+			ai_has_no_other_wars_or_wargoals = yes
+		}
+		bypass = {
+			HAN = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = lac_building_up_for_hangdogs
+		completion_reward = {
+			HAN = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = lac_brought_to_heel
+		icon = GFX_goal_generic_best_boy_1
+		cost = 4.3
+		prerequisite = {
+			focus = lac_hang_the_dogs
+		}
+		available = {
+			HAN = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = lac_hang_the_dogs
+		completion_reward = {
+			525 = {
+				add_core_of = LAC
+			}
+			country_event = nf_lanius.14
+		}
+	}
+	focus = {
+		id = lac_loot_dog_city
+		icon = GFX_goal_bottlecap
+		cost = 4.3
+		prerequisite = {
+			focus = lac_hang_the_dogs
+		}
+		available = {
+			525 = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		x = 2
+		y = 1
+		relative_position_id = lac_hang_the_dogs
+		completion_reward = {
+			add_resource = {
+				type = energy
+				amount = 10
+				state = 189
+			}
+			add_resource = {
+				type = metal
+				amount = 10
+				state = 189
+			}
+		}
+	}
+	focus = {
+		id = lac_good_boy_yay
+		icon = GFX_goal_bottlecap
+		cost = 4.3
+		prerequisite = {
+			focus = lac_hang_the_dogs
+		}
+		available = {
+			525 = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		x = 4
+		y = 1
+		relative_position_id = lac_hang_the_dogs
+		completion_reward = {
+			add_resource = {
+				type = energy
+				amount = 10
+				state = 189
+			}
+			add_resource = {
+				type = metal
+				amount = 10
+				state = 189
+			}
+		}
+	}
+	focus = {
+		id = lac_cyber_dog
+		icon = GFX_goal_generic_best_boy_2
+		cost = 4.3
+		prerequisite = {
+			focus = lac_hang_the_dogs
+		}
+		available = {
+			525 = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		x = 4
+		y = 1
+		relative_position_id = lac_hang_the_dogs
+		completion_reward = {
+			country_event = nf_lanius.16
+		}
+	}
+	focus = {
+		id = lac_triumphant_campaign
+		icon = GFX_goal_CES_lanius
+		cost = 4.3
+		prerequisite = {
+			focus = lac_brought_to_heel
+		}
+		available = {
+			525 = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = lac_brought_to_heel
+		completion_reward = {
+			every_army_leader = {
+				limit = {
+					has_id = 12161
+				}
+				add_skill_level = 1
+				add_unit_leader_trait = built_to_destroy_trait
+			}
+			CES = {
+				news_event = nf_lanius.17
+			}
+			swap_ideas = {
+				remove_idea = lac_cohort_of_east
+				add_idea = lac_cohort_of_east_2
+			}
+		}
+	}
+	focus = {
+		id = lac_new_slot_woo
+		icon = GFX_goal_generic_the_box
+		cost = 4.3
+		prerequisite = {
+			focus = lac_triumphant_campaign
+		}
+		x = 2
+		y = 1
+		relative_position_id = lac_triumphant_campaign
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = lac_intervene_in_civil_war
+		icon = GFX_goal_CES_crucifixion_2
+		cost = 4.3
+		available = {
+			NOT = {
+				CES = {
+					has_country_leader = {
+						name = "Caesar"
+						ruling_only = yes
+					}
+				}
+			}
+			CES = {
+				has_country_flag = CES_civil_war
+			}
+		}
+		prerequisite = {
+			focus = lac_triumphant_campaign
+		}
+		x = -2
+		y = 1
+		relative_position_id = lac_triumphant_campaign
+		completion_reward = {
+			country_event = nf_lanius.21
+			custom_effect_tooltip = lac_intervene_in_civil_war_tt
+		}
+	}
+	focus = {
+		id = lac_lessons_hangdogs
+		icon = GFX_goal_generic_focus_spears
+		cost = 4.3
+		available = {
+			HAN = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		prerequisite = {
+			focus = lac_hang_the_dogs
+		}
+		x = -2
+		y = 1
+		relative_position_id = lac_hang_the_dogs
+		completion_reward = {
+			set_technology = {
+				tribal_infantry_defense_tech = 1
+			}
+		}
+	}
+	focus = {
+		id = lac_code_salvages
+		icon = GFX_goal_generic_scrap_metal
+		cost = 4.3
+		available = {
+			HAN = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		x = -4
+		y = 1
+		prerequisite = {
+			focus = lac_hang_the_dogs
+		}
+		relative_position_id = lac_hang_the_dogs
+		completion_reward = {
+			525 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = lac_lessons_from_younger_brother
+		icon = GFX_goal_CES_women_marriage
+		cost = 4.3
+		prerequisite = {
+			focus = lac_towards_denver
+		}
+		available = {
+			MXC = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		x = 1
+		y = 2
+		relative_position_id = lac_maxson_must_die
+		completion_reward = {
+			country_event = nf_lanius.13
+		}
+	}
+	focus = {
+		id = lac_ttm_giggity
+		icon = GFX_goal_TTM_Diana_Angry
+		cost = 11.5 #80 on purpose
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		prerequisite = {
+			focus = lac_pushing_for_colorado
+		}
+		available = {
+			ai_has_no_other_wars_or_wargoals = yes
+			TTM = {
+				has_completed_focus = ttm_meeting_a_legend
+				has_completed_focus = ttm_upholding_our_ideals
+				NOT = { is_guaranteed_by = LAC }
+				NOT = { is_in_faction_with = LAC }
+			}
+		}
+		x = 2
+		y = 1
+		will_lead_to_war_with = TTM
+		relative_position_id = lac_pushing_for_colorado
+		completion_reward = {
+			TTM = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = lac_teaching_the_final_lesson
+		icon = GFX_goal_TTM_Twin_Mothers_Destroyed
+		cost = 4.3
+		prerequisite = {
+			focus = lac_ttm_giggity
+		}
+		available = {
+			owns_state = 554
+		}
+		x = 1
+		y = 1
+		relative_position_id = lac_ttm_giggity
+		completion_reward = {
+			554 = {
+				damage_building = {
+					type = infrastructure
+					damage = 10
+				}
+				add_core_of = LAC
+			}
+			set_province_name = {
+				id = 5583
+				name = "Fort Desolation"
+			}
+			hidden_effect = {
+				554 = { set_state_name = "Fort Desolation" }
+			}
+		}
+	}
+	focus = {
+		id = lac_move_for_texas
+		icon = GFX_goal_generic_texas2
+		cost = 4.3
+		available = {
+			date > 2277.05.20
+		}
+		prerequisite = {
+			focus = lac_triumphant_campaign
+		}
+		x = 0
+		y = 1
+		relative_position_id = lac_triumphant_campaign
+		completion_reward = {
+			custom_effect_tooltip = lns_crucify_opposition_tt
+			set_country_flag = reduced_texas_coring_cost
+		}
+	}
+	focus = {
+		id = lac_hire_vulpes
+		icon = GFX_goal_uoa_spy
+		cost = 8.6
+		prerequisite = {
+			focus = lac_conquest_of_new_mexico
+		}
+		x = 6
+		y = 1
+		relative_position_id = lac_conquest_of_new_mexico
+		completion_reward = {
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+					has_intelligence_agency = no
+				}
+				create_intelligence_agency = { name = "The Frumentarii of the East" icon = "GFX_intelligence_agency_logo_leg" }
+			}
+			else_if = {
+				limit = {
+					has_dlc = "La Resistance"
+					has_intelligence_agency = yes
+				}
+				upgrade_intelligence_agency = upgrade_economy_civilian
+				upgrade_intelligence_agency = upgrade_army_department
+				add_country_leader_trait = lanius_frumentarii
+			}
+			else = {
+				add_ideas = texas_spy_agency
+			}
+		}
+	}
+
+	focus = {
+		id = lac_slave_markets_taos
+		icon = GFX_goal_CES_slaves
+		cost = 8.6
+		prerequisite = {
+			focus = lac_conquest_of_new_mexico
+		}
+		x = 8
+		y = 1
+		relative_position_id = lac_conquest_of_new_mexico
+		completion_reward = {
+			set_temp_variable = {
+				slaves_to_add = 1.0
+			}
+			add_slaves_to_nation = yes
+			increase_slavery = yes
+		}
+	}
+
+	focus = {
+		id = lac_colorado_trade
+		icon = GFX_goal_generic_brahmin_trade
+		cost = 8.6
+		prerequisite = {
+			focus = lac_slave_markets_taos
+		}
+		x = 0
+		y = 1
+		relative_position_id = lac_slave_markets_taos
+		completion_reward = {
+			set_temp_variable = {
+				caps_to_add = 300
+			}
+			add_caps = yes
+		}
+	}
+
+	focus = {
+		id = lac_hire_iron_alliance
+		icon = GFX_goal_generic_power_armour_raider_3
+		cost = 4.3
+		available = {
+			IRN = {
+				exists = yes
+				has_war = no
+			}
+			set_temp_variable = { caps_diff = -50 }
+			caps_cost_trigger = yes
+		}
+		prerequisite = {
+			focus = lac_towards_denver
+		}
+		x = -4
+		y = 1
+		relative_position_id = lac_maxson_did_die
+		completion_reward = {
+			add_manpower = 750
+			set_temp_variable = {
+				caps_to_add = -50
+			}
+			add_caps = yes
+			IRN = {
+				set_temp_variable = {
+					caps_to_add = 50
+				}
+				add_caps = yes
+			}
+		}
+	}
+	focus = {
+		id = lac_stories_of_battle
+		icon = GFX_goal_BOS_tesla_cannon
+		cost = 4.3
+		available = {
+			MXC = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		prerequisite = {
+			focus = lac_towards_denver
+		}
+		x = -6
+		y = 1
+		relative_position_id = lac_maxson_did_die
+		completion_reward = {
+			army_experience = 20
+		}
+	}
+
+	focus = {
+		id = lac_lubbock
+		icon = GFX_goal_LNS_LUB_withdrawl
+		cost = 4.3
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		available = {
+			ai_has_no_other_wars_or_wargoals = yes
+		}
+		prerequisite = {
+			focus = lac_move_for_texas
+		}
+		bypass = {
+			LUB = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		x = -2
+		y = 1
+		relative_position_id = lac_move_for_texas
+		completion_reward = {
+			LUB = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = lac_lone_star
+		icon = GFX_goal_LNS_Victory_Hand
+		cost = 4.3
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		available = {
+			OR = {
+				has_war_with = LUB
+				LUB = {
+					all_core_land_owned_by_prev_sphere = yes
+				}
+			}
+			#Exclude has no ai wars. Want Lanius to be more aggro here.
+			#ai_has_no_other_wars_or_wargoals = yes
+		}
+		prerequisite = {
+			focus = lac_move_for_texas
+		}
+		bypass = {
+			LNS = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			has_war_with = LNS
+		}
+		x = 0
+		y = 1
+		relative_position_id = lac_move_for_texas
+		completion_reward = {
+			LNS = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = lac_invite_ironmongers
+		icon = GFX_goal_attis_army
+		cost = 4.3
+		available = {
+			IMO = {
+				exists = yes
+				has_completed_focus = imo_fort_stockton
+				has_completed_focus = imo_roads_through_the_forest
+				has_completed_focus = imo_austin_city_labs
+			}
+		}
+		bypass = {
+			IMO = {
+				exists = no
+			}
+		}
+		prerequisite = {
+			focus = lac_lone_star
+		}
+		x = -4
+		y = 1
+		relative_position_id = lac_lone_star
+		completion_reward = {
+			IMO = {
+				invite_to_caesars_legion = yes
+			}
+		}
+	}
+	focus = {
+		id = lac_roller_slaves
+		icon = GFX_goal_CES_women_marriage
+		cost = 4.3
+		available = {
+			ASS = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		prerequisite = {
+			focus = lac_lone_star
+		}
+		x = 4
+		y = 1
+		relative_position_id = lac_lone_star
+		completion_reward = {
+			892 = {
+				add_core_of = LAC
+			}
+			every_state = {
+				limit = {
+					is_core_of = ASS
+				}
+				add_core_of = ROOT
+			}
+		}
+	}
+	focus = {
+		id = lac_stop_the_signal
+		icon = GFX_goal_cmc_looking_for_entertainment
+		cost = 4.3
+		available = {
+			TUB = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		prerequisite = {
+			focus = lac_lone_star
+		}
+		x = 2
+		y = 1
+		relative_position_id = lac_lone_star
+		completion_reward = {
+			news_event = nf_lanius.20
+		}
+	}
+	focus = {
+		id = lac_conquer_houston
+		icon = GFX_goal_generic_vault_girl_riding_rocket
+		cost = 4.3
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		available = {
+			ai_has_no_other_wars_or_wargoals = yes
+		}
+		prerequisite = {
+			focus = lac_lone_star
+		}
+		bypass = {
+			HRO = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		x = -2
+		y = 1
+		relative_position_id = lac_lone_star
+		completion_reward = {
+			HRO = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = lac_brotherhood
+		icon = GFX_goal_TBH_conscription_1
+		cost = 4.3
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		available = {
+			OR = {
+				has_war_with = LUB
+				LUB = {
+					all_core_land_owned_by_prev_sphere = yes
+				}
+			}
+			OR = {
+				has_war_with = LNS
+				LNS = {
+					all_core_land_owned_by_prev_sphere = yes
+				}
+			}
+			#Exclude has no ai wars. Want Lanius to be more aggro here.
+			#ai_has_no_other_wars_or_wargoals = yes
+		}
+		prerequisite = {
+			focus = lac_move_for_texas
+		}
+		bypass = {
+			TBH = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		x = 2
+		y = 1
+		relative_position_id = lac_move_for_texas
+		will_lead_to_war_with = LUB
+		will_lead_to_war_with = LNS
+		will_lead_to_war_with = TBH
+		completion_reward = {
+			TBH = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = lac_plunder_lonestar
+		icon = GFX_goal_generic_patty_even_more_innuendo
+		cost = 4.3
+		prerequisite = {
+			focus = lac_lone_star
+		}
+		available = {
+			controls_state = 921
+		}
+		x = 0
+		y = 1
+		relative_position_id = lac_lone_star
+		completion_reward = {
+			5 = {
+				add_to_temp_variable = {
+					development_to_add = 1
+				}
+				add_development_to_node = yes
+			}
+		}
+	}
+	focus = {
+		id = lac_victory_texas
+		icon = GFX_goal_LAC_monster_of_the_east
+		cost = 4.3
+		available = {
+			LUB = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			LNS = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			TBH = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		prerequisite = {
+			focus = lac_plunder_lonestar
+		}
+		x = 0
+		y = 1
+		relative_position_id = lac_plunder_lonestar
+		completion_reward = {
+			set_cosmetic_tag = LAC_texas
+			swap_ideas = {
+				remove_idea = lac_cohort_of_east_2
+				add_idea = lac_cohort_of_east_3
+			}
+			CES = {
+				news_event = nf_lanius.23
+			}
+		}
+	}
+	focus = {
+		id = lac_more_political_power
+		icon = GFX_goal_behemoth
+		cost = 4.3
+		prerequisite = {
+			focus = lac_victory_texas
+		}
+		available = {
+			any_owned_state = {
+				OR = {
+					is_core_of = SHA
+					is_core_of = IMO
+					is_core_of = UOA
+				}
+			}
+		}
+		x = 2
+		y = 1
+		relative_position_id = lac_victory_texas
+		completion_reward = {
+			add_political_power = 300
+			if = {
+				limit = {
+					NOT = {
+						AND = {
+							has_idea = mutant_law_super
+							has_idea = mutant_law_both
+						}
+					}
+				}
+				add_ideas = mutant_law_super
+			}
+		}
+	}
+	focus = {
+		id = lac_mutants_of_texas
+		icon = GFX_goal_NEW_Super_Mutant_Technician
+		cost = 4.3
+		available = {
+			SHA = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		prerequisite = {
+			focus = lac_victory_texas
+		}
+		x = -2
+		y = 1
+		relative_position_id = lac_victory_texas
+		completion_reward = {
+			news_event = nf_lanius.19
+		}
+	}
+	focus = {
+		id = lac_fate_legion
+		icon = GFX_goal_CES_rome_ascendant
+		cost = 4.3
+		prerequisite = {
+			focus = lac_victory_texas
+		}
+		x = 0
+		y = 1
+		bypass = {
+			CES = { exists = no }
+		}
+		relative_position_id = lac_victory_texas
+		completion_reward = {
+			if = {
+				limit = {
+					CES = {
+						has_country_leader = {
+							name = "Caesar"
+							ruling_only = yes
+						}
+					}
+				}
+				news_event = nf_lanius.24
+			}
+			else = {
+				country_event = nf_lanius.25
+			}
+		}
+	}
+	focus = {
+		id = lac_reconstruction
+		icon = GFX_goal_CES_crucifixion_2
+		cost = 4.3
+		prerequisite = {
+			focus = lac_fate_legion
+		}
+		available = {
+			520 = {
+				controller = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = lac_fate_legion
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = CES
+				}
+				set_variable = {
+					coring_cost_targeted_state_factor@LAC = -0.5
+				}
+			}
+			custom_effect_tooltip = lac_reconstruction_tt
+		}
+	}
+	focus = {
+		id = lac_avenge_house
+		icon = GFX_goal_VEG_The_Lucky_38
+		cost = 4.3
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		prerequisite = {
+			focus = lac_fate_legion
+		}
+		bypass = {
+			owns_state = 211
+		}
+		available = {
+			is_neighbor_of = VEG
+			ai_has_no_other_wars_or_wargoals = yes
+			CES = {
+				exists = no
+			}
+		}
+		x = 2
+		y = 1
+		relative_position_id = lac_fate_legion
+		completion_reward = {
+			VEG = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = lac_conquer_california
+		icon = GFX_goal_CES_skinned_bear
+		cost = 4.3
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		prerequisite = {
+			focus = lac_fate_legion
+		}
+		bypass = {
+			owns_state = 211
+		}
+		available = {
+			is_neighbor_of = VEG
+			ai_has_no_other_wars_or_wargoals = yes
+			CES = {
+				exists = no
+			}
+		}
+		x = -2
+		y = 1
+		relative_position_id = lac_fate_legion
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = NCR
+						is_core_of = MOT
+					}
+				}
+				add_claim_by = LAC
+			}
+		}
+	}
+}
+
+# vim: set ft=pdx tw=79 :

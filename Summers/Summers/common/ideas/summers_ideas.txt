@@ -1,0 +1,399 @@
+ideas = {
+	
+	country = {
+	
+	lup_death_than_enslavement = {
+			
+			picture = shottol
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.15
+				surrender_limit = 0.75
+			}
+			targeted_modifier = {
+				tag = LAC
+				defense_bonus_against = 0.10
+				attack_bonus_against = 0.10
+			}
+	    }
+	
+	suf_jupiter_program_degraded = {
+			
+			picture = generic_officer_hat
+			
+			allowed = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_leader_start_level = 2
+				army_org_Factor = 0.05
+				training_time_army_factor = 0.15
+				army_org = 1
+				acclimatization_cold_climate_gain_factor = 0.02
+				acclimatization_hot_climate_gain_factor = 0.10
+				military_leader_cost_factor = 25.0
+				special_forces_cap = 0.05
+			}
+	    }
+		
+	suf_jupiter_program_restored = {
+			
+			picture = usa_department_of_defense
+			
+			allowed = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_leader_start_level = 3
+				army_org_Factor = 0.10
+				training_time_army_factor = 0.30
+				army_org = 2
+				acclimatization_cold_climate_gain_factor = 0.02
+				acclimatization_hot_climate_gain_factor = 0.10
+				army_leader_start_attack_level= 1
+				army_leader_start_planning_level= 1
+				army_leader_start_defense_level= 1
+				army_leader_start_logistics_level= 1
+				military_leader_cost_factor = 50.0
+				special_forces_cap = 0.10
+			}
+	    }
+		
+				suf_labor_corps = {
+		
+				picture = ast_all_in
+					
+				allowed = {
+				}
+
+				removal_cost = 1
+				
+				modifier = {
+					production_speed_buildings_factor = 0.1
+					
+			}
+	}
+	
+	suf_emphasis_on_training = {
+			
+			picture = generic_oppression
+			
+			allowed = {
+			}
+
+			removal_cost = -1
+		
+			modifier = {
+				org_loss_when_moving = -0.10
+				army_speed_factor = 0.1
+				defence = 0.1
+				army_org_factor = 0.10
+			}
+			
+		}
+	
+	suf_mainframe_online = {
+			
+			picture = generic_nuke_device
+			
+			allowed = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+				MONTHLY_POPULATION = 0.05
+				stability_factor = 0.10
+				war_support_factor = 0.10
+				training_time_army_factor = -0.05
+			}
+
+		}
+		
+		suf_allocate_resources = {
+
+		picture = aztlan_land_distribution
+
+		allowed = {
+			}
+		removal_cost = -1
+
+		modifier = {
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				}
+			}
+			
+	
+	suf_consolidating_our_territory = {
+	picture = ncn_sneering_imperialist
+			
+	allowed = {
+			}
+			
+	removal_cost = -1
+			
+	modifier = {
+		required_garrison_factor = -0.50
+			 }
+	}
+	
+	suf_repairing_the_facility = {
+
+		picture = VEG_Sanitary_City
+
+		allowed = {
+			}
+		removal_cost = -1
+
+		modifier = {
+				production_speed_buildings_factor = -0.45
+				industry_repair_factor = 0.3
+				consumer_goods_factor = 0.25
+				weekly_manpower = -100
+				}
+			}
+			
+		suf_norad_online = {
+
+		picture = rocket_facility
+
+		allowed = {
+			}
+		removal_cost = -1
+
+		modifier = {
+			decryption = 5.0
+			encryption = 5.0
+			diplomacy_distance = 150
+			hidden_modifier = {
+					intelligence_agency_defense = 4
+					crypto_strength = 2
+					}
+				}
+			}
+		
+			
+	suf_conelrad = {
+	picture = DES_guarantee_nevada
+			
+	allowed = {
+			}
+			
+	removal_cost = -1
+			
+	modifier = {
+		required_garrison_factor = -0.15
+		resistance_target = -0.05
+		political_power_factor = -0.05
+			 }
+	}
+	
+		suf_dbac_formed = {
+			
+			picture = us_army_knowledge
+			
+			allowed = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				special_forces_cap = 0.25
+				army_attack_factor = 0.075
+				army_defence_factor = 0.075
+				
+				
+			}
+	    }
+		
+	suf_forged_in_blood = {
+			
+			picture = brotherhood_tactics_lexicon
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.10
+				surrender_limit = 0.25
+			}
+	    }
+		
+	suf_old_world_faults_1 = {
+			
+			picture = corruption_10
+
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.50
+				consumer_goods_factor = 0.30
+				MONTHLY_POPULATION = 0.05
+				conscription_factor = -0.15
+			}
+	    }
+		
+	suf_old_world_faults_2 = {
+			
+			picture = corruption_10
+			
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.35
+				consumer_goods_factor = 0.20
+				MONTHLY_POPULATION = 0.075
+				conscription_factor = -0.10
+			}
+	    }
+		
+	suf_old_world_faults_3 = {
+			
+			picture = corruption_10
+			
+
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.20
+				consumer_goods_factor = 0.10
+				MONTHLY_POPULATION = 0.10
+				conscription_factor = -0.05
+			}
+	    }
+		
+	suf_overcoming_faults = {
+			
+			picture = generic_toy_soldier
+			
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.10
+				consumer_goods_factor = -0.10
+				MONTHLY_POPULATION = 0.15
+				conscription_factor = 0.15
+			}
+	    }
+		
+		suf_space_defense_agency = {
+			
+			picture = generic_ufo_idea
+
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.-15
+				special_forces_cap = 0.15
+			}
+			targeted_modifier = {
+				tag = UFO
+				defense_bonus_against = 0.15
+				attack_bonus_against = 0.15
+			}
+			equipment_bonus = {
+				power_armor_equipment = {
+					soft_attack = 0.10
+					hard_attack = 0.10
+					instant = yes
+				}
+			}
+		}
+		
+
+		
+	suf_aid_from_maxons = {
+			
+			picture = paladin_council
+			
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.10
+				conscription_factor = -0.05
+				special_forces_cap = 0.05
+			}
+	    }
+		
+	suf_scribes_arrive = {
+		
+		picture = scribe_council
+			
+
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.05
+			}
+	    }
+		
+		suf_scribes_knowlege = {
+		
+		picture = scribe_council
+			
+
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.05
+				global_building_slots_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+	    }
+		
+		suf_lessons_of_the_paladins = {
+			
+			picture = paladin_council
+
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.10
+				conscription_factor = -0.05
+				special_forces_cap = 0.05
+			}
+			equipment_bonus = {
+				power_armor_equipment = {
+					soft_attack = 0.10
+					hard_attack = 0.10
+					instant = yes
+				}
+			}
+	    }
+	}	
+}	
+
+	
+
+		
+	
+	
+	
+	

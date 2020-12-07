@@ -1,0 +1,2244 @@
+focus_tree = {
+	id = nf_summers_federation
+	country = { 
+		factor= 0
+		modifier = {
+			add = 50
+			tag = SUF
+		}   
+	}
+	default = no
+	
+	#Custom focuses start here
+	
+	#Start 1
+	focus = {
+		id = suf_the_day_the_bombs_fell
+		icon = GFX_goal_the_last_argument_of_presidents
+		cost = 1
+		x = 14
+		y = 0
+		completion_reward = {
+		
+			country_event = { id = nf_fort.1 }
+		}
+	}
+	#Start 2 
+	focus = {
+		id = suf_a_way_of_life
+		icon = GFX_goal_generic_large_scale_normal_industry_focus
+		cost = 1
+		prerequisite = {
+			focus = suf_the_day_the_bombs_fell
+		}
+		x = 14
+		y = 1
+		completion_reward = {
+
+			country_event = { id = nf_fort.2 }
+		}
+	}
+	#Start 3 
+	focus = {
+		id = suf_the_cave_in
+		icon = GFX_goal_generic_bunkers_focus
+		cost = 1 
+		prerequisite = { 
+			focus = suf_a_way_of_life
+	} 
+	x =14 
+	y =2 
+	completion_reward = {
+			country_event = { id = nf_fort.3 }
+		} 
+	}
+	#Start 4
+	focus = { 
+		id = suf_our_return
+		icon = GFX_goal_generic_cities_focus
+		cost = 1
+		prerequisite = { 
+			focus = suf_the_cave_in
+	} 
+		x =14 
+		y =3 
+		completion_reward = {
+			country_event = { id = nf_fort.4 }
+		}
+	}
+
+	#Industrial Path
+	focus = { 
+		id = suf_allocation_of_respurces
+		icon = GFX_goal_generic_position_armies
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_our_return
+	}
+		x =14 
+		y =4 
+		completion_reward = {
+			add_ideas = suf_allocate_resources 
+		}
+	}
+	
+	#Industrial Path Left
+	
+	focus = { 
+		id = suf_eastern_bunker_excavation
+		icon = GFX_goal_generic_cart
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_allocation_of_respurces
+	}
+		x =12 
+		y =5 
+		completion_reward = {
+			 546 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+		}
+		
+		SUF = {
+				add_equipment_to_stockpile = {
+					type = power_armor_equipment_3
+					amount = 75
+					producer = USA
+				}
+			}
+		SUF = {
+			add_equipment_to_stockpile = {
+				type = ballistic_equipment_1
+				amount = 300
+				producer = SUF
+			}
+		}
+	}
+}
+
+	focus = { 
+		id = suf_restoring_the_power
+		icon = GFX_goal_square_vault_generator
+		cost = 7.2
+		prerequisite = { 
+			focus = suf_eastern_bunker_excavation
+	}
+		x =12 
+		y =6 
+		completion_reward = {
+			 546 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = electricity_generator
+					level = 2
+					instant_build = yes
+				}
+		}
+		set_technology = {
+		resource_generator_power_tech_1 = 1
+		resource_generator_tech = 1
+		}
+	}
+}
+
+#Industrial Tree Middle
+
+focus = { 
+		id = suf_expanding_the_roads
+		icon = GFX_goal_CES_via_militaris
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_allocation_of_respurces
+	}
+		x =14 
+		y =5 
+		completion_reward = {
+			 546 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		}
+		
+		 331 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		}
+		
+		 225 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		}
+	}
+}
+
+focus = { 
+		id = suf_clearing_the_roads
+		icon = GFX_goal_generic_tool_cabinet
+		cost = 7.2
+		prerequisite = { 
+			focus = suf_expanding_the_roads
+	}
+		x =14 
+		y =6 
+		completion_reward = {
+			 546 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		add_resource = {
+		type = metal
+		amount = 17
+	}
+		}
+		
+		 331 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		add_resource = {
+			type = metal
+			amount = 3
+			}
+		}
+		
+		 225 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+				type = metal
+				amount = 3
+			}
+		}
+	}
+}
+
+	#Industrial Right
+
+	focus = { 
+		id = suf_western_bunker_excavation
+		icon = GFX_goal_generic_cart
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_allocation_of_respurces
+	}
+		x =16 
+		y =5 
+		completion_reward = {
+			 546 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+		}
+		
+	set_technology = {
+	robot_automation_tech = 1
+	robot_makeshift_automatons_tech = 1
+	}
+
+		SUF = {
+			add_equipment_to_stockpile = {
+				type = support_robot_scrap_equipment
+				amount = 200
+				producer = USA
+			}
+		load_oob = summers_robotics_1
+		}
+	}
+}
+
+focus = { 
+		id = suf_restoring_the_armories
+		icon = GFX_goal_generic_ammo_boxes_focus
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_western_bunker_excavation
+	}
+		x =16 
+		y =6 
+		completion_reward = {
+			 546 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+		}
+		add_ideas = suf_labor_corps
+	}
+}
+
+focus = { 
+		id = suf_powering_the_mainframe
+		icon = GFX_goal_ARM_mechanical_computing
+		cost = 20
+		prerequisite = { 
+			focus = suf_restoring_the_armories
+		}
+		prerequisite = { 
+			focus = suf_restoring_the_power
+		}
+		prerequisite = { 
+			focus = suf_clearing_the_roads
+	}
+		x =14 
+		y =7 
+		completion_reward = {
+		add_political_power = 100
+		add_ideas = suf_mainframe_online
+		swap_ideas = {
+				remove_idea = suf_jupiter_program_degraded
+				add_idea = suf_jupiter_program_restored
+			}
+	}
+}
+
+
+	
+	#Military Path
+	focus = { 
+		id = suf_opening_the_military_academy
+		icon = GFX_goal_generic_small_arms 
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_our_return
+	} 
+		x =20 
+		y =4 
+		completion_reward = {
+			add_manpower = 900
+			add_ideas = suf_emphasis_on_training
+		}
+	}
+	focus = { 
+		id = suf_analyzing_pre_war_military
+		icon = GFX_goal_generic_position_armies
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_opening_the_military_academy
+	} 
+		x =19
+		y =5 
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = vehicle_tech_category
+			}
+		}
+		available_if_capitulated = yes  
+	}
+	
+	focus = { 
+		id = suf_looking_at_army_layouts
+		icon = GFX_goal_generic_western
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_analyzing_pre_war_military
+	}
+		x =19
+		y =6 
+		completion_reward = {
+			army_experience = 50
+		}
+		 
+		available_if_capitulated = yes  
+	}
+	
+	focus = { 
+		id = suf_analyzing_pre_war_airforce
+		icon = GFX_goal_generic_build_airforce
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_opening_the_military_academy
+		}
+		x =21 
+		y =5 
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = air_tech_category
+			}
+		}   
+		available_if_capitulated = yes  
+	}
+	focus = { 
+		id = suf_look_at_old_planes
+		icon = GFX_goal_generic_air_bomber
+		cost = 4.4 
+		prerequisite = { 
+			focus = suf_analyzing_pre_war_airforce
+		} 
+		x =21 
+		y =6 
+		completion_reward = {
+			air_experience = 50
+		}
+		available_if_capitulated = yes  
+	}
+	
+	focus = { 
+		id = suf_new_general
+		icon = GFX_goal_uoa_medal
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_looking_at_army_layouts
+			focus = suf_look_at_old_planes
+	} 
+		x =20
+		y =7 
+		completion_reward = {
+			army_experience = 50
+			add_popularity = {
+				ideology = elites
+				popularity = 0.05
+			}
+			create_corps_commander = {
+				name = "General Husky"
+				portrait_path = "gfx/leaders/raider/portrait_raider_generic_6.dds"
+				skill = 3
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 3
+			}
+		}
+		 
+		available_if_capitulated = yes  
+	}
+	
+	
+		#Start of Political Path 
+	focus = { 
+		id = suf_western_outlook
+		icon = GFX_goal_NCR_Hardline
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_our_return
+	} 
+		x =6 
+		y =4 
+		completion_reward = {
+			add_political_power = 100
+			add_stability = -0.10
+
+		}
+	}
+	
+	focus = { 
+		id = suf_emergency_fortifications
+		icon = GFX_goal_generic_outpost
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_western_outlook
+	} 
+		x =6 
+		y =5 
+		completion_reward = {
+			add_manpower = -500
+			331 = {
+			add_building_construction = {
+					type = bunker
+					level = 2
+					province = 6633
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 1835
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 2869
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 2978
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 7014
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	#Elites Lanius Defense
+	focus = { 
+		id = suf_allying_the_executives
+		icon = GFX_goal_pal_contact_other_gangs
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_emergency_fortifications
+	} 
+		mutually_exclusive = {
+		focus = suf_contacting_our_neigbors
+		focus = suf_contact_the_goddess
+	}
+		x =4 
+		y =6 
+		completion_reward = {
+		add_popularity = {
+				ideology = elites
+				popularity = 0.05
+			}
+		EXE = { 
+		country_event = { id = nf_fort.5 }
+			}
+		}
+	}
+	
+	focus = { 
+		id = suf_civil_defense_force
+		icon = GFX_goal_generic_new_sheriff_in_town
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_allying_the_executives
+	} 
+		x =4 
+		y =7 
+		completion_reward = {
+		load_oob = Summers_Civil_Defense
+		SUF = {
+			add_equipment_to_stockpile = {
+				type = ballistic_equipment_1
+				amount = 200
+				producer = SUF
+			}
+		}
+	}
+}	
+	focus = { 
+		id = suf_pre_emptive_strike
+		icon = GFX_goal_ITZ_encourage_office_dynasties
+		cost = 4.4
+		bypass = {
+			has_war_with = LAC
+		}
+		prerequisite = { 
+			focus = suf_civil_defense_force
+	} 
+		x =4 
+		y =8 
+		completion_reward = {
+		declare_war_on = {
+			target = LAC
+			type = annex_everything
+			}
+		EXE = {
+			declare_war_on = {
+			target = LAC
+			type = annex_everything
+			}
+		}
+	}
+}	
+	#People Lanius Defense
+	
+	focus = { 
+		id = suf_contacting_our_neigbors
+		icon = GFX_goal_pal_back_to_raiding
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_emergency_fortifications
+	}
+		mutually_exclusive = {
+		focus = suf_allying_the_executives
+		focus = suf_contact_the_goddess
+	}
+		x =6 
+		y =6 
+		completion_reward = {
+		add_popularity = {
+				ideology = people
+				popularity = 0.05
+			}
+		create_faction = "Summers Defense Pact"
+		EXE = { 
+		country_event = { id = nf_fort.7 }
+			}
+		ASF = { 
+		country_event = { id = nf_fort.7 }
+			}
+		LUP = { 
+		country_event = { id = nf_fort.7 }
+			}
+		PEC = { 
+		country_event = { id = nf_fort.7 }
+			}
+		TTM = { 
+		country_event = { id = nf_fort.7 }
+			}
+		}
+	}
+	
+	focus = { 
+		id = suf_request_arms_from_texas
+		icon = GFX_goal_TAA_tex_deal
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_contacting_our_neigbors
+	} 
+		x =6 
+		y =7 
+		completion_reward = {
+		LNS = { 
+		country_event = { id = nf_fort.8 }
+			}
+		TBH = { 
+		country_event = { id = nf_fort.8 }
+			}
+		TAA = { 
+		country_event = { id = nf_fort.8 }
+			}
+	}
+}
+
+	focus = { 
+		id = suf_push_back_the_bull
+		icon = GFX_goal_generic_legion_speared
+		cost = 4.4
+		bypass = {
+			has_war_with = LAC
+		}
+		prerequisite = { 
+			focus = suf_request_arms_from_texas
+	} 
+		x =6 
+		y =8 
+		completion_reward = {
+		declare_war_on = {
+			target = LAC
+			type = annex_everything
+			}
+	}
+}
+
+#Intellectuals Lanius Path
+
+	focus = { 
+		id = suf_contact_the_goddess
+		icon = GFX_goal_generic_focus_magazine_robcofun_wastelad
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_emergency_fortifications
+	} 	
+		mutually_exclusive = {
+		focus = suf_allying_the_executives
+		focus = suf_contacting_our_neigbors
+	}
+		x =8 
+		y =6 
+		completion_reward = {
+		TTM = { 
+		country_event = { id = nf_fort.9 }
+		add_popularity = {
+				ideology = intellectuals
+				popularity = 0.05
+			}
+			}
+	}
+}
+
+	focus = { 
+		id = suf_strengthen_our_bonds
+		icon = GFX_goal_VEG_Wrong_Package
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_contact_the_goddess
+	} 
+		x =8 
+		y =7 
+		completion_reward = {
+
+		
+		SUF = {
+		set_technology = {
+		robot_heavy_lifter_tech = 1
+			}
+			add_equipment_to_stockpile = {
+				type = combat_robot_lifter_equipment
+				amount = 150
+				producer = TTM
+			}
+			load_oob = summers_robotics_2
+		}
+
+		TTM = {
+		add_equipment_to_stockpile = {
+				type = combat_robot_lifter_equipment
+				amount = 150
+				producer = TTM
+			}
+		}
+				
+		
+	}
+}
+
+	focus = { 
+		id = suf_put_to_the_test
+		icon = GFX_goal_ITZ_cometh_the_hour_cometh_the_man
+		cost = 4.4
+		bypass = {
+			has_war_with = LAC
+		}
+		prerequisite = { 
+			focus = suf_strengthen_our_bonds
+	}
+		available = {
+		ASF = {
+		exists = no
+			}
+		}
+		x =8 
+		y =8 
+		completion_reward = {
+		declare_war_on = {
+			target = LAC
+			type = annex_everything
+			}
+		TTM = {
+		declare_war_on = {
+			target = LAC
+			type = annex_everything
+			}
+		}
+	}
+}
+
+#Victory against Lanius
+
+	focus = { 
+		id = suf_victory_over_the_legate
+		icon = GFX_goal_KSR_flagstaff_retirement
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_push_back_the_bull
+			focus = suf_pre_emptive_strike
+			focus = suf_put_to_the_test
+	} 
+		available = {
+		LAC = {
+		exists = no
+			}
+		}
+		x =6 
+		y =9 
+		completion_reward = {
+		add_stability = 0.05
+		add_war_support = 0.05
+		every_state = {
+				limit = {
+					is_core_of = LAC
+				}
+				add_core_of = SUF
+			}
+		  if = {
+            limit = {
+                ROOT = { is_in_faction = yes }
+            }
+            leave_faction = yes
+        }
+	EXE = {	
+		if = {
+            limit = {
+                EXE = { is_in_faction = yes }
+            }
+            leave_faction = yes
+        } 
+	}
+	ASF = {	
+		if = {
+            limit = {
+                ASF = { is_in_faction = yes }
+            }
+            leave_faction = yes
+        } 
+	}
+	LUP = {	
+		if = {
+            limit = {
+                LUP = { is_in_faction = yes }
+            }
+            leave_faction = yes
+        } 
+	}
+	EDA = {		
+		if = {
+            limit = {
+                EDA = { is_in_faction = yes }
+            }
+            leave_faction = yes
+			}
+		}
+		
+	PEC = {		
+		if = {
+            limit = {
+                PEC = { is_in_faction = yes }
+            }
+            leave_faction = yes
+			}
+		}
+		
+	TTM = {		
+		if = {
+            limit = {
+                TTM = { is_in_faction = yes }
+            }
+            leave_faction = yes
+			}
+		}
+	}
+}
+
+
+#Emergency Election
+
+	focus = { 
+		id = suf_emergency_elections
+		icon = GFX_goal_mutant_self_management
+		cost = 1
+		available = {
+		has_completed_focus = suf_victory_over_the_legate
+		}
+		x =14 
+		y =9 
+		completion_reward = {
+		country_event = { id = nf_fort.10 }
+	}
+}
+
+#Any-Winner Focuses
+
+	focus = { 
+		id = suf_sending_out_the_scouts
+		icon = GFX_goal_generic_pioneer_scouts
+		cost = 7.2
+		prerequisite = { 
+			focus = suf_emergency_elections
+	} 
+
+		x =14 
+		y =10 
+		completion_reward = {
+		108 = { add_claim_by = SUF }
+		423 = { add_claim_by = SUF }
+		566 = { add_claim_by = SUF }
+		541 = { add_claim_by = SUF }
+		537 = { add_claim_by = SUF }
+		265 = { add_claim_by = SUF }
+	}
+}
+
+	focus = { 
+		id = suf_securing_the_south
+		icon = GFX_goal_NEW_counquering_vault
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_sending_out_the_scouts
+	} 
+
+		x =13 
+		y =11 
+		completion_reward = {
+		declare_war_on = {
+			target = EXE
+			type = annex_everything
+			}
+	}
+}
+
+	focus = { 
+		id = suf_integrating_the_settlements
+		icon = GFX_goal_NCR_Milcenters
+		cost = 7.2
+		prerequisite = { 
+			focus = suf_sending_out_the_scouts
+	} 
+		available = {
+		EXE = {
+		exists = no
+			}
+		}
+		x =15 
+		y =11 
+		completion_reward = {
+		
+		every_state = {
+        limit = {
+            OR = {
+				 is_core_of = EXE
+            }
+        }
+        add_core_of = SUF
+		}
+	}
+}
+
+	#Elites Political Path
+
+	focus = { 
+		id = suf_the_clovis_question
+		icon = GFX_goal_generic_focus_magazine_gunsandbullets_take_aim
+		cost = 4.4
+		mutually_exclusive = {
+		focus = suf_looking_to_the_future
+		focus = suf_a_dream_of_statehood
+	}
+		prerequisite = { 
+			focus = suf_integrating_the_settlements
+	} 
+		prerequisite = { 
+			focus = suf_securing_the_south
+	}
+
+		x =14 
+		y =13 
+		completion_reward = {
+		set_technology = {
+		ballistic_weaponry_tech_3 = 1
+		prewar_infantry_kit = 1
+		}
+		LUB = {
+		country_event = { id = nf_fort.11 }
+		}
+	}
+}
+
+	focus = { 
+		id = suf_we_love_cannons
+		icon = GFX_goal_generic_artillery
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_the_clovis_question
+	} 
+
+
+		x =12 
+		y =14 
+		completion_reward = {
+		CWB = {
+		country_event = { id = nf_fort.12 }
+		}
+	}
+}
+
+	focus = { 
+		id = suf_gods_gonna_cut_you_down
+		icon = GFX_goal_HEA_focus_embracing_violence
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_the_clovis_question
+	} 
+
+
+		x =14 
+		y =14 
+		completion_reward = {
+		create_wargoal = {
+			type = annex_everything
+            target = ASF
+			}
+	}
+}
+
+	focus = { 
+		id = suf_setting_the_black_sun
+		icon = GFX_goal_pal_we_won
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_the_clovis_question
+	} 
+
+
+		x =16 
+		y =14 
+		completion_reward = {
+		create_wargoal = {
+			type = annex_everything
+            target = BSU
+			}
+	}
+}
+
+	focus = { 
+		id = suf_consolidating_our_position
+		icon = GFX_goal_FFI_stomped
+		cost = 10
+		prerequisite = { 
+			focus = suf_setting_the_black_sun
+	} 
+		prerequisite = { 
+			focus = suf_gods_gonna_cut_you_down
+	} 
+		prerequisite = { 
+			focus = suf_we_love_cannons
+	} 
+
+		x =14 
+		y =15 
+		completion_reward = {
+		 add_state_core = 108
+		 add_state_core = 423
+		create_wargoal = {
+			type = annex_everything
+            target = SUN
+			}
+			
+			add_timed_idea = {
+		idea = suf_consolidating_our_territory
+		days = 180
+		}
+
+	}
+}
+
+	focus = { 
+		id = suf_biting_the_scorpion
+		icon = GFX_goal_generic_creature_radscorpion
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_consolidating_our_position
+	} 
+
+
+		x =13 
+		y =16 
+		completion_reward = {
+		create_wargoal = {
+			type = annex_everything
+            target = SCO
+			}
+	}
+}
+
+	focus = { 
+		id = suf_peircing_the_chapter
+		icon = GFX_goal_generic_focus_magazine_gunsandbullets_plasma
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_consolidating_our_position
+	} 
+
+
+		x =15 
+		y =16 
+		completion_reward = {
+		create_wargoal = {
+			type = annex_everything
+            target = MXC
+			}
+	}
+}
+
+	focus = { 
+		id = suf_putting_down_the_dogs
+		icon = GFX_goal_CES_burned_dog
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_peircing_the_chapter
+	} 
+		prerequisite = { 
+			focus = suf_biting_the_scorpion
+	}
+
+		x =14 
+		y =17 
+		completion_reward = {
+		create_wargoal = {
+			type = annex_everything
+            target = HAN
+			}
+	}
+}
+
+	focus = { 
+		id = suf_clearing_collins
+		icon = GFX_goal_pal_pr_cyclops
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_putting_down_the_dogs
+	} 
+
+
+		x =13 
+		y =18 
+		completion_reward = {
+		create_wargoal = {
+			type = annex_everything
+            target = WHD
+			}
+	}
+}
+
+	focus = { 
+		id = suf_retaking_zeros_ruins
+		icon = GFX_goal_generic_focus_magazine_gunsandbullets_lasers
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_putting_down_the_dogs
+	} 
+
+
+		x =15 
+		y =18 
+		completion_reward = {
+		create_wargoal = {
+			type = annex_everything
+            target = GLW
+			}
+	}
+}
+
+	focus = { 
+		id = suf_restoring_the_complex
+		icon = GFX_goal_pal_the_below
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_clearing_collins
+	}
+
+		prerequisite = { 
+			focus = suf_retaking_zeros_ruins
+	} 
+
+
+		x =14 
+		y =19 
+		completion_reward = {
+		add_state_core = 510
+		add_state_core = 412
+		
+		add_timed_idea = {
+		idea = suf_repairing_the_facility
+		days = 240
+		}
+		
+	}
+}
+
+	focus = { 
+		id = suf_norad_is_online
+		icon = GFX_goal_ITZ_oil_and_imperialism
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_restoring_the_complex
+	}
+
+		available = {
+		NOT = {
+        has_idea = suf_repairing_the_facility
+		}
+	}
+		x =14 
+		y =20 
+		completion_reward = {
+		set_cosmetic_tag = NORAD
+		add_ideas = suf_norad_online
+		add_state_core = 310
+		set_capital = 310
+		310 = {
+		set_state_name = "Cheyenne Mountain Complex"
+			}
+	}
+}
+
+	focus = { 
+		id = suf_reform_conelrad
+		icon = GFX_goal_TLA_awake_and_angry
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_norad_is_online
+	}
+		x =13 
+		y =21 
+		completion_reward = {
+		add_ideas = suf_conelrad
+		
+	}
+}
+
+	focus = { 
+		id = suf_forming_the_dbac
+		icon = GFX_goal_generic_helm_gas_mask
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_norad_is_online
+	}
+
+		x =15 
+		y =21 
+		completion_reward = {
+		add_ideas = suf_dbac_formed
+		load_oob = summers_dbac
+		set_technology = {
+		special_forces_tech_level_scientific = 1
+		spec_ops_equipment_tech_5 = 1
+		}
+	}
+}
+
+	focus = { 
+		id = suf_prison_for_dissidents
+		icon = GFX_goal_BRK_slave_rights
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_reform_conelrad
+	}
+
+		x =12 
+		y =22 
+		completion_reward = {
+		add_state_core = 572
+	}
+}
+
+	focus = { 
+		id = suf_clearing_colorado
+		icon = GFX_goal_generic_state_colorado
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_forming_the_dbac
+	}
+
+		x =16 
+		y =22 
+		completion_reward = {
+		create_wargoal = {
+			type = annex_everything
+            target = ROB
+			}
+			create_wargoal = {
+			type = annex_everything
+            target = IRN
+			}
+			create_wargoal = {
+			type = annex_everything
+            target = DSL
+			}
+			create_wargoal = {
+			type = annex_everything
+            target = HXL
+			}
+			create_wargoal = {
+			type = annex_everything
+            target = BAG
+			}
+			create_wargoal = {
+			type = annex_everything
+            target = LUM
+			}
+	}
+}
+
+	focus = { 
+		id = suf_securing_colorado
+		icon = GFX_goal_TTM_Colorado_Shield
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_prison_for_dissidents
+	}
+		prerequisite = { 
+			focus = suf_clearing_colorado
+	}
+	
+		
+		x =14 
+		y =23 
+		completion_reward = {
+		add_state_core = 525
+		add_state_core = 524
+		525 = {
+		set_state_name = "Denver"
+			}
+			
+			every_state = {
+				limit = {
+					is_colorado_state = yes
+				}
+				set_variable = {
+					coring_cost_targeted_state_factor@SUF = -0.5
+				}
+			}
+			custom_effect_tooltip = lac_pushing_for_colorado_desc_tt
+	}
+}
+
+#New Mexican Republic Path
+
+	focus = { 
+		id = suf_a_dream_of_statehood
+		icon = GFX_goal_generic_desert
+		cost = 4.4
+		mutually_exclusive = {
+		focus = suf_the_clovis_question
+		focus = suf_looking_to_the_future
+	}
+		prerequisite = { 
+			focus = suf_integrating_the_settlements
+	} 
+		prerequisite = { 
+			focus = suf_securing_the_south
+	}
+
+		x =6 
+		y =13 
+		completion_reward = {
+		set_technology = {
+		ballistic_weaponry_tech_2 = 1
+		truck_tech_1 = 1
+		}
+		add_stability = 0.05
+		add_war_support = 0.05
+		create_faction = "New American Defense Pact"
+		}
+	}
+	
+	focus = { 
+		id = suf_friends_of_god
+		icon = GFX_goal_HEA_focus_brotherhood_with_the_ires
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_a_dream_of_statehood
+	} 
+		bypass = {
+			ASF = { exists = no }
+		}
+		x =5 
+		y =14 
+		completion_reward = {
+		ASF = {
+		country_event = { id = nf_fort.13 }
+			}
+		}
+	}
+	
+	focus = { 
+		id = suf_plucking_the_rose
+		icon = GFX_goal_TAA_rose_yellow
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_a_dream_of_statehood
+	} 
+		bypass = {
+			EDA = { exists = no }
+		}
+		x =7 
+		y =14 
+		completion_reward = {
+		EDA = {
+		country_event = { id = nf_fort.14 }
+			}
+		}
+	}
+	
+	focus = { 
+		id = suf_feeding_the_wolves
+		icon = GFX_goal_generic_mistress_of_mystery
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_plucking_the_rose
+	} 	
+		prerequisite = { 
+			focus = suf_friends_of_god
+	}
+		bypass = {
+			LUP = { exists = no }
+		}
+		x =6 
+		y =15 
+		completion_reward = {
+		LUP = {
+		country_event = { id = nf_fort.15 }
+			}
+		}
+	}
+	
+	focus = { 
+		id = suf_an_offer_to_the_suns
+		icon = GFX_goal_generic_TWO_shield
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_feeding_the_wolves
+	} 
+
+		x =4 
+		y =16 
+		completion_reward = {
+		SUN = {
+		country_event = { id = nf_fort.16 }
+			}
+		BSU = {
+		country_event = { id = nf_fort.17 }
+			}
+		}
+	}
+	
+	focus = { 
+		id = suf_clovis_for_security
+		icon = GFX_KHA_focus_ncr_support
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_feeding_the_wolves
+	} 
+
+		x =8 
+		y =16 
+		completion_reward = {
+		LUB = {
+		country_event = { id = nf_fort.19 }
+			}
+		}
+	}
+	
+	focus = { 
+		id = suf_cannon_for_security
+		icon = GFX_goal_MLP_rainbow_portal
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_feeding_the_wolves
+	} 
+
+		x =6 
+		y =16 
+		completion_reward = {
+		CWB = {
+		country_event = { id = nf_fort.18 }
+			}
+		}
+	}
+	
+	focus = { 
+		id = suf_accept_our_union
+		icon = GFX_goal_generic_focus_magazine_lal_married_a_robot
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_cannon_for_security
+	}
+		prerequisite = { 
+			focus = suf_clovis_for_security
+	}
+		prerequisite = { 
+			focus = suf_an_offer_to_the_suns
+	} 
+
+		x =5 
+		y =17 
+		completion_reward = {
+		
+		ASF = {
+		country_event = { id = nf_fort.20 }
+			}
+			
+		LUP = {
+		country_event = { id = nf_fort.20 }
+			}
+			
+		EDA = {
+		country_event = { id = nf_fort.20 }
+			}
+			
+			hidden_effect = {
+			complete_national_focus = suf_or_face_the_consequences
+			}
+		}
+	}
+	
+	focus = { 
+		id = suf_or_face_the_consequences
+		icon = GFX_goal_NCN_Their_Father_Is_Dead
+		cost = 4.4
+		available = {
+		has_completed_focus = suf_accept_our_union
+		}
+		prerequisite = { 
+			focus = suf_cannon_for_security
+	}
+		prerequisite = { 
+			focus = suf_clovis_for_security
+	}
+		prerequisite = { 
+			focus = suf_an_offer_to_the_suns
+	}
+
+		x =7 
+		y =17 
+		completion_reward = {
+		add_war_support = 0.15
+		}
+	}
+	
+	focus = { 
+		id = suf_a_state_reborn
+		icon = GFX_goal_ENC_laser_weapons_reform
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_accept_our_union
+	} 
+		prerequisite = { 
+			focus = suf_or_face_the_consequences
+	}
+
+		x =6 
+		y =18 
+		completion_reward = {
+		add_ideas = suf_old_world_faults_1
+		swap_ideas = {
+				remove_idea = SUF_remnants_of_the_army
+				add_idea = SUF_to_protect_the_republic
+			}
+		set_cosmetic_tag = New_Mexico
+		every_state = {
+				limit = {
+					is_core_of = RES
+				}
+				add_claim_by = SUF
+			}
+		91 = { add_claim_by = SUF }
+		392 = { add_claim_by = SUF }
+		482 = { add_claim_by = SUF }
+		224 = { add_claim_by = SUF }
+		501 = { add_claim_by = SUF }
+		538 = { add_claim_by = SUF }
+		522 = { add_claim_by = SUF }
+		563 = { add_claim_by = SUF }
+		632 = { add_claim_by = SUF }
+		442 = { add_claim_by = SUF }
+		633 = { add_claim_by = SUF }
+		88 = { add_claim_by = SUF }
+		248 = { add_claim_by = SUF }
+		275 = { add_claim_by = SUF }
+		add_stability = 0.03
+		
+		}
+	}
+	
+	#New Mexican Security Path
+	focus = { 
+		id = suf_a_republic_forged_in_blood
+		icon = GFX_goal_VEG_The_Human_Banquet
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_a_state_reborn
+	} 
+		
+
+		x =3 
+		y =19 
+		completion_reward = {
+		add_ideas = suf_forged_in_blood
+		}
+	}
+	
+	focus = { 
+		id = suf_offering_a_goddess_security
+		icon = GFX_goal_TTM_Robot_Refugees
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_a_republic_forged_in_blood
+	} 
+		
+
+		x =2 
+		y =20 
+		completion_reward = {
+		SUF = {give_guarantee = TTM }
+		}
+	}
+	
+	focus = { 
+		id = suf_securing_our_future
+		icon = GFX_goal_NCR_Bastion_By_the_Sea
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_a_republic_forged_in_blood
+	} 
+		
+
+		x =4 
+		y =20 
+		completion_reward = {
+		5 = {
+		set_state_name = "Red Sun Defense Zone"
+			}
+			641 = {
+			add_building_construction = {
+					type = bunker
+					level = 2
+					province = 1815
+					instant_build = yes
+				}
+			}
+				5 = {
+			add_building_construction = {
+					type = bunker
+					level = 2
+					province = 8967
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 8968
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 8969
+					instant_build = yes
+				}
+			}
+			
+				409 = {
+			add_building_construction = {
+					type = bunker
+					level = 2
+					province = 6630
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 2910
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = suf_our_options_await
+		icon = GFX_goal_ENC_threat_of_communism
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_securing_our_future
+	} 
+		prerequisite = { 
+			focus = suf_offering_a_goddess_security
+	} 
+
+		x =3 
+		y =21 
+		completion_reward = {
+		add_war_support = 0.05
+		add_manpower = 1000
+		}
+	}
+	
+	focus = { 
+		id = suf_wait_until_the_time_arises
+		icon = GFX_goal_CES_diplomatic
+		cost = 20
+		prerequisite = { 
+			focus = suf_our_options_await
+	} 
+		mutually_exclusive = {
+		focus = suf_freedom_is_a_sovereign_right
+	}
+
+		x =2 
+		y =22 
+		completion_reward = {
+		add_war_support = 0.05
+		add_stability = 0.05
+		create_wargoal = {
+			type = annex_everything
+            target = CES
+			}
+		}
+	}
+	focus = { 
+		id = suf_freedom_is_a_sovereign_right
+		icon = GFX_goal_ENC_poison_bull
+		cost = 10
+		prerequisite = { 
+			focus = suf_our_options_await
+	} 
+		mutually_exclusive = {
+		focus = suf_wait_until_the_time_arises
+	}
+
+		x =4 
+		y =22 
+		completion_reward = {
+		add_manpower = 500
+		create_wargoal = {
+			type = annex_everything
+            target = CES
+			}
+		}
+	}
+	#New Mexican Homefront Path
+	
+	focus = { 
+		id = suf_an_infant_republic
+		icon = GFX_goal_pal_vault_city
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_a_state_reborn
+	} 
+		
+
+		x =9 
+		y =19 
+		completion_reward = {
+		swap_ideas = {
+				remove_idea = suf_old_world_faults_1
+				add_idea = suf_old_world_faults_2
+			}
+		}
+	}
+	
+	focus = { 
+		id = suf_mending_cultural_ties
+		icon = GFX_goal_TIM_patch_american_labor
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_an_infant_republic
+	} 
+		
+
+		x =8 
+		y =20 
+		completion_reward = {
+		swap_ideas = {
+				remove_idea = suf_old_world_faults_2
+				add_idea = suf_old_world_faults_3
+			}
+		}
+	}
+	
+	focus = { 
+		id = suf_integrating_our_rightful_land
+		icon = GFX_goal_MOJ_progressive_thought
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_an_infant_republic
+	} 
+		
+
+		x =10 
+		y =20 
+		completion_reward = {
+				every_state = {
+				limit = {
+					is_core_of = LUP
+				}
+				add_core_of = ROOT
+			}
+		every_state = {
+				limit = {
+					is_core_of = ASF
+				}
+				add_core_of = ROOT
+			}
+		every_state = {
+				limit = {
+					is_core_of = EDA
+				}
+				add_core_of = ROOT
+			}
+		}
+	}
+	
+	
+	focus = { 
+		id = suf_a_time_to_join_together
+		icon = GFX_goal_TIM_patch_american_cultures
+		cost = 4.4
+		prerequisite = { 
+			focus = suf_mending_cultural_ties
+	} 
+	
+		prerequisite = { 
+			focus = suf_integrating_our_rightful_land
+	} 
+		
+
+		x =9 
+		y =21 
+		completion_reward = {
+		swap_ideas = {
+				remove_idea = suf_old_world_faults_3
+				add_idea = suf_overcoming_faults
+			}
+		}
+	}
+	
+	#Intellectuals Political Path Start
+	focus = { 
+		id = suf_looking_to_the_future
+		icon = GFX_goal_ARM_the_equation_of_war
+		cost = 4.4
+		mutually_exclusive = {
+		focus = suf_the_clovis_question
+		focus = suf_a_dream_of_statehood
+	}
+		prerequisite = { 
+			focus = suf_integrating_the_settlements
+	} 
+		prerequisite = { 
+			focus = suf_securing_the_south
+	}
+
+		x =23 
+		y =13 
+		completion_reward = {
+		add_political_power = 100
+		
+	}
+}
+
+	focus = { 
+		id = suf_a_division_in_our_ranks
+		icon = GFX_goal_ITZ_deal_with_the_technocrats
+		cost = 4.4
+
+		prerequisite = { 
+			focus = suf_looking_to_the_future
+	} 
+
+		x =23 
+		y =14 
+		completion_reward = {
+		country_event = { id = nf_fort.21 }
+	}
+}
+
+	#MIB Route
+	
+		focus = { 
+		id = suf_hello_commander
+		icon = GFX_goal_MOJ_what_remains
+		cost = 4.4
+
+		prerequisite = { 
+			focus = suf_a_division_in_our_ranks
+	} 
+		mutually_exclusive = {
+		focus = suf_contacting_maxons_chapter
+	}
+	
+		x =19 
+		y =15 
+		completion_reward = {
+		every_state = {
+				limit = {
+					is_core_of = EDA
+				}
+				add_core_of = SUF
+			}
+		set_technology = {
+		ballistic_weaponry_tech_4 = 1
+		prewar_infantry_kit = 1
+		}
+				
+	create_country_leader = {
+	name = "The Man in Black"
+	desc = "MIB_DESC"
+	picture = "gfx/leaders/EDA/portrait_eda_leader.dds"
+	expire = "3000.1.1"
+	ideology = technocracy
+		}
+	}
+}
+
+	focus = { 
+		id = suf_eda_teams
+		icon = GFX_goal_generic_focus_vault_tec_power_armor
+		cost = 4.4
+
+		prerequisite = { 
+			focus = suf_hello_commander
+	} 
+
+		x =19 
+		y =16
+		completion_reward = {
+		set_cosmetic_tag = Space_Defence_Command
+		set_technology = {
+		texas_brotherhood_pa_tech = 1
+		}
+		load_oob = summers_eda_teams
+	}
+}
+
+	focus = { 
+		id = suf_expand_the_ao
+		icon = GFX_goal_VEG_Thorn
+		cost = 4.4
+
+		prerequisite = { 
+			focus = suf_eda_teams
+	} 
+
+		x =17 
+		y =17
+		completion_reward = {
+		create_wargoal = {
+			type = annex_everything
+            target = PEC
+			}
+	}
+}
+
+	focus = { 
+		id = suf_tech_for_protech
+		icon = GFX_goal_TTM_Lil_Sis
+		cost = 4.4
+
+		prerequisite = { 
+			focus = suf_eda_teams
+	} 
+
+		x =19 
+		y =17
+		completion_reward = {
+		TTM = {
+		country_event = { id = nf_fort.22 }
+		}
+	}
+}
+
+	focus = { 
+		id = suf_expand_our_bunkers
+		icon = GFX_goal_ITZ_expand_the_border_fortifications
+		cost = 4.4
+
+		prerequisite = { 
+			focus = suf_eda_teams
+	} 
+
+		x =21 
+		y =17
+		completion_reward = {
+		set_technology = {
+		underground_industry_tech = 1
+		}
+	}
+}
+
+	focus = { 
+		id = suf_restore_the_defenses
+		icon = GFX_goal_generic_dam
+		cost = 4.4
+
+		prerequisite = { 
+			focus = suf_expand_our_bunkers
+	} 
+		prerequisite = { 
+			focus = suf_tech_for_protech
+	} 
+	
+	prerequisite = { 
+			focus = suf_expand_the_ao
+	}  
+
+		x =18 
+		y =18
+		completion_reward = {
+		every_owned_state = {
+				limit = {
+					is_core_of = SUF
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+			}
+	}
+}
+
+	focus = { 
+		id = suf_secure_nearby_installations
+		icon = GFX_goal_LNS_LUB_Occupation
+		cost = 4.4
+
+		prerequisite = { 
+			focus = suf_expand_our_bunkers
+	} 
+		prerequisite = { 
+			focus = suf_tech_for_protech
+	} 
+	
+	prerequisite = { 
+			focus = suf_expand_the_ao
+	} 
+		x =20 
+		y =18
+		completion_reward = {
+			create_wargoal = {
+			type = annex_everything
+            target = CWB
+			}
+			
+		create_wargoal = {
+			type = annex_everything
+            target = LUB
+			}
+	}
+}
+
+	focus = { 
+		id = suf_prepare_for_their_invasion
+		icon = GFX_goal_area_51
+		cost = 4.4
+
+		prerequisite = { 
+			focus = suf_restore_the_defenses
+	} 
+		prerequisite = { 
+			focus = suf_secure_nearby_installations
+	} 
+		x =19 
+		y =19
+		completion_reward = {
+		add_ideas = suf_space_defense_agency
+		set_technology = {
+		vertibird_unlock_tech = 1
+		air_tech_level_scientific = 1
+		}
+		add_equipment_to_stockpile = {
+					type = vb_gunship_equipment
+					amount = 50
+					producer = USA
+				}
+	}
+}
+	
+	#Brotherhood Path
+	
+	focus = { 
+		id = suf_contacting_maxons_chapter
+		icon = GFX_goal_pal_apply_for_citizenship
+		cost = 4.4
+
+		prerequisite = { 
+			focus = suf_a_division_in_our_ranks
+	} 
+		mutually_exclusive = {
+		focus = suf_hello_commander
+	}
+
+		x =27 
+		y =15 
+		completion_reward = {
+		add_ideas = suf_aid_from_maxons
+	}
+}
+
+	focus = { 
+		id = suf_scribes_and_shiny_guns
+		icon = GFX_goal_pal_vc_energy_weapons
+		cost = 4.4
+
+		prerequisite = { 
+			focus = suf_contacting_maxons_chapter
+	} 
+
+		x =27 
+		y =16 
+		completion_reward = {
+		add_ideas = suf_scribes_arrive
+		set_technology = {
+		energy_weaponry_tech_1 = 1
+		power_armour_tech_level_settler = 1
+		}
+	}
+}
+
+	focus = { 
+		id = suf_learning_a_knights_oath
+		icon = GFX_goal_generic_pa_statue
+		cost = 4.4
+
+		prerequisite = { 
+			focus = suf_scribes_and_shiny_guns
+	} 
+
+		x =25 
+		y =17 
+		completion_reward = {
+		set_technology = {
+		power_armour_tech_level_scientific = 1
+		stripped_pa_tech = 1
+		simple_servo_tech = 1
+		scav_pa_tech = 1
+		}
+		SUF = {
+				add_equipment_to_stockpile = {
+					type = power_armor_equipment_3
+					amount = 150
+					producer = USA
+				}
+			}
+		SUF = {
+			add_equipment_to_stockpile = {
+				type = energy_equipment_1
+				amount = 300
+				producer = SUF
+			}
+		}
+	}
+}
+
+	focus = { 
+		id = suf_the_tasks_of_scribes
+		icon = GFX_goal_pal_the_test
+		cost = 4.4
+
+		prerequisite = { 
+			focus = suf_scribes_and_shiny_guns
+	} 
+
+		x =27 
+		y =17 
+		completion_reward = {
+		swap_ideas = {
+				remove_idea = suf_scribes_arrive
+				add_idea = suf_scribes_knowlege
+			}
+	}
+}
+
+	focus = { 
+		id = suf_the_duty_of_paladins
+		icon = GFX_goal_generic_van_buren_power_armour
+		cost = 4.4
+
+		prerequisite = { 
+			focus = suf_scribes_and_shiny_guns
+	} 
+
+		x =29 
+		y =17 
+		completion_reward = {
+		swap_ideas = {
+				remove_idea = suf_aid_from_maxons
+				add_idea = suf_lessons_of_the_paladins
+			}
+	}
+}
+
+	focus = { 
+		id = suf_reaching_out_to_texas
+		icon = GFX_goal_generic_texas1
+		cost = 4.4
+
+		prerequisite = { 
+			focus = suf_learning_a_knights_oath
+	}
+		prerequisite = { 
+			focus = suf_the_tasks_of_scribes
+	}
+		prerequisite = { 
+			focus = suf_the_duty_of_paladins
+	}
+
+		x =26 
+		y =18 
+		completion_reward = {
+		country_event = { id = nf_fort.23 }
+	}
+}
+
+	focus = { 
+		id = suf_closing_the_nursery
+		icon = GFX_goal_TTM_rob_game_over
+		cost = 4.4
+
+		prerequisite = { 
+			focus = suf_learning_a_knights_oath
+	}
+		prerequisite = { 
+			focus = suf_the_tasks_of_scribes
+	}
+		prerequisite = { 
+			focus = suf_the_duty_of_paladins
+	} 
+
+		x =28 
+		y =18 
+		completion_reward = {
+		create_wargoal = {
+			type = annex_everything
+            target = TTM
+			}
+	}
+}
+
+	focus = { 
+		id = suf_forming_the_summers_chapter
+		icon = GFX_goal_generic_Steel_crate
+		cost = 4.4
+
+		prerequisite = { 
+			focus = suf_reaching_out_to_texas
+	} 
+		prerequisite = { 
+			focus = suf_closing_the_nursery
+	} 
+
+		x =27 
+		y =19 
+		completion_reward = {
+		set_cosmetic_tag = Summers_Chapter
+		swap_ideas = {
+				remove_idea = SUF_remnants_of_the_army
+				add_idea = SUF_a_new_chapter
+			}
+		every_state = {
+				limit = {
+					is_core_of = TTM
+				}
+				add_core_of = SUF
+			}
+	}
+}
+
+	
+	##End of Focus Tree##
+	}

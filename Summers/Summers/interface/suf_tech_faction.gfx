@@ -1,0 +1,86 @@
+spriteTypes = {
+
+	
+	# SUF (Fort Summers)
+	
+spriteType = {
+		name = "GFX_SUF_standard_weaponry_tech_medium"
+		texturefile = "gfx/interface/equipment/cosmetic/22revolver.dds"
+		alwaystransparent = yes
+}
+spriteType = {
+name = "GFX_SUF_ballistic_weaponry_tech_1_medium"
+		texturefile = "gfx/interface/equipment/cosmetic/ballistic/ballistic_weaponry_tech_icon_2_10mm_smg.dds"
+		alwaystransparent = yes
+}
+spriteType = {
+name = "GFX_SUF_ballistic_weaponry_tech_2_medium"
+		texturefile = "gfx/interface/equipment/cosmetic/support/ballistic_fireteam_weaponry_tech_icon_2_automatic_rifle.dds"
+		alwaystransparent = yes
+}
+spriteType = {
+		name = "GFX_SUF_ballistic_weaponry_tech_4_medium"
+		texturefile = "gfx/interface/equipment/cosmetic/OICW.dds"
+		alwaystransparent = yes
+		}
+spriteType = {
+		name = "GFX_SUF_energy_weaponry_tech_1_medium"
+		texturefile = "gfx/interface/equipment/cosmetic/ae7_laser_pistol.dds"
+		alwaystransparent = yes
+}
+spriteType = {
+		name = "GFX_SUF_energy_weaponry_tech_2_medium"
+		texturefile = "gfx/interface/equipment/cosmetic/MakeshiftLaser.dds"
+		alwaystransparent = yes
+}
+spriteType = {
+		name = "GFX_SUF_energy_weaponry_tech_3_medium"
+		texturefile = "gfx/interface/equipment/cosmetic/energy/energy_weaponry_tech_icon_3_laer.dds"
+		alwaystransparent = yes
+	}
+spriteType = {
+		name = "GFX_SUF_energy_weaponry_tech_4_medium"
+		texturefile = "gfx/interface/equipment/cosmetic/energy/energy_weaponry_tech_icon_3_m1_winchester.dds"
+		alwaystransparent = yes
+}
+spriteType = {
+		name = "GFX_SUF_fireteam_weaponry_tech_medium"
+		texturefile = "gfx/interface/equipment/cosmetic/support/ballistic_fireteam_weaponry_tech_icon_2_gatling.dds"
+		alwaystransparent = yes
+}
+	
+spriteType = {
+		name = "GFX_SUF_spec_ops_equipment_tech_5_medium"
+		texturefile = "gfx/interface/equipment/cosmetic/DBAC_equipment.dds"
+		alwaystransparent = yes
+	}
+	
+spriteType = {
+		name = "GFX_SUF_robot_heavy_lifter_tech_medium"
+		texturefile = "gfx/interface/equipment/cosmetic/sentrybot_fo3.dds"
+		alwaystransparent = yes
+	}
+	
+spriteType = {
+		name = "GFX_SUF_power_armor_equipment_3_medium"
+		texturefile = "gfx/interface/equipment/cosmetic/pa/t_45_icon_army.dds"
+		alwaystransparent = yes
+	}
+
+spriteType = {
+		name = "GFX_SUF_power_armor_equipment_4_medium"
+		texturefile = "gfx/interface/equipment/cosmetic/pa/t_51_icon_army.dds"
+		alwaystransparent = yes
+	}
+	
+spriteType = {
+		name = "GFX_SUF_truck_equipment_1_medium"
+		texturefile = "gfx/interface/equipment/cosmetic/summers_trucks.dds"
+		alwaystransparent = yes
+	}	
+	
+	
+	
+	
+	}
+# vim: set ft=pdx tw=79 :

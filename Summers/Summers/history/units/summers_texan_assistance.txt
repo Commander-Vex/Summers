@@ -1,0 +1,124 @@
+﻿division_template = {
+	is_locked = yes
+	name = "Texan Patrolmen"
+	regiments = {
+		police_infantry = { x = 0 y = 0 }
+		police_infantry = { x = 0 y = 1 }
+		police_infantry = { x = 1 y = 0 }
+		police_infantry = { x = 1 y = 1 }
+		police_infantry = { x = 2 y = 0 }
+		police_infantry = { x = 2 y = 1 }
+		police_infantry = { x = 3 y = 0 }
+		police_infantry = { x = 3 y = 1 }
+	}
+
+}
+
+
+division_template = {
+	is_locked = yes
+	name = "Texan Motorized Patrolmen"
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+	is_locked = yes
+	name = "Texan Brotherhood Knights"
+	regiments = {
+		power_armour = { x = 0 y = 0 }
+		power_armour = { x = 0 y = 1 }
+		power_armour = { x = 0 y = 2 }
+		power_armour = { x = 1 y = 0 }
+		power_armour = { x = 1 y = 1 }
+		power_armour = { x = 1 y = 2 }
+	}
+
+}
+
+units = {
+	division = {
+		name = "Texan Motorized Assistance"
+		location = 7016
+		division_template = "Texan Motorized Patrolmen"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	
+	division = {
+		name = "Texan Motorized Assistance"
+		location = 7006
+		division_template = "Texan Motorized Patrolmen"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	
+	division = {
+		name = "Texan Motorized Assistance"
+		location = 5266
+		division_template = "Texan Motorized Patrolmen"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	
+	division = {
+		name = "Texan Patrolmen Assistance"
+		location = 7016
+		division_template = "Texan Patrolmen"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	
+	division = {
+		name = "Texan Patrolmen Assistance"
+		location = 7016
+		division_template = "Texan Patrolmen"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	
+	division = {
+		name = "Texan Patrolmen Assistance"
+		location = 7016
+		division_template = "Texan Patrolmen"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	
+	division = {
+		name = "Texan Patrolmen Assistance"
+		location = 7016
+		start_experience_factor = 0.5
+		division_template = "Texan Patrolmen"
+		start_equipment_factor = 1.0
+	}
+	
+	division = {
+		name = "Texan Patrolmen Assistance"
+		location = 7016
+		division_template = "Texan Patrolmen"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	
+	division = {
+		name = "Texan Knights"
+		location = 7016
+		division_template = "Texan Brotherhood Knights"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+	}
+	
+	division = {
+		name = "Texan Knights"
+		location = 7016
+		division_template = "Texan Brotherhood Knights"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+	}
+
+}

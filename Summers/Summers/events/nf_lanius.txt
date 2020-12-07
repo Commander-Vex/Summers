@@ -1,0 +1,882 @@
+﻿add_namespace = nf_lanius
+country_event = {
+	id = nf_lanius.1
+	title = nf_lanius.1.t
+	desc = nf_lanius.1.d
+	picture = GFX_event_lanius_cool
+	is_triggered_only = yes
+	option = {
+		name = nf_lanius.1.a		#Spawns Lanius with an extra Charismatic SPECIAL
+		create_field_marshal = {
+			name = "Lanius"
+			picture = "portrait_lanius.dds"
+			traits = {
+				strong_trait
+				perceptive_trait
+				enduring_trait
+				charismatic_trait
+				dont_add_specials_loser
+			}
+			id = 12161
+			skill = 4
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+		}
+		custom_effect_tooltip = nf_lanius.1.a_tt
+	}
+	option = {
+		name = nf_lanius.1.b		#Spawns Lanius with an extra Agility SPECIAL
+		create_field_marshal = {
+			name = "Lanius"
+			picture = "portrait_lanius.dds"
+			traits = {
+				strong_trait
+				perceptive_trait
+				enduring_trait
+				agile_trait
+				dont_add_specials_loser
+			}
+			id = 12161
+			skill = 4
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+		}
+		custom_effect_tooltip = nf_lanius.1.b_tt
+	}
+	option = {
+		name = nf_lanius.1.c		#Spawns Lanius with an extra Luck SPECIAL
+		create_field_marshal = {
+			name = "Lanius"
+			picture = "portrait_lanius.dds"
+			traits = {
+				strong_trait
+				perceptive_trait
+				enduring_trait
+				lucky_trait
+				dont_add_specials_loser
+			}
+			id = 12161
+			skill = 4
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+		}
+		custom_effect_tooltip = nf_lanius.1.c_tt
+	}
+	option = {
+		name = nf_lanius.1.e		#Spawns Lanius with an extra Intelligence SPECIAL
+		create_field_marshal = {
+			name = "Lanius"
+			picture = "portrait_lanius.dds"
+			traits = {
+				strong_trait
+				perceptive_trait
+				enduring_trait
+				intelligent_trait
+				dont_add_specials_loser
+			}
+			id = 12161
+			skill = 4
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+		}
+		custom_effect_tooltip = nf_lanius.1.e_tt
+	}
+
+}
+
+country_event = {
+	id = nf_lanius.2
+	title = nf_lanius.2.t
+	desc = nf_lanius.2.d
+	picture = GFX_event_lanius_planning
+	is_triggered_only = yes
+	option = {
+		name = nf_lanius.2.a		#Spawns units with good weapons
+		hidden_effect = {
+			load_oob = LAC_guncohort
+		}
+		if = {
+			limit = {
+				NOT = { has_tech = ballistic_weaponry_tech_1 }
+			}
+			set_technology = {
+				ballistic_weaponry_tech_1 = 1
+			}
+		}
+		custom_effect_tooltip = lanius_guncohort_tt
+	}
+	option = {
+		name = nf_lanius.2.b		#Spawns a large amount of units
+		hidden_effect = {
+			load_oob = LAC_bigcohort
+		}
+		custom_effect_tooltip = lanius_bigcohort_tt
+	}
+	option = {
+		name = nf_lanius.2.c		#Spawns motorised units
+		hidden_effect = {
+			load_oob = LAC_motorcohort
+		}
+		if = {
+			limit = {
+				NOT = { has_tech = bike_tech_1 }
+			}
+			set_technology = {
+				bike_tech_1 = 1
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_tech = bike_tech_2 }
+			}
+			set_technology = {
+				bike_tech_2 = 1
+			}
+		}
+		custom_effect_tooltip = lanius_motorcohort_tt
+	}
+}
+
+country_event = {
+	id = nf_lanius.3
+	title = nf_lanius.3.t
+	desc = nf_lanius.3.d
+	picture = GFX_event_ENC_legion_conquest
+	is_triggered_only = yes
+	option = {
+		name = nf_lanius.3.a		#Seize the slaver's stock
+		set_temp_variable = {
+			slaves_to_add = 0.70
+		}
+		add_slaves_to_nation = yes
+	}
+	option = {
+		name = nf_lanius.3.b		#Seize the merchant's goods
+		set_temp_variable = {
+			caps_to_add = 300
+		}
+		add_caps = yes
+	}
+	option = {
+		name = nf_lanius.3.c		#Conscript the workers
+		add_manpower = 1000
+	}
+}
+
+country_event = {
+	id = nf_lanius.4
+	title = nf_lanius.4.t
+	desc = nf_lanius.4.d
+	picture = GFX_event_legion_scouts
+	is_triggered_only = yes
+	option = {
+		name = nf_lanius.4.a		#Enslave the women and children
+		set_temp_variable = {
+			slaves_to_add = 1.5
+		}
+		add_slaves_to_nation = yes
+	}
+	option = {
+		name = nf_lanius.4.b		#Enlist the tribesmen
+		hidden_effect = {
+			load_oob = LAC_freshfaces
+		}
+		custom_effect_tooltip = lanius_freshfaces_tt
+	}
+	option = {
+		name = nf_lanius.4.c		#Put them to work
+		189 = {
+			set_building_level = {
+				type = infrastructure
+				level = 5
+				instant_build = yes
+			}
+		}
+		410 = {
+			add_resource = {
+				type = metal
+				amount = 8
+			}
+			set_building_level = {
+				type = infrastructure
+				level = 5
+				instant_build = yes
+			}
+		}
+		25 = {
+			add_resource = {
+				type = metal
+				amount = 8
+			}
+			set_building_level = {
+				type = infrastructure
+				level = 5
+				instant_build = yes
+			}
+		}
+		152 = {
+			add_resource = {
+				type = water
+				amount = 8
+			}
+			set_building_level = {
+				type = infrastructure
+				level = 5
+				instant_build = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = nf_lanius.5
+	title = nf_lanius.5.t
+	desc = nf_lanius.5.d
+	picture = GFX_event_generic_raider_1
+	is_triggered_only = yes
+	option = {
+		name = nf_lanius.5.a		#Choose to focus on Colorado
+		complete_national_focus = lac_pushing_for_colorado
+	}
+	option = {
+		name = nf_lanius.5.b		#Choose to focus on Texas
+		complete_national_focus = lac_the_next_step
+	}
+}
+
+country_event = {
+	id = nf_lanius.6
+	title = nf_lanius.6.t
+	desc = nf_lanius.6.d
+	picture = GFX_event_generic_raider_1
+	is_triggered_only = yes
+	option = {
+		name = nf_lanius.6.a		#Books
+		add_ideas = asf_the_memorabilia
+	}
+	option = {
+		name = nf_lanius.6.b		#Engineers
+		add_ideas = lac_engineers
+	}
+}
+
+country_event = {
+	id = nf_lanius.7
+	title = nf_lanius.7.t
+	desc = nf_lanius.7.d
+	picture = GFX_event_legion_scouts
+	is_triggered_only = yes
+	option = {
+		name = nf_lanius.7.a		#Farmers
+		566 = {
+			add_resource = {
+				type = water
+				amount = 7
+			}
+		}
+	}
+	option = {
+		name = nf_lanius.7.b		#Craftsmen
+		566 = {
+			add_resource = {
+				type = metal
+				amount = 7
+			}
+		}
+	}
+}
+
+country_event = {
+	id = nf_lanius.8
+	title = nf_lanius.8.t
+	desc = nf_lanius.8.d
+	picture = GFX_event_lanius_cool
+	is_triggered_only = yes
+	option = {
+		name = nf_lanius.8.a		#Farmers
+		215 = {
+			add_resource = {
+				type = circuitry
+				amount = 7
+			}
+		}
+		add_equipment_to_stockpile = { type = plasma_equipment_1 amount = 100 producer = USA }
+	}
+	option = {
+		name = nf_lanius.8.b		#Craftsmen
+		215 = {
+			add_resource = {
+				type = composites
+				amount = 7
+			}
+		}
+		add_equipment_to_stockpile = { type = plasma_equipment_1 amount = 100 producer = USA }
+	}
+}
+
+country_event = {
+	id = nf_lanius.9
+	title = nf_lanius.9.t
+	desc = nf_lanius.9.d
+	picture =  GFX_event_CES_camp_1
+	is_triggered_only = yes
+	option = {
+		name = nf_lanius.9.a		#Seize the slaver's stock
+		add_ideas = wickiup_nomads
+	}
+	option = {
+		name = nf_lanius.9.b		#Seize the merchant's goods
+		add_ideas = guerilla_legacy
+	}
+
+}
+
+country_event = {
+	id = nf_lanius.10
+	title = nf_lanius.10.t
+	desc = nf_lanius.10.d
+	picture = GFX_event_ENC_legion_conquest
+	is_triggered_only = yes
+	option = {
+		name = nf_lanius.10.a		#builder
+		add_country_leader_trait = lanius_builder_trait
+	}
+	option = {
+		name = nf_lanius.10.b		#Ruthless
+		add_country_leader_trait = lanius_ruthless
+	}
+}
+
+news_event = {
+	id = nf_lanius.11
+	title = nf_lanius.11.t
+	desc = nf_lanius.11.d
+	picture = GFX_event_ENC_legion_conquest
+	is_triggered_only = yes
+	option = {
+		name = nf_lanius.11.a		#builder
+		create_corps_commander = {
+			name = "Dyed-Blood"
+			picture = "portrait_par_country_leader.dds"
+			skill = 4
+			traits = { desert_fox strong_trait charismatic_trait }
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 5
+			id = 12162
+		}
+		load_oob = LAC_red_oakies
+		add_country_leader_trait = LAC_master_of_the_rock
+	}
+
+}
+
+country_event = {
+	id = nf_lanius.12
+	title = nf_lanius.12.t
+	desc = nf_lanius.12.d
+	picture = GFX_event_BOS_bunker_door
+	is_triggered_only = yes
+	option = {
+		name = nf_lanius.12.a		#slaves
+		add_ideas = lac_brotherhood_slaves
+	}
+	option = {
+		name = nf_lanius.12.b		#Kill Them
+		add_equipment_to_stockpile = { type = spec_ops_equipment_5 amount = 300 producer = USA }
+	}
+}
+
+country_event = {
+	id = nf_lanius.13
+	title = nf_lanius.13.t
+	desc = nf_lanius.13.d
+	picture = GFX_event_rrg_women_resistance
+	is_triggered_only = yes
+	option = {
+		name = nf_lanius.13.a		#orthodox
+		add_political_power = 150
+		add_stability = 0.10
+	}
+	option = {
+		name = nf_lanius.13.b		#builder
+		add_country_leader_trait = lanius_women
+	}
+}
+
+country_event = {
+	id = nf_lanius.14
+	title = nf_lanius.14.t
+	desc = nf_lanius.14.d
+	picture = GFX_event_lanius_cool
+	is_triggered_only = yes
+	option = {
+		name = nf_lanius.14.a		#orthodox
+		add_ideas = legion_nf_shottol_god_of_dogs
+	}
+	option = {
+		name = nf_lanius.14.b		#builder
+		set_temp_variable = {
+			slaves_to_add = 1.5
+		}
+		add_slaves_to_nation = yes
+	}
+}
+
+news_event = {
+	id = nf_lanius.15
+	title = nf_lanius.15.t
+	desc = nf_lanius.15.d
+	picture = GFX_event_lanius_cool
+	is_triggered_only = yes
+	option = {
+		name = nf_lanius.15.a
+		swap_ideas = {
+			remove_idea = lac_loot_from_theeast_1
+			add_idea = lac_loot_from_theeast_2
+		}
+
+	}
+}
+
+
+news_event = {
+	id = nf_lanius.18
+	title = nf_lanius.18.t
+	desc = nf_lanius.16.d
+	picture = GFX_event_lanius_cool
+	is_triggered_only = yes
+	option = {
+		name = nf_lanius.16.a
+		swap_ideas = {
+			remove_idea = lac_loot_from_theeast_2
+			add_idea = lac_loot_from_theeast_3
+		}
+
+	}
+}
+
+country_event = {
+	id = nf_lanius.16
+	title = nf_lanius.16.t
+	desc = nf_lanius.16.d
+	picture = GFX_event_LAC_dog
+	is_triggered_only = yes
+	option = {
+		name = nf_lanius.16.a
+		random_unit_leader = {
+			limit = {
+				has_id = 10105
+			}
+			if = {
+				limit = {
+					NOT = { has_trait = animal_friend_trait }
+				}
+				add_unit_leader_trait = animal_friend_trait
+				add_logistics = 1
+			}
+			else = {
+				add_logistics = 3
+			}
+		}
+		add_equipment_to_stockpile = {
+			type = dogs_equipment_3
+			amount = 1
+			producer = USA
+		}
+	}
+	option = {
+		name = nf_lanius.16.b
+		custom_effect_tooltip = nf_lanius.16.b_tt
+		trigger = {
+			CES = {
+				has_country_leader = {
+					name = "Caesar"
+					ruling_only = yes
+				}
+			}
+		}
+		CES = { news_event = nf_lanius.17 }
+	}
+}
+news_event = {
+	id = nf_lanius.17
+	title = nf_lanius.17.t
+	desc = nf_lanius.17.d
+	picture = GFX_event_LAC_dog
+	is_triggered_only = yes
+	option = {
+		name = nf_lanius.17.a
+		subtract_from_variable = { CES_stress_level = 1 }
+		custom_effect_tooltip = nf_lanius.17.a_tt
+	}
+}
+
+news_event = {
+	id = nf_lanius.19
+	title = nf_lanius.19.t
+	desc = nf_lanius.19.d
+	picture = GFX_event_lanius_cool
+	is_triggered_only = yes
+	option = {
+		name = nf_lanius.19.a
+		create_corps_commander = {
+			name = "Shale"
+			portrait_path = "gfx/leaders/SHA/portrait_shale.dds"
+			traits = {
+				strong_trait
+				enduring_trait
+				dont_add_specials_loser
+			}
+			id = 12162
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+}
+
+news_event = {
+	id = nf_lanius.20
+	title = nf_lanius.20.t
+	desc = nf_lanius.20.d
+	picture = GFX_event_sub_generic_fortress
+	is_triggered_only = yes
+	option = {
+		name = nf_lanius.20.a
+		add_country_leader_trait = propaganda_team
+	}
+}
+
+country_event = {
+	id = nf_lanius.21
+	title = nf_lanius.21.t
+	desc = nf_lanius.21.d
+	picture = GFX_event_lanius_planning
+	is_triggered_only = yes
+	option = {
+		name = nf_lanius.21.a		#Help Malpais
+		trigger = {
+			MAL = { exists = yes }
+		}
+		MAL = { news_event = nf_lanius.22 }
+	}
+	option = {
+		name = nf_lanius.21.b		#Spawns Aurelius
+		trigger = {
+			AUR = { exists = yes }
+		}
+		AUR = { news_event = nf_lanius.22 }
+	}
+	option = {
+		name = nf_lanius.21.c	#Help Lucius
+		trigger = {
+			LUC = { exists = yes }
+		}
+		LUC = { news_event = nf_lanius.22 }
+	}
+	option = {
+		name = nf_lanius.21.e		#Noobs
+	}
+}
+news_event = {
+	id = nf_lanius.22
+	title = nf_lanius.22.t
+	desc = nf_lanius.22.d
+	picture = GFX_event_ENC_legion_conquest
+	is_triggered_only = yes
+	option = {
+		name = nf_lanius.22.a
+		if = {
+			limit = {
+				NOT = { has_tech = anti_tank_equipment_tech_1 }
+			}
+			set_technology = { anti_tank_equipment_tech_1 = 1 }
+		}
+		if = {
+			limit = {
+				NOT = { has_tech = recon_company_tech_1 }
+			}
+			set_technology = { recon_company_tech_1 = 1 }
+		}
+
+		division_template = {
+			name = "The Eastern Cohort"
+			regiments = {
+				spec_ops = { x = 0 y = 0 }
+				spec_ops = { x = 0 y = 1 }
+				spec_ops = { x = 1 y = 0 }
+				spec_ops = { x = 1 y = 1 }
+
+			}
+			support = {
+				anti_tank_company = { x = 0 y = 0 }
+				recon_company = { x = 1 y = 0 }
+			}
+		}
+		set_division_template_lock = {
+			division_template = "The Eastern Cohort"
+			is_locked = yes
+		}
+		random_owned_state = {
+			create_unit = {
+				division = "name = \"Centuria\" division_template = \"The Eastern Cohort\" start_experience_factor = 0.75 start_equipment_factor = 1.0 "
+				owner = prev
+				allow_spawning_on_enemy_provs = yes
+				count = 3
+			}
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 500
+		}
+	}
+}
+news_event = {
+	id = nf_lanius.23
+	title = nf_lanius.23.t
+	desc = nf_lanius.23.d
+	picture = GFX_event_ENC_legion_conquest
+	is_triggered_only = yes
+	option = {
+		name = nf_lanius.23.a
+		swap_ideas = {
+			remove_idea = lac_loot_from_theeast_3
+			add_idea = lac_loot_from_theeast_4
+		}
+	}
+}
+news_event = {
+	id = nf_lanius.24
+	title = nf_lanius.24.t
+	desc = nf_lanius.24.d
+	picture = GFX_event_ENC_legion_conquest
+	is_triggered_only = yes
+	option = {
+		name = nf_lanius.24.a
+		set_technology = {
+			tools_tech_level_settler = 1
+			habitation_tech_level_settler = 1
+			exploitation_tech_level_settler = 1
+		}
+	}
+}
+
+country_event = {
+	id = nf_lanius.25
+	title = nf_lanius.25.t
+	desc = nf_lanius.25.d
+	picture = GFX_event_ENC_legion_conquest
+	is_triggered_only = yes
+	option = {
+		name = nf_lanius.25.a
+		every_country = {
+			limit = {
+				original_tag = CES
+			}
+			country_event = nf_lanius.26
+		}
+	}
+	option = {
+		name = nf_lanius.25.b
+		every_country = {
+			limit = {
+				original_tag = CES
+			}
+			country_event = nf_lanius.29
+		}
+	}
+	option = {
+		name = nf_lanius.25.c
+		every_country = {
+			limit = {
+				original_tag = CES
+			}
+			country_event = nf_lanius.32
+		}
+	}
+}
+country_event = {
+	id = nf_lanius.26
+	title = nf_lanius.26.t
+	desc = nf_lanius.26.d
+	picture = GFX_event_ENC_legion_conquest
+	is_triggered_only = yes
+	option = {
+		name = nf_lanius.26.a
+		remove_ideas = lac_loot_from_theeast_4
+		LAC = { news_event = nf_lanius.27 }
+	}
+	option = {
+		name = nf_lanius.26.b
+		LAC = {
+			grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+		}
+		remove_ideas = lac_loot_from_theeast_4
+		LAC = { news_event = nf_lanius.28 }
+	}
+}
+
+news_event = {
+	id = nf_lanius.27
+	title = nf_lanius.27.t
+	desc = nf_lanius.27.d
+	picture = GFX_event_ENC_legion_conquest
+	is_triggered_only = yes
+	option = {
+		name = nf_lanius.27.a
+		set_technology = {
+			tools_tech_level_settler = 1
+			habitation_tech_level_settler = 1
+			exploitation_tech_level_settler = 1
+		}
+	}
+}
+
+news_event = {
+	id = nf_lanius.28
+	title = nf_lanius.28.t
+	desc = nf_lanius.28.d
+	picture = GFX_event_lanius_planning
+	is_triggered_only = yes
+	option = {
+		name = nf_lanius.28.a
+		leave_faction = yes
+
+	}
+}
+
+country_event = {
+	id = nf_lanius.29
+	title = nf_lanius.29.t
+	desc = nf_lanius.29.d
+	picture = GFX_event_ENC_legion_conquest
+	is_triggered_only = yes
+	option = {
+		name = nf_lanius.29.a
+		remove_ideas = lac_loot_from_theeast_4
+		LAC = { news_event = nf_lanius.30 }
+		add_ideas = lac_plunder_goes_east
+	}
+	option = {
+		name = nf_lanius.29.b
+		remove_ideas = lac_loot_from_theeast_4
+		LAC = {
+			grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+			news_event = nf_lanius.31
+		}
+	}
+}
+news_event = {
+	id = nf_lanius.30
+	title = nf_lanius.30.t
+	desc = nf_lanius.30.d
+	picture = GFX_event_legion_slaves
+	is_triggered_only = yes
+	option = {
+		name = nf_lanius.30.a
+		swap_ideas = {
+			remove_idea = lac_cohort_of_east_3
+			add_idea = lac_damn_were_awesome
+		}
+		set_temp_variable = { trade_route_selector_target = 5 }
+		set_temp_variable = { node_map_selector = 520 }
+		create_trade_route_between = yes
+	}
+}
+
+news_event = {
+	id = nf_lanius.31
+	title = nf_lanius.31.t
+	desc = nf_lanius.31.d
+	picture = GFX_event_lanius_planning
+	is_triggered_only = yes
+	option = {
+		name = nf_lanius.31.a
+		leave_faction = yes
+	}
+}
+
+country_event = {
+	id = nf_lanius.32
+	title = nf_lanius.32.t
+	desc = nf_lanius.32.d
+	picture = GFX_event_ENC_legion_conquest
+	is_triggered_only = yes
+	option = {
+		name = nf_lanius.32.a #submit!
+		remove_ideas = lac_loot_from_theeast_4
+		ai_chance = {
+			modifier = {
+				factor = 0
+			}
+		}
+		LAC = {
+			puppet = ROOT
+			news_event = nf_lanius.30
+		}
+
+	}
+	option = {
+		name = nf_lanius.32.b ### No.
+		LAC = {
+			grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+			news_event = nf_lanius.31
+		}
+	}
+}
+
+news_event = {
+	id = nf_lanius.33
+	title = nf_lanius.33.t
+	desc = nf_lanius.33.d
+	picture = GFX_event_KHA_vault_22_sign
+	is_triggered_only = yes
+	option = {
+		name = nf_lanius.33.a		#Books
+		set_temp_variable = {
+			slaves_to_add = 0.70
+		}
+		add_slaves_to_nation = yes
+		429 = {
+			add_resource = {
+				type = composites
+				amount = 3
+			}
+			add_resource = {
+				type = circuitry
+				amount = 3
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = nf_lanius.50
+	title = nf_lanius.50.t
+	desc = nf_lanius.50.d
+	picture = GFX_event_legion_slaves
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_lanius.50.a #Choose to focus on Colorado
+		set_temp_variable = {
+			slaves_to_add = 0.09
+		}
+		add_slaves_to_nation = yes
+	}
+
+}

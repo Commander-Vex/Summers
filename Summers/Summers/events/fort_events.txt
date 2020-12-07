@@ -1,0 +1,863 @@
+﻿add_namespace = nf_fort
+
+country_event = {
+    id = nf_fort.1
+    title = nf_fort.1.t
+    desc = nf_fort.1.desc
+    picture = GFX_event_generic_settlement_1
+    is_triggered_only = yes
+    
+	option = {
+		name = nf_fort.1.option.a
+		add_equipment_to_stockpile = { 
+				type = power_armor_equipment_2
+				amount = 200
+				producer = USA			
+			}
+		add_popularity = {
+				ideology = elites
+				popularity = 0.05
+			}
+	}
+	option = {
+		name = nf_fort.1.option.b
+		load_oob = summers_new_mexican_guard
+		add_popularity = {
+				ideology = people
+				popularity = 0.05
+			}
+			
+	}	
+    option = {
+		name = nf_fort.1.option.c
+		add_tech_bonus = {
+				name = land_doctrine_bonus
+				bonus = 0.25
+				uses = 2
+				category = cat_land_doctrine
+			}
+		add_popularity = {
+				ideology = intellectuals
+				popularity = 0.05
+			}
+    }
+}
+country_event = {
+    id = nf_fort.2
+    title = nf_fort.2.t
+    desc = nf_fort.2.desc
+    picture = GFX_event_generic_settlement_1
+    is_triggered_only = yes
+    
+	option = {
+		name = nf_fort.2.option.b
+				add_tech_bonus = {
+				name = support_bonus
+				bonus = 0.5
+				uses = 2
+				category = support_tech
+			}
+		add_popularity = {
+				ideology = people
+				popularity = 0.05
+			}
+	}
+	option = {
+		name = nf_fort.2.option.a
+		add_tech_bonus = {
+				name = industry_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		add_popularity = {
+				ideology = intellectuals
+				popularity = 0.05
+			}
+	}	
+    option = {
+		name = nf_fort.2.option.c
+		add_manpower = 600
+		add_popularity = {
+				ideology = elites
+				popularity = 0.05
+			}
+    }
+}
+country_event = {
+    id = nf_fort.3
+    title = nf_fort.3.t
+    desc = nf_fort.3.desc
+    picture = GFX_event_generic_settlement_1
+    is_triggered_only = yes
+    
+	option = {
+		name = nf_fort.3.option.a
+		546 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		add_popularity = {
+				ideology = people
+				popularity = 0.05
+			}
+	}
+	option = {
+		name = nf_fort.3.option.b
+		add_equipment_to_stockpile = { 
+				type = energy_equipment_2
+				amount = 500
+				producer = USA			
+			}
+		add_popularity = {
+				ideology = elites
+				popularity = 0.05
+			}
+	}	
+    option = {
+		name = nf_fort.3.option.c
+		add_equipment_to_stockpile = { 
+				type = fighter_equipment_3
+				amount = 20
+				producer = USA			
+			}
+			546 = {
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+		add_popularity = {
+				ideology = intellectuals
+				popularity = 0.05
+			}
+    }
+}
+country_event = {
+    id = nf_fort.4
+    title = nf_fort.4.t
+    desc = nf_fort.4.desc
+    picture = GFX_event_generic_settlement_1
+    is_triggered_only = yes
+    
+	option = {
+		name = nf_fort.4.option.a
+		546 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		add_popularity = {
+				ideology = people
+				popularity = 0.05
+			}
+	}
+	option = {
+		name = nf_fort.4.option.b
+		546 = {
+			add_resource = {
+			type = metal
+			amount = 10
+			}
+			add_resource = {
+			type = water
+			amount = 10
+			}
+		}
+		add_popularity = {
+				ideology = intellectuals
+				popularity = 0.05
+			}
+	}	
+    option = {
+		name = nf_fort.4.option.c
+		add_manpower = 650
+		add_popularity = {
+				ideology = elites
+				popularity = 0.05
+			}
+    }
+}
+
+country_event = {
+    id = nf_fort.5
+    title = nf_fort.5.t
+    desc = nf_fort.5.desc
+    picture = GFX_event_generic_settlement_1
+    is_triggered_only = yes
+    
+	option = {
+	name = nf_fort.5.option.a
+	SUF = {
+	create_faction = "Eastern Defense Command"
+	add_to_faction = EXE
+	ai_chance = {
+		modifier = {
+		factor = 100
+			}
+		}
+	}
+}
+	 
+	option = {
+		name = nf_fort.5.option.b
+		ai_chance = {
+		modifier = {
+		factor = 0
+			}
+		}
+		SUF = {
+	546 = {
+			add_building_construction = {
+					type = bunker
+					level = 2
+					province = 2813
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 1698
+					instant_build = yes
+				}
+			}
+	225 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 1703
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 5704
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 5703
+					instant_build = yes
+			}
+			add_building_construction = {
+					type = bunker
+					level = 2
+					province = 2787
+					instant_build = yes
+				}
+			}
+		}	
+	}
+}
+
+country_event = {
+    id = nf_fort.6
+    title = nf_fort.6.t
+    desc = nf_fort.6.desc
+    picture = GFX_event_generic_settlement_1
+    is_triggered_only = yes
+    
+	
+	option = {
+		name = nf_fort.6.option.a
+		SUF = {
+		add_ideas = EDA_secrets
+		load_oob = summers_blue_rose_remnants
+		add_popularity = {
+				ideology = intellectuals
+				popularity = 0.05
+			}
+			
+			}
+		}
+	}
+	
+	country_event = {
+    id = nf_fort.7
+    title = nf_fort.7.t
+    desc = nf_fort.7.desc
+    picture = GFX_event_generic_settlement_1
+    is_triggered_only = yes
+    
+	option = {
+		name = nf_fort.7.option.a
+		SUF = {add_to_faction = ROOT}
+		ROOT = {
+		add_opinion_modifier = { target = SUF modifier = umb_partners_and_friends }
+					}
+		ai_chance = {
+		modifier = {
+		factor = 45
+			}
+		}
+	}
+	
+	option = {
+		name = nf_fort.7.option.b
+		ai_chance = {
+		modifier = {
+		factor = 55
+			}
+		}
+	}
+}
+
+	country_event = {
+    id = nf_fort.8
+    title = nf_fort.8.t
+    desc = nf_fort.8.desc
+    picture = GFX_event_generic_settlement_1
+    is_triggered_only = yes
+    
+	option = {
+		name = nf_fort.8.option.a
+		ai_chance = {factor = 10 }
+	SUF = {
+			add_equipment_to_stockpile = {
+				type = energy_equipment_1
+				amount = 150
+				producer = USA
+			}
+	}
+}
+	option = {
+		name = nf_fort.8.option.b
+		ai_chance = {
+		modifier = {
+		factor = 85
+			}
+		}
+		SUF = {
+			add_equipment_to_stockpile = {
+				type = ballistic_equipment_1
+				amount = 150
+				producer = USA
+			}
+		}
+	}
+	
+}
+
+	country_event = {
+    id = nf_fort.9
+    title = nf_fort.9.t
+    desc = nf_fort.9.desc
+    picture = GFX_event_generic_settlement_1
+    is_triggered_only = yes
+    
+	option = {
+		name = nf_fort.9.option.a
+		ai_chance = {
+		modifier = {
+		factor = 55
+			}
+		}
+		SUF = {create_faction = "Summer Goddess" }
+	SUF = {add_to_faction = ROOT}
+	ROOT = {
+		add_opinion_modifier = { target = SUF modifier = umb_partners_and_friends }
+					}
+	}
+	
+	option = {
+		name = nf_fort.9.option.b
+		ai_chance = {
+		modifier = {
+		factor = 45
+			}
+		}
+	SUF = {give_guarantee = TTM }
+		}
+	}
+	
+	country_event = {
+    id = nf_fort.10
+    title = nf_fort.10.t
+    desc = nf_fort.10.desc
+    picture = GFX_event_generic_settlement_1
+    is_triggered_only = yes
+    
+	option = {
+		name = nf_fort.10.option.a
+		trigger = {
+		has_completed_focus = suf_pre_emptive_strike
+		}
+		add_popularity = {
+				ideology = elites
+				popularity = 0.20
+			}
+		}
+	
+	option = {
+		name = nf_fort.10.option.b
+		trigger = {
+		has_completed_focus = suf_put_to_the_test
+		}
+		set_politics = { ruling_party = intellectuals elections_allowed = no }
+		
+		add_popularity = {
+				ideology = intellectuals
+				popularity = 0.35
+			}
+		}
+		
+	option = {
+		name = nf_fort.10.option.c
+		trigger = {
+		has_completed_focus = suf_push_back_the_bull
+		}
+		set_politics = { ruling_party = people elections_allowed = no }
+		
+		add_popularity = {
+				ideology = people
+				popularity = 0.35
+			}
+	}
+}
+
+	country_event = {
+    id = nf_fort.11
+    title = nf_fort.11.t
+    desc = nf_fort.11.desc
+    picture = GFX_event_generic_settlement_1
+    is_triggered_only = yes
+    
+	option = {
+		name = nf_fort.11.option.a
+		ai_chance = {
+		modifier = {
+		factor = 75
+			}
+		}
+	SUF = {
+	transfer_state = 423}
+	}
+	
+	option = {
+		name = nf_fort.11.option.b
+		ai_chance = {
+		modifier = {
+		factor = 25
+			}
+		}
+			SUF = {
+			create_wargoal = {
+			type = annex_everything
+            target = LUB
+			}
+		}
+	}
+}
+	
+	country_event = {
+    id = nf_fort.12
+    title = nf_fort.12.t
+    desc = nf_fort.12.desc
+    picture = GFX_event_generic_settlement_1
+    is_triggered_only = yes
+    
+	option = {
+		name = nf_fort.12.option.a
+		ai_chance = {
+		modifier = {
+		factor = 45
+			}
+		}
+	SUF = {
+	transfer_state = 108}
+	}
+	
+	option = {
+		name = nf_fort.12.option.b
+		ai_chance = {
+		modifier = {
+		factor = 55
+			}
+		}
+			SUF = {
+			create_wargoal = {
+			type = annex_everything
+            target = CWB
+			}
+		}
+	}
+}
+
+	country_event = {
+    id = nf_fort.13
+    title = nf_fort.13.t
+    desc = nf_fort.13.desc
+    picture = GFX_event_generic_settlement_1
+    is_triggered_only = yes
+    
+	option = {
+		name = nf_fort.13.option.a
+		SUF = {add_to_faction = ROOT}
+		ai_chance = {
+		modifier = {
+		factor = 75
+			}
+		}
+	}
+	
+	option = {
+		name = nf_fort.13.option.b
+		ai_chance = {
+		modifier = {
+		factor = 25
+			}
+		}
+		SUF = {
+		create_wargoal = {
+			type = annex_everything
+            target = ASF
+			}
+		}
+	}
+}
+
+	country_event = {
+    id = nf_fort.14
+    title = nf_fort.14.t
+    desc = nf_fort.14.desc
+    picture = GFX_event_generic_settlement_1
+    is_triggered_only = yes
+    
+	option = {
+		name = nf_fort.14.option.a
+		SUF = {add_to_faction = ROOT}
+		ai_chance = {
+		modifier = {
+		factor = 75
+			}
+		}
+	}
+	
+	option = {
+		name = nf_fort.14.option.b
+		ai_chance = {
+		modifier = {
+		factor = 25
+			}
+		}
+		SUF = {
+		create_wargoal = {
+			type = annex_everything
+            target = EDA
+			}
+		}
+	}
+}
+
+	country_event = {
+    id = nf_fort.15
+    title = nf_fort.15.t
+    desc = nf_fort.15.desc
+    picture = GFX_event_generic_settlement_1
+    is_triggered_only = yes
+    
+	option = {
+		name = nf_fort.15.option.a
+		SUF = {add_to_faction = ROOT}
+	ai_chance = {
+		modifier = {
+		factor = 75
+			}
+		}
+	}
+	
+	option = {
+		name = nf_fort.15.option.b
+		ai_chance = {
+		modifier = {
+		factor = 25
+			}
+		}
+		SUF = {
+		create_wargoal = {
+			type = annex_everything
+            target = LUP
+			}
+		}
+	}
+}
+
+	country_event = {
+    id = nf_fort.16
+    title = nf_fort.16.t
+    desc = nf_fort.16.desc
+    picture = GFX_event_generic_settlement_1
+    is_triggered_only = yes
+    
+	option = {
+		name = nf_fort.16.option.a
+		ai_chance = {
+		modifier = {
+		factor = 65
+			}
+		}
+	SUF = {
+	transfer_state = 145}
+	SUF = {give_guarantee = SUN }
+	}
+	
+	option = {
+		name = nf_fort.16.option.b
+		ai_chance = {
+		modifier = {
+		factor = 35
+			}
+		}
+			SUF = {
+			create_wargoal = {
+			type = annex_everything
+            target = SUN
+			}
+		}
+	}
+}
+
+	country_event = {
+    id = nf_fort.17
+    title = nf_fort.17.t
+    desc = nf_fort.17.desc
+    picture = GFX_event_generic_settlement_1
+    is_triggered_only = yes
+    
+	option = {
+		name = nf_fort.17.option.a
+		ai_chance = {
+		modifier = {
+		factor = 65
+			}
+		}
+	SUF = {
+	transfer_state = 464}
+	SUF = {give_guarantee = BSU }
+	}
+	
+	option = {
+		name = nf_fort.12.option.b
+		ai_chance = {
+		modifier = {
+		factor = 35
+			}
+		}
+			SUF = {
+			create_wargoal = {
+			type = annex_everything
+            target = BSU
+			}
+		}
+	}
+}
+
+	country_event = {
+    id = nf_fort.18
+    title = nf_fort.18.t
+    desc = nf_fort.18.desc
+    picture = GFX_event_generic_settlement_1
+    is_triggered_only = yes
+    
+	option = {
+		name = nf_fort.18.option.a
+		ai_chance = {
+		modifier = {
+		factor = 65
+			}
+		}
+	SUF = {
+	transfer_state = 106}
+	SUF = {give_guarantee = CWB }
+	}
+	
+	option = {
+		name = nf_fort.18.option.b
+		ai_chance = {
+		modifier = {
+		factor = 35
+			}
+		}
+			SUF = {
+			give_military_access = CWB
+			create_wargoal = {
+			type = annex_everything
+            target = CWB
+			}
+		}
+	}
+}
+
+	
+	country_event = {
+    id = nf_fort.19
+    title = nf_fort.19.t
+    desc = nf_fort.19.desc
+    picture = GFX_event_generic_settlement_1
+    is_triggered_only = yes
+    
+	option = {
+		name = nf_fort.19.option.a
+		ai_chance = {
+		modifier = {
+		factor = 65
+			}
+		}
+	SUF = {
+	give_military_access = LUB
+	transfer_state = 423
+	}
+	SUF = {give_guarantee = LUB }
+	}
+	
+	option = {
+		name = nf_fort.19.option.b
+		ai_chance = {
+		modifier = {
+		factor = 35
+			}
+		}
+			SUF = {
+			create_wargoal = {
+			type = annex_everything
+            target = LUB
+			}
+		}
+	}
+}
+
+	country_event = {
+    id = nf_fort.20
+    title = nf_fort.20.t
+    desc = nf_fort.20.desc
+    picture = GFX_event_generic_settlement_1
+    is_triggered_only = yes
+    
+	option = {
+		name = nf_fort.20.option.a
+		ai_chance = {
+		modifier = {
+		factor = 65
+			}
+		}
+	SUF = {
+	annex_country = { target = ROOT transfer_troops = yes } 
+	}
+}
+	option = {
+		name = nf_fort.20.option.b
+		ai_chance = {
+		modifier = {
+		factor = 35
+			}
+		}
+			SUF = {
+			create_wargoal = {
+			type = annex_everything
+            target = ROOT
+			}
+		}
+	}
+}
+
+	country_event = {
+    id = nf_fort.21
+    title = nf_fort.21.t
+    desc = nf_fort.21.desc
+    picture = GFX_event_generic_settlement_1
+    is_triggered_only = yes
+    
+	option = {
+		name = nf_fort.21.option.a
+		ai_chance = {
+		modifier = {
+		factor = 50
+			}
+		}
+		complete_national_focus = suf_hello_commander
+}
+	option = {
+		name = nf_fort.21.option.b
+		ai_chance = {
+		modifier = {
+		factor = 50
+			}
+		}
+		complete_national_focus = suf_contacting_maxons_chapter
+		}
+	}
+	
+	country_event = {
+    id = nf_fort.22
+    title = nf_fort.22.t
+    desc = nf_fort.22.desc
+    picture = GFX_event_generic_settlement_1
+    is_triggered_only = yes
+    
+	option = {
+		name = nf_fort.22.option.a
+		ai_chance = {
+		modifier = {
+		factor = 50
+			}
+		}
+		SUF = {
+		set_technology = {
+		robotics_tech_level_scientific = 1
+		vehicles_tech_level_scientific = 1
+		}
+		give_guarantee = TTM
+	}
+}
+	option = {
+		name = nf_fort.22.option.b
+		ai_chance = {
+		modifier = {
+		factor = 50
+			}
+		}
+		
+		}
+	}
+	
+	country_event = {
+    id = nf_fort.23
+    title = nf_fort.23.t
+    desc = nf_fort.23.desc
+    picture = GFX_event_generic_settlement_1
+    is_triggered_only = yes
+    
+	option = {
+		name = nf_fort.23.option.a
+		ai_chance = {
+		modifier = {
+		factor = 100
+			}
+		}
+		SUF = {
+			add_equipment_to_stockpile = {
+				type = power_armor_equipment_tbh
+				amount = 300
+				producer = TBH
+			}
+			set_technology = {
+			police_infantry_tech = 1
+			}
+			load_oob = summers_texan_assistance
+		 }
+	}
+}
+
+	

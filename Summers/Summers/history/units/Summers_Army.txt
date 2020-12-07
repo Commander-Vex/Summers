@@ -1,0 +1,83 @@
+﻿division_template = {
+	name = "US Army Remnants"
+	template_counter= 96
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+
+	}
+
+}
+division_template = {
+	name = "US Army Ranger Remnants"
+	template_counter= 83
+	regiments = {
+		spec_ops = { x = 0 y = 0 }
+		spec_ops = { x = 0 y = 1 }
+		spec_ops = { x = 0 y = 2 }
+		spec_ops = { x = 1 y = 0 }
+		spec_ops = { x = 1 y = 1 }
+	}
+		support = {
+	fireteam_support = { x = 0 y = 0 }
+	}
+}
+units = {
+	division {
+			name = "Alpha Company"
+			location = 5558
+			division_template = "US Army Remnants"
+			start_experience_factor = 0.5
+			start_equipment_factor = 1.0
+	}
+	division {
+			name = "Omega Company"
+			location = 5558
+			division_template = "US Army Remnants"
+			start_experience_factor = 0.5
+			start_equipment_factor = 1.0
+	}
+	
+	division {
+			name = "Bravo Company"
+			location = 5558
+			division_template = "US Army Remnants"
+			start_experience_factor = 0.5
+			start_equipment_factor = 1.0
+	}
+	
+	division {
+			name = "Charlie Company"
+			location = 5558
+			division_template = "US Army Remnants"
+			start_experience_factor = 0.5
+			start_equipment_factor = 1.0
+	}
+	
+	division {
+			name = "Zeta Company"
+			location = 5558
+			division_template = "US Army Remnants"
+			start_experience_factor = 0.5
+			start_equipment_factor = 1.0
+	}
+	division {
+			name = "Jupiter Corp"
+			location = 5558
+			division_template = "US Army Ranger Remnants"
+			start_experience_factor = 0.8
+			start_equipment_factor = 1.0
+	}
+	
+	division {
+			name = "Hades Corp"
+			location = 5558
+			division_template = "US Army Ranger Remnants"
+			start_experience_factor = 0.8
+			start_equipment_factor = 1.0
+	}
+

@@ -1,0 +1,125 @@
+division_template = {
+name = "Lupa's Followers"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+    support = {
+	 	dog_company = { x = 0 y = 0 }
+		}
+	}
+	
+division_template = {
+name = "Lupa's Legion"
+
+	regiments = {
+		spec_ops = { x = 0 y = 0 }
+		spec_ops = { x = 0 y = 1 }
+        spec_ops = { x = 0 y = 2 }
+		spec_ops = { x = 1 y = 0 }
+	}
+    support = {
+	 	dog_company = { x = 0 y = 0 }
+	    dog_company = { x = 0 y = 1 }
+		}
+	}
+	
+division_template = {
+	name = "Lupa's Pups"
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 1 y = 0 }
+		militia = { x = 1 y = 1 }
+		militia = { x = 2 y = 0 }
+		militia = { x = 2 y = 1 }
+	}
+	support = {
+	}
+}
+	
+	units = {
+
+	division = {
+		name = "Lupa's Pack"
+		location = 8971
+		division_template = "Lupa's Legion"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "The Lost Legion"
+		location = 8971
+		division_template = "Lupa's Legion"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	
+	division = {
+		name = "Lupa's Followers"
+		location = 5464
+		division_template = "Lupa's Followers"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	
+		division = {
+		name = "Lupa's Followers"
+		location = 5517
+		division_template = "Lupa's Followers"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	
+		division = {
+		name = "Lupa's Followers"
+		location = 2947
+		division_template = "Lupa's Followers"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	
+		division = {
+		name = "Lupa's Followers"
+		location = 864
+		division_template = "Lupa's Followers"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	
+		division = {
+		name = "Lupa's Followers"
+		location = 8977
+		division_template = "Lupa's Followers"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	
+	division = {
+		name = "Lupa's Pups"
+		location = 8971
+		division_template = "Lupa's Pups"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	
+		division = {
+		name = "Lupa's Pups"
+		location = 5448
+		division_template = "Lupa's Pups"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	
+		division = {
+		name = "Lupa's Pups"
+		location = 5595
+		division_template = "Lupa's Pups"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+}

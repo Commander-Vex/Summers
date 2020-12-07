@@ -1,0 +1,58 @@
+division_template = {
+	is_locked = yes
+	name = "Dangerous Biome Assault Corp"
+	template_counter= 121
+	regiments = {
+		spec_ops = { x = 0 y = 0 }
+		spec_ops = { x = 0 y = 1 }
+		spec_ops = { x = 0 y = 2 }
+		spec_ops = { x = 1 y = 0 }
+		spec_ops = { x = 1 y = 1 }
+		spec_ops = { x = 1 y = 2 }
+		spec_ops = { x = 2 y = 0 }
+		spec_ops = { x = 2 y = 1 }
+		spec_ops = { x = 2 y = 2 }
+
+	}
+	support = {
+	fireteam_support = { x = 0 y = 0 }
+	}
+}
+
+	units = {
+		division {
+			name = "Bloodhound Platoon"
+			location = 6868
+			division_template = "Dangerous Biome Assault Corp"
+			start_experience_factor = 0.7
+			start_equipment_factor = 1.5
+	}
+		division {
+			name = "Treefrog Platoon"
+			location = 6875
+			division_template = "Dangerous Biome Assault Corp"
+			start_experience_factor = 0.7
+			start_equipment_factor = 1.0
+	}
+		division {
+			name = "Romeo Platoon"
+			location = 6875
+			division_template = "Dangerous Biome Assault Corp"
+			start_experience_factor = 0.7
+			start_equipment_factor = 1.0
+	}
+		division {
+			name = "Rocket Team Red"
+			location = 6800
+			division_template = "Dangerous Biome Assault Corp"
+			start_experience_factor = 0.7
+			start_equipment_factor = 1.0
+	}
+	
+		division {
+			name = "Echo Platoon"
+			location = 6800
+			division_template = "Dangerous Biome Assault Corp"
+			start_experience_factor = 0.7
+			start_equipment_factor = 1.0
+	}
